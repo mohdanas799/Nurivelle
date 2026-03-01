@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurivelle - Premium Kids Care & Skincare</title>
+    <meta name="description" content="Premium care for your little ones with natural, safe ingredients.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-[#333] overflow-x-hidden">
+<!-- NAVBAR SECTION -->
+    <header id="main-header" class="fixed  top-0 left-0 w-full z-[100] nav-glass">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" id="header-logo" aria-label="Nurivelle Home">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-9 ">
+                </a>
+            <div class="flex items-center gap-12">
+                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+                    
+                    <li class="relative dropdown-group">
+                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                           <a href="services.html"> Services </a>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
+                        </div>
+                    </li>
+
+                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-200 overflow-hidden relative group">
+                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+                        <span>Free Enquiry</span>
+                        <span class="absolute top-full left-0">Free Enquiry</span>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+                </a>
+
+                <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1 w-10 h-10" aria-label="Toggle Menu">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div id="mega-menu" class="fixed inset-0 z-[90] font-comic font-black pointer-events-none">
+    
+    <div id="menu-panel" class="bg-white w-full h-full lg:h-auto lg:w-[90%] lg:max-w-[1200px] pt-32 lg:mx-auto lg:mt-24 lg:rounded-[32px] lg:border lg:border-stone-200 overflow-y-auto p-6 shadow-2xl pointer-events-auto transition-transform duration-500 -translate-y-full">
+        
+        <div class="flex justify-end lg:hidden mb-4"></div>
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="hidden md:block w-[35%] h-[420px] rounded-[24px] overflow-hidden relative">
+                <div class="swiper mySwiper h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Kids Care">
+                            <div class="card-overlay"></div>
+                            <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Our Quality <span class="ml-2">→</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-[65%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-10 lg:pb-0">
+                <a href="index.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Home">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Home <span class="ml-2">→</span></div>
+                </a>
+                <a href="about.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="About">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">About <span class="ml-2">→</span></div>
+                </a>
+                <a href="services.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Services">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Services <span class="ml-2">→</span></div>
+                </a>
+                <a href="gallery.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Gallery">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Gallery <span class="ml-2">→</span></div>
+                </a>
+                <a href="blog.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Blog">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Blogs <span class="ml-2">→</span></div>
+                </a>
+                <a href="contact.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Contact">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Contact <span class="ml-2">→</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- HERO SECTION -->
+<header class="relative h-[80em] max-md:h-[52em] flex items-center justify-center overflow-hidden py-20">
+        
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
+                 class="w-full h-full object-cover" alt="Background Pattern">
+        </div>
+
+        <div class="absolute top-80 left-32 reveal delay-300 hidden md:block animate-float">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d30975a4b8191b5749630_Hero%20Image-1.png" 
+                 class="" alt="Hero Top Left">
+        </div>
+        <div class="absolute top-36 right-40 reveal delay-500 hidden md:block animate-float" style="animation-delay: 1s;">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d3097a664a7333007f28b_Hero%20Image.png" 
+                 class="" alt="Hero Top Right">
+        </div>
+
+        <div class="container mx-auto max-w-7xl relative z-10 max-md:top-2 -top-20 text-center px-4">
+            
+            <div class="flex flex-col items-center gap-6">
+                <div class="reveal font-boldo">
+                    <h1 class="text-8xl max-md:text-4xl font-bold text-white leading-tight uppercase tracking-tight"> 
+                         <span>Where Little</span>
+                          <span class="block mt-5 max-md:mt-5">Minds</span>
+                    </h1>
+                    <div class="flex items-center justify-center gap-3 max-md:gap-1 mt-6">
+                        <span class="text-8xl max-md:text-4xl font-bold text-white uppercase">Gr</span>
+                        <div class="w-48 h-48 max-md:w-28 max-md:h-28 -mt-12 -mx-6 max-md:-mx-3 max-md:w-16">
+                            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2c935a7a7fdc82b36f6c_Contact%20Hero%20Title%20Inner%20Image.png" 
+                                 class="w-full h-full object-contain" alt="O-icon">
+                        </div>
+                        <span class="text-8xl max-md:text-4xl font-bold text-white uppercase">W Safely</span>
+                    </div>
+                </div>
+
+                <p class="reveal font-comic font-black text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mt-4">
+                    A warm, secure early learning space where children feel loved, supported, and encouraged to explore, learn, and grow—every single day.
+                </p>
+                
+                <div class="reveal mt-6">
+    <div class="relative inline-block bg-white rounded-full">
+        
+        <a href="/program" 
+           class="primary-button relative inline-flex items-center gap-4 bg-[#FF00BF] text-white px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 hover:-translate-x-1 active:translate-y-0 active:translate-x-0 border-2 border-white shadow-lg">
+            
+            <div class="relative h-8 text-2xl max-md:text-lg font-boldo overflow-hidden flex flex-col items-start">
+                <span class="btn-text-slide">Explore Programs</span>
+                <span class="btn-text-slide">Explore Programs</span>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" 
+                     class="w-8 h-8 object-contain" alt="icon">
+            </div>
+        </a>
+
+    </div>
+</div>
+            </div>
+
+            <div class="flex justify-between items-end mt-2 max-md:mt-10 w-full md:absolute max-md:-bottom-32 md:inset-x-0 px-6">
+                <div class="delay-700">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d3098321d4de7c52374fb_Hero%20Info%20Image.png" 
+                         class="w-80 max-md:w-80 transform" alt="Kid Info">
+                </div>
+                <div class="delay-1000">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d309876973668a3ddd2cb_Hero%20Info%20Image-1.png" 
+                         class="w-80 max-md:w-64 transform" alt="Hero Right">
+                </div>
+            </div>
+        </div>
+
+        <!-- <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6dfbbcb0713a9adc1_image%2026.png" class="absolute bottom-10 max-md:left-[10em] max-md:bottom-[0em]  left-0 w-[30em] opacity-50 hidden lg:block" alt="">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6543a290c585b6402_image%2025.png" class="absolute top-10 right-0 w-[30em] opacity-50 hidden lg:block" alt=""> -->
+<img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6dfbbcb0713a9adc1_image%2026.png" 
+             class="absolute bottom-24 left-0 w-[15em] md:w-[30em] opacity-80 z-0 pointer-events-none" alt="">
+        
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6543a290c585b6402_image%2025.png" 
+             class="absolute top-16 right-0 w-[15em] md:w-[30em] opacity-80 z-0 pointer-events-none" alt="">
+    </header>
+<!-- ABOUT US SECTION -->
+<section class="py-16 px-4 md:py-24">
+    <div class="max-w-7xl mx-auto text-center">
+        <header class="mb-12">
+            <span class="text-xs font-comic font-black uppercase tracking-[0.2em] text-gray-500 mb-10 block">About Us</span>
+            <h2 class="max-md:text-3xl text-7xl font-boldo font-[900] text-black uppercase tracking-tighter">
+              <span>Growing Children</span>
+              <span class="block mt-5 max-md:mt-5">With Love Daily</span>
+            </h2>
+        </header>
+
+        <div class="bg-brand-purple p-4 md:p-8 rounded-[40px] mb-12 relative">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative ">
+                
+                <article class="sticky top-36 md:static bg-[#f0f4ee] rounded-[32px] p-6 md:p-8 flex flex-col justify-between items-start text-left dashed-border min-h-[320px] md:min-h-[450px] shadow-xl md:shadow-none transition-transform">
+                    <div class="w-10 h-10 md:w-12 md:h-12">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d01859eddb74562465fee_About%20Us%20Card%20Icon01.png" 
+                             alt="Experience Icon" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                    <div>
+                        <div class="text-4xl md:text-5xl font-black text-black font-boldo flex items-baseline">
+                            <span class="counter" data-target="20">0</span>
+                            <span>+</span>
+                        </div>
+                        <p class="text-xs md:text-sm font-comic font-black text-gray-600 mt-2">Years Of Experience</p>
+                    </div>
+                </article>
+
+                <div class="sticky top-40 md:static rounded-[32px] overflow-hidden dashed-border h-[320px] md:h-[450px] shadow-xl md:shadow-none">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d0049ff90d81c3c8efc34_About%20Us%20Card%20Image%2002.png" 
+                         alt="Smiling Baby" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <article class="sticky top-44 md:static bg-[#f0f4ee] rounded-[32px] p-6 md:p-8 flex flex-col justify-between items-start text-left dashed-border min-h-[320px] md:min-h-[450px] shadow-xl md:shadow-none">
+                    <div class="w-10 h-10 md:w-12 md:h-12">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d0185080a3ab5e7f4a0c4_About%20Us%20Card%20Icon02.png" 
+                             alt="Caregiver Icon" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                    <div>
+                        <div class="text-4xl md:text-5xl font-black font-boldo text-black flex items-baseline">
+                            <span class="counter" data-target="35">0</span>
+                            <span>K+</span>
+                        </div>
+                        <p class="text-xs md:text-sm font-comic font-black text-gray-600 mt-2">Caregiver To Child</p>
+                    </div>
+                </article>
+
+                <div class="sticky top-36 md:static rounded-[32px] overflow-hidden dashed-border h-[320px] md:h-[450px] shadow-xl md:shadow-none">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d0049799e830f05312a13_About%20Us%20Card%20Image%2001.png" 
+                         alt="Mother and Child" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 mt-20 md:mt-0">
+            <p class="text-gray-600 font-comic font-black text-2xl max-md:text-lg leading-relaxed mb-10">
+                We are a childcare and early learning center dedicated to creating a safe, warm, and inspiring environment where children feel valued, supported, and confident.
+            </p>
+            
+            <a href="/about" class="group relative inline-flex items-center gap-5 bg-[#6332fa] text-white px-10 py-5 rounded-full font-bold transition-all duration-300 shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[8px]">
+                <div class="relative h-[28px] overflow-hidden">
+                    <div class="flex flex-col text-2xl font-boldo max-md:text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                        <span class="leading-[30px]">Know More Us</span>
+                        <span class="leading-[30px]">Know More Us</span>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" 
+                         alt="Icon" class="w-8 h-8 md:w-10 md:h-10">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- FEATURED SERVICES SECTION  -->
+<section class="relative bg-[#dbc6ff] overflow-hidden">
+    
+    <div class="relative w-full bg-white overflow-hidden bg-[#f8f9f5] z-10">
+        <div class="animate-ticker">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 py-12 md:py-24 text-center">
+        <header class="mb-10 md:mb-20">
+            <span class="text-[10px] md:text-xs font-comic font-black uppercase tracking-[0.3em] text-black/40 block mb-10">Care Features</span>
+            <h2 class="text-7xl max-md:text-2xl font-boldo font-[900] text-black uppercase tracking-tighter">
+              <span> Carefully Crafted Care</span>
+              <span class="block mt-5 max-md:mt-2">For Little Ones</span>
+            </h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            
+            <article class="order-1 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#e87155] transition-all hover:-translate-y-1">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec516ded00bb91226b6f_Features%20Card%20Bg%20Image-1.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0 pointer-events-none" alt="bg">
+                <div class="relative z-10 w-full">
+                    <div class="bg-black/90 p-3 md:p-4 rounded-xl md:rounded-2xl inline-block mb-6 md:mb-14">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec512f6305e043220c15_Features%20Card%20Icon.svg" class="w-6 md:w-9 h-6 md:h-9 invert" alt="icon">
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-black uppercase mb-2 md:mb-4 leading-tight tracking-tighter"><span>Developmental</span><span class="block mt-2 max-md:mt-1">Activities</span></h3>
+                    <p class="text-black/70 font-semibold text-xs md:text-lg leading-snug">Sensory play and motor skill activities support child growth.</p>
+                </div>
+            </article>
+
+            <article class="order-2 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#f1f3ea] transition-all hover:-translate-y-1">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec51df621cd990772f75_Features%20Card%20Bg%20Image-2.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0 pointer-events-none" alt="bg">
+                <div class="relative z-10 w-full">
+                    <div class="bg-black/90 p-3 md:p-4 rounded-xl md:rounded-2xl inline-block mb-6 md:mb-14">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec513426946415387bc0_Features%20Card%20Icon-1.svg" class="w-6 md:w-9 h-6 md:h-9 invert" alt="icon">
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-black uppercase mb-2 md:mb-4 leading-tight tracking-tighter text-black"><span>Qualified</span><span class="block mt-2 max-md:mt-1">Caregivers</span></h3>
+                    <p class="text-gray-500 font-semibold text-xs md:text-lg leading-snug">Safe nutrition accommodating all dietary needs and preferences.</p>
+                </div>
+            </article>
+
+            <article class="order-3 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#8ec678] transition-all hover:-translate-y-1">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec514e3fb3a4b9f00495_Features%20Card%20Bg%20Image.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0 pointer-events-none" alt="bg">
+                <div class="relative z-10 w-full">
+                    <div class="bg-black/90 p-3 md:p-4 rounded-xl md:rounded-2xl inline-block mb-6 md:mb-14">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec528c37c37d2fbef42e_Features%20Card%20Icon-2.svg" class="w-6 md:w-9 h-6 md:h-9 invert" alt="icon">
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-black uppercase mb-2 md:mb-4 leading-tight tracking-tighter"><span>Healthy</span><span class="block mt-2 max-md:mt-1">Meal Area</span></h3>
+                    <p class="text-black/70 font-semibold text-xs md:text-lg leading-snug">A safe space for nutrition, from bottle feeding to solids.</p>
+                </div>
+            </article>
+
+            <article class="order-4 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#e87155] transition-all">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec52f20b9d53760c4006_Features%20Card%20Bg%20Image-4.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0" alt="bg">
+                <div class="relative z-10 w-full">
+                    <div class="bg-black/90 p-3 md:p-4 rounded-xl md:rounded-2xl inline-block mb-6 md:mb-14">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec52c4fa02c6de7af9b8_Features%20Card%20Icon-4.svg" class="w-6 md:w-9 h-6 md:h-9 invert" alt="icon">
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-black uppercase mb-2 md:mb-4 leading-tight tracking-tighter"><span>Sleep and Rest</span><span class="block mt-2 max-md:mt-1">Programs</span></h3>
+                    <p class="text-black/70 font-semibold text-xs md:text-lg leading-snug">Consistent nap schedules designed for peaceful, safe sleep.</p>
+                </div>
+            </article>
+
+            <article class="order-5 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#f1f3ea] transition-all">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec51df621cd990772f75_Features%20Card%20Bg%20Image-2.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0" alt="bg">
+                <div class="relative z-10 w-full">
+                    <div class="bg-black/90 p-3 md:p-4 rounded-xl md:rounded-2xl inline-block mb-6 md:mb-14">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec5284941d277690261f_Features%20Card%20Icon-5.svg" class="w-6 md:w-9 h-6 md:h-9 invert" alt="icon">
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-black uppercase mb-2 md:mb-4 leading-tight tracking-tighter text-black"><span></span>Secure</span><span class="block mt-2 max-md:mt-1">Entry & Exit</span></h3>
+                    <p class="text-gray-500 font-semibold text-xs md:text-lg leading-snug">Controlled access systems ensuring only authorized entry.</p>
+                </div>
+            </article>
+
+            <article class="order-6 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#8ec678] transition-all">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec514dbb40cb1b987ab4_Features%20Card%20Bg%20Image-3.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0" alt="bg">
+                <div class="relative z-10 w-full">
+                    <div class="bg-black/90 p-3 md:p-4 rounded-xl md:rounded-2xl inline-block mb-6 md:mb-14">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec520a7c1c27eeda504a_Features%20Card%20Icon-3.svg" class="w-6 md:w-9 h-6 md:h-9 invert" alt="icon">
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-black uppercase mb-2 md:mb-4 leading-tight tracking-tighter"><span></span>Outdoor</span><span class="block mt-2 max-md:mt-1">Play Area</span></h3>
+                    <p class="text-black/70 font-semibold text-xs md:text-lg leading-snug">Safe outdoor space for fresh air and nature exploration.</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="relative w-full overflow-hidden bg-white z-10">
+        <div class="animate-ticker scale-y-[-1]">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+        </div>
+    </div>
+</section>
+<!-- why-choose-us section -->
+  <section class="pt-20 pb-10 text-center px-4 relative z-10">
+        <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-10">Why Choose Us</p>
+        <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+             <span> Confident Beginnings</span>
+              <span class="block mt-5 max-md:mt-2">For Every Child.</span>
+        </h2>
+        
+        <a href="/" class="group relative inline-flex items-center mt-7 gap-5 bg-[#6332fa] text-white px-10 py-5 rounded-full font-bold transition-all duration-300 shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[8px]">
+                <div class="relative h-[32px] max-md:h-[32px] font-boldo overflow-hidden">
+                    <div class="flex flex-col text-2xl max-md:text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                        <span class="leading-[32px]">Enquiry For Free</span>
+                        <span class="leading-[32px]">Enquiry For Free</span>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" 
+                         alt="Icon" class="w-8 h-8 md:w-10 md:h-10">
+                </div>
+            </a>
+    </section>
+
+    <div class="trigger-area relative h-[400vh] max-md:h-[280vh] w-full">
+        <div class="sticky-box sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+            <div class="relative w-full h-full max-w-6xl flex items-center justify-center px-6">
+                
+                <div class="card-item card-stack-item w-[280px] h-[380px] md:w-[350px] md:h-[480px] bg-white rounded-[2.5rem] border-[1px] border-gray-100 overflow-hidden card-shadow">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5184f0f9633090453952_Why%20Choose%20Card%20Image.png" alt="Small Group" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <p class="text-white font-boldo text-lg md:text-xl uppercase leading-tight">Small Group<br>Attention</p>
+                    </div>
+                </div>
+
+                <div class="card-item card-stack-item w-[280px] h-[380px] md:w-[350px] md:h-[480px] bg-white rounded-[2.5rem] border-[1px] border-gray-100 overflow-hidden card-shadow">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e51834f1d55f72657b182_Why%20Choose%20Card%20Image-1.png" alt="Safe Environment" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <p class="text-white font-boldo text-lg md:text-xl uppercase leading-tight">Safe, Loving<br>Environment</p>
+                    </div>
+                </div>
+
+                <div class="card-item card-stack-item w-[280px] h-[380px] md:w-[350px] md:h-[480px] bg-white rounded-[2.5rem] border-[1px] border-gray-100 overflow-hidden card-shadow">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5183d153500411ac6752_Why%20Choose%20Card%20Image-2.png" alt="Qualified Educators" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <p class="text-white font-boldo text-lg md:text-xl uppercase leading-tight">Qualified<br>Educators</p>
+                    </div>
+                </div>
+
+                <div class="card-item card-stack-item w-[280px] h-[380px] md:w-[350px] md:h-[480px] bg-white rounded-[2.5rem] border-[1px] border-gray-100 overflow-hidden card-shadow">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5182f212d5ff26eb6845_Why%20Choose%20Card%20Image-3.png" alt="Learning" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <p class="text-white font-boldo text-lg md:text-xl uppercase leading-tight">Learning<br>Through Play</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ <!-- experience section  -->
+    <section id="experience-section" class="experience py-20 px-4 opacity-0 translate-y-20">
+        <div class="max-w-6xl mx-auto bg-[#dcd4ff] rounded-[40px] p-8 md:p-16">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] tracking-tight uppercase">
+                    Daily Experience
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="experience-card opacity-0 translate-y-10 bg-white/90 rounded-[32px] p-8 flex flex-col items-center justify-center text-center dashed-border h-[260px]">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c8d82f9b804a3d763967d_Card%20Image.png" 
+                         alt="Warm Welcome" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-6">
+                    <h3 class="text-lg md:text-xl font-extrabold text-black">Warm Welcome</h3>
+                </div>
+
+                <div class="experience-card opacity-0 translate-y-10 bg-white/90 rounded-[32px] p-8 flex flex-col items-center justify-center text-center dashed-border h-[260px]">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c8d828ab149ee5dbb6b83_Card%20Image-1.png" 
+                         alt="Playful Learning" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-6">
+                    <h3 class="text-lg md:text-xl font-extrabold text-black">Playful Learning</h3>
+                </div>
+
+                <div class="experience-card opacity-0 translate-y-10 bg-white/90 rounded-[32px] p-8 flex flex-col items-center justify-center text-center dashed-border h-[260px]">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c8d82bc2db624ca13fe20_Card%20Image-2.png" 
+                         alt="Emotional Growth" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-6">
+                    <h3 class="text-lg md:text-xl font-extrabold text-black">Emotional Growth</h3>
+                </div>
+
+                <div class="experience-card opacity-0 translate-y-10 bg-white/90 rounded-[32px] p-8 flex flex-col items-center justify-center text-center dashed-border h-[260px]">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c8d82063c326be9521870_Card%20Image-3.png" 
+                         alt="Learning Time" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-6">
+                    <h3 class="text-lg md:text-xl font-extrabold text-black">Learning Time</h3>
+                </div>
+
+                <div class="experience-card opacity-0 translate-y-10 bg-white/90 rounded-[32px] p-8 flex flex-col items-center justify-center text-center dashed-border h-[260px]">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c8d82b34aa26c074e30bc_Card%20Image-4.png" 
+                         alt="Outdoor Fun" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-6">
+                    <h3 class="text-lg md:text-xl font-extrabold text-black">Outdoor Fun</h3>
+                </div>
+
+                <div class="experience-card opacity-0 translate-y-10 bg-white/90 rounded-[32px] p-8 flex flex-col items-center justify-center text-center dashed-border h-[260px]">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c8d82e02a7d0b41e27d73_Card%20Image-5.png" 
+                         alt="Parent Updates" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-6">
+                    <h3 class="text-lg md:text-xl font-extrabold text-black">Parent Updates</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<!-- programs one section  -->
+<main class="hidden lg:block max-w-7xl mx-auto px-10 py-2 ">
+        <header class="text-center mb-16">
+            <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-10">Our Programs</p>
+        <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+            <span> Programs Designed</span>
+              <span class="block mt-7 max-md:mt-2">For Every Child.</span>
+        </h2>
+        </header>
+
+        <div class="stack-container -mb-[23em] ">
+            <div class="desktop-card card-1">
+  <article class="bg-[#f4f3ec] rounded-[50px] shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+
+    <!-- LEFT IMAGE -->
+    <div class="w-[35%] p-7">
+      <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png"
+        class="w-full h-full object-cover rounded-[40px]">
+    </div>
+
+    <!-- CENTER CONTENT -->
+    <div class="w-[40%] p-12 flex flex-col justify-between">
+
+      <div>
+        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9f1ef1be24912cd37f_Program%20Card%20Icon%2001.png"
+          class="w-14 h-14 mb-4">
+
+        <h2 class="text-4xl font-black text-slate-900 mb-1">
+          Infant Care
+          <span class="text-lg font-bold text-slate-600 ml-2">
+            0 months–18 months
+          </span>
+        </h2>
+
+        <p class="text-slate-600 text-sm mb-8">
+          Our Infant program is all about providing cozy care and fun experiences for your little one right from the start.
+        </p>
+
+        <div class="ticket-dashed-h mb-8"></div>
+
+        <ul class="space-y-2 font-bold font-comic text-slate-800">
+          <li class="flex items-center gap-3"><span class="check-circle">✓</span> Tummy Time & Development</li>
+          <li class="flex items-center gap-3"><span class="check-circle">✓</span> Sensory Play</li>
+          <li class="flex items-center gap-3"><span class="check-circle">✓</span> Language & Communication</li>
+           <li class="flex items-center gap-3"><span class="check-circle">✓</span>Bonding &Comfort</li>
+        </ul>
+      </div>
+
+      <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+
+    </div>
+
+    <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">0 months-18 months</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+
+  </article>
+            </div>
+            <div class="desktop-card card-2">
+                <article class="bg-[#8ec371] rounded-[50px] shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+                    <div class="w-[35%] p-7">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cec9488a257375bf18d_Thumbnail%20Image%2004.png" class="w-full h-full object-cover rounded-[40px]">
+                    </div>
+                    <div class="w-[40%] p-12 flex flex-col justify-between">
+                        <div>
+                            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cca2811a654e06c8569_Program%20Card%20Icon%2002.png" class="w-14 h-14 mb-4" alt="">
+                            <h2 class="text-4xl font-black text-slate-900 mb-1">Toddlers <span class="text-lg font-bold text-slate-800 ml-2">18 months–3 Years</span></h2>
+                            <p class="text-slate-900/70 text-sm mb-8">Our toddler program is focused on nurturing curiosity and supporting early development through playful exploration.</p>
+                            <div class="ticket-dashed-h border-black/10 mb-8"></div>
+                            <ul class="space-y-2 font-bold text-slate-900">
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Creative Play</li>
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Story-time & Language</li>
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Exploration</li>
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span>Music &Movement</li>
+                            </ul>
+                        </div>
+                          <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>  
+     </div>
+                      <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col text-black justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">18 months–3 Years</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+                </article>
+            </div>
+            <div class="desktop-card card-3">
+                <article class="bg-[#e87053] rounded-[50px] text-black shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+                    <div class="w-[35%] p-7">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552e21d779887479095db5_Thumbnail%20Image%2003.png" class="w-full h-full object-cover rounded-[40px]">
+                    </div>
+                    <div class="w-[40%] p-12 flex flex-col justify-between text-black">
+                        <div>
+<img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695530eb03eab3b018215095_Program%20Card%20Icon%2003.png"  class="w-14 h-14 mb-4" alt="">                            <h2 class="text-4xl font-black mb-1">Preschoolers <span class="text-lg font-bold opacity-80 ml-2">3-5 Years</span></h2>
+                            <p class="text-black text-sm mb-8">Preparing young minds for their next big step in education with spark and creativity.</p>
+                            <div class="ticket-dashed-h border-white/20 mb-8"></div>
+                            <ul class="space-y-2 font-bold">
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> STEM Exploration</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Creative Arts</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Outdoor Play</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Outdoor Play &Nature</li>
+                            </ul>
+                        </div>
+                        <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>  
+     </div>
+                      <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col text-black justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">3-5 Years</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+         <header class="text-center lg:hidden mb-16">
+            <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-3">Why Choose Us</p>
+            <h2 class="text-4xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+               Programs Designed<br>For Every Child.
+            </h2>
+        </header>
+        
+        <div class="lg:hidden swiper mySwiper px-5 overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-[#f4f3ec] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl max-md:text-2xl font-black text-slate-900 leading-tight">Infant Care</h2>
+                        <p class="text-xl font-bold text-slate-600 mt-1 mb-4">0 months–18 months</p>
+                        <p class="text-slate-600 mb-6 text-sm">Our Infant program is all about providing cozy care and fun experiences for your little one.</p>
+                        <div class="ticket-dashed-h mb-6"></div>
+                        <ul class="space-y-4 mb-8 font-comic font-bold text-slate-800">
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Tummy Time</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Sensory Play</li>
+                             <li class="flex items-center gap-3"><span class="check-circle">✓</span> Language & Communication</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Bonding &Comfort</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] items-center font-boldo overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>                     </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-[#8ec371] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cec9488a257375bf18d_Thumbnail%20Image%2004.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl font-black max-md:text-2xl text-slate-900 leading-tight">Toddlers</h2>
+                        <p class="text-xl font-bold text-slate-800 mt-1 mb-4">18 months–3 Years</p>
+                        <p class="text-slate-900/70 mb-6 text-sm">Nurturing curiosity and supporting early development through playful exploration.</p>
+                        <div class="ticket-dashed-h border-black/10 mb-6"></div>
+                        <ul class="space-y-4 mb-8 font-comic font-bold text-slate-900">
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Creative Play</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Fun</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Exploration</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Music &Movement</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] items-center font-boldo overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                 </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-[#e87053] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552e21d779887479095db5_Thumbnail%20Image%2003.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl font-black max-md:text-2xl text-black leading-tight">Preschoolers</h2>
+                        <p class="text-xl font-bold text-black mt-1 mb-4">3-5 Years</p>
+                        <p class="text-black mb-6 text-sm">Sparking creativity and preparing children for the next stage of learning.</p>
+                        <div class="ticket-dashed-h border-white/20 mb-6"></div>
+                        <ul class="space-y-4 mb-8 font-comic font-bold text-black">
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> STEM Fun</li>
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Creative Arts</li>
+                       <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Play</li>
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Play &Nature</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] items-center font-bold overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Testimonials section  -->
+<section class="py-20 px-6 " 
+         x-data="{ 
+            active: 0, 
+            slides: [
+                {
+                    img: 'https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c970a6e36c1b9dc9cc540_Testimonial%20Slide%20Image.png',
+                    title: '“A second home for us”',
+                    text: 'From the very first week, we felt complete peace leaving our child here. The caregivers are patient, warm, and attentive. Our child feels safe, happy, and excited every morning.',
+                    name: 'Isabella Khan',
+                    role: 'Parent of Toddler'
+                },
+                {
+                    img: 'https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cb03c9a70d8197ad486b2_Testimonial%20Slide%20Image%2002.png',
+                    title: '“A must for parents”',
+                    text: 'When we first enrolled our child, we were amazed at the level of care and support provided. The environment is nurturing and encourages growth, making drop-offs a breeze.',
+                    name: 'Michael Smith',
+                    role: 'Parent of Preschooler'
+                },
+                {
+                    img: 'https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cb03c5393689aa3b05170_322ec486797e112270c9f2fe8b063131_Testimonial%20Slide%20Image%2001.png',
+                    title: '“A wonderful community”',
+                    text: 'The connections we’ve made with staff and other parents have been truly heartwarming. Our child has thrived here and has built lasting friendships.',
+                    name: 'Laura Johnson',
+                    role: 'Parent of Infant'
+                }
+            ],
+            next() { this.active = (this.active + 1) % this.slides.length },
+            prev() { this.active = (this.active - 1 + this.slides.length) % this.slides.length }
+         }">
+    
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center mb-16 animate__animated animate__fadeInDown">
+            <span class=" text-gray-400 font-bold font-comic mb-10 uppercase tracking-widest">
+                Testimonials
+            </span>
+            <h2 class="text-7xl max-md:text-2xl font-[900] text-[#1a1a1a] mt-6 leading-[1.1] uppercase tracking-tighter">
+                <span>  What Families Love</span>
+              <span class="block mt-7 max-md:mt-2">Most About Our Care</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+            
+            <div class="lg:col-span-8 animate__animated animate__fadeInLeft">
+                <div class="relative h-full">
+                    
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="active === index" 
+                             x-transition:enter="transition ease-out duration-500"
+                             x-transition:enter-start="opacity-0 transform translate-x-8"
+                             x-transition:enter-end="opacity-100 transform translate-x-0"
+                             class="flex flex-col md:flex-row gap-8 items-center h-full">
+                            
+                            <div class="w-full md:w-1/2">
+                                <div class="dashed-border p-3 rounded-[50px]">
+                                    <img :src="slide.img" class="w-full h-[400px] object-cover rounded-[40px] shadow-sm" alt="Testimonial">
+                                </div>
+                            </div>
+
+                            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                                <div class="mb-4">
+                                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c97deb03af869bf0f26e7_Stars.png" class="w-32" alt="Stars">
+                                </div>
+                                <h3 class="text-2xl font-bold max-md:text-xl text-gray-900 mb-4" x-text="slide.title"></h3>
+                                <p class="text-gray-600 leading-relaxed mb-6 text-base" x-text="slide.text"></p>
+                                
+                                <div class="mb-8">
+                                    <h4 class="font-bold text-lg text-gray-900" x-text="slide.name"></h4>
+                                    <p class="text-gray-500 text-sm" x-text="slide.role"></p>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <button @click="prev()" class="hover:opacity-70 transition-opacity">
+                                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c9989fa6113e0b3882955_Left%20Arrow.svg" class="w-12 h-12" alt="Previous">
+                                    </button>
+                                    <button @click="next()" class="hover:opacity-70 transition-opacity">
+                                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c9989e75cb6846f03cd85_Right%20Arrow.svg" class="w-12 h-12" alt="Next">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 animate__animated animate__fadeInRight">
+                <div class="bg-[#6200ee] rounded-[40px] p-10 h-full flex flex-col justify-between min-h-[450px] text-white">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Facts & Numbers</h3>
+                        <p class="text-lg opacity-90 leading-snug">
+                            of the clients are satisfied in real time and always coming back to updates
+                        </p>
+                    </div>
+                    
+                    <div class="mt-auto">
+                        <div class="text-8xl font-black tracking-tighter animate__animated animate__pulse animate__infinite">
+                            90%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- faq section -->
+<section class="py-12 md:py-24 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+        
+        <div class="space-y-4 text-left">
+            <span class="uppercase tracking-[0.2em] mb-16 font-comic text-[10px] md:text-xs font-bold text-gray-500">
+                Parents Question
+            </span>
+            <h2 class="faq-title text-7xl max-md:text-2xl lg:text-6xl text-[#1a1a1a] uppercase">
+                 <span> Answers For</span>
+              <span class="block mt-7 max-md:mt-2">Parents</span>
+            </h2>
+        </div>
+
+        <div class="space-y-3 md:space-y-4 font-comic" x-data="{ selected: 1 }">
+            
+            <div class="border border-dashed border-gray-400 f rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 1 ? selected = 1 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What ages do you accept?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 1 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 1" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 2 ? selected = 2 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What are your operating hours?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 2 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 2" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 3 ? selected = 3 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">Is your center licensed?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 3 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 3" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 4 ? selected = 4 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">How do you ensure safety?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 4 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 4" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- blog-one section   -->
+ <section class="relative bg-[#dbc6ff] h-auto overflow-hidden">
+      <div class="relative w-full overflow-hidden bg-white z-10">
+        <div class="animate-ticker">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f8f5e198e2ab2fe45dd9d_Element%20Ticker%20Image.png" alt="wavy-top" class="h-14 md:h-28">
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-20 relative ">
+        
+        <div class="text-center mb-16 animate__animated animate__fadeIn">
+            <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-800 mb-10">Blog & News</p>
+            <h2 class="text-7xl max-md:text-xl font-[900] text-[#1a1a1a] leading-[1.1] uppercase tracking-tighter">
+                  <span>Insights For Confident</span>
+              <span class="block mt-7 max-md:mt-2">Parenting Choices</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <article class="bg-[#f5f7f1] rounded-[40px] p-2 border-2 border-dashed border-gray-400 shadow-sm transition-transform duration-300 hover:-translate-y-2 animate__animated animate__fadeInUp">
+                <div class="overflow-hidden rounded-[35px]">
+                    <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695631dc3e82643828acec1c_Thumbnail%20Image%2009.png" class="w-full h-64 object-cover" alt="Bedtime">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-[12px] font-bold text-gray-500 mb-3">
+                        <span>February 5, 2026</span>
+                        <span class="w-8 h-[1px] bg-gray-300"></span>
+                        <span>Baby Care</span>
+                    </div>
+                    <h3 class="text-2xl max-md:text-lg font-black text-[#1a1a1a] leading-tight uppercase">Calm Bedtime Routines For Kids</h3>
+                </div>
+            </article>
+
+            <article class="bg-[#f5f7f1] rounded-[40px] p-2 border-2 border-dashed border-gray-400 shadow-sm transition-transform duration-300 hover:-translate-y-2 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <div class="overflow-hidden rounded-[35px]">
+                    <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28293081c1869ba4c8ba_Thumbnail%20Image%2008.png" class="w-full h-64 object-cover" alt="Music">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-[12px] font-bold text-gray-500 mb-3">
+                        <span>March 12, 2026</span>
+                        <span class="w-8 h-[1px] bg-gray-300"></span>
+                        <span>Health & Safety</span>
+                    </div>
+                    <h3 class="text-2xl max-md:text-lg font-black text-[#1a1a1a] leading-tight uppercase">Music Enhances Toddlers’ Growth</h3>
+                </div>
+            </article>
+
+            <article class="bg-[#f5f7f1] rounded-[40px] p-2 border-2 border-dashed border-gray-400 shadow-sm transition-transform duration-300 hover:-translate-y-2 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <div class="overflow-hidden rounded-[35px]">
+                    <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28374e1406c635242971_Thumbnail%20Image%2007.png" class="w-full h-64 object-cover" alt="Safety">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-[12px] font-bold text-gray-500 mb-3">
+                        <span>April 20, 2026</span>
+                        <span class="w-8 h-[1px] bg-gray-300"></span>
+                        <span>Parenting Tips</span>
+                    </div>
+                    <h3 class="text-2xl max-md:text-lg font-black text-[#1a1a1a] leading-tight uppercase">Safety Updates For Parent Peace</h3>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="mt-16 flex justify-center animate__animated animate__fadeInUp">
+            <a href="/" class="group relative inline-flex items-center font-boldo gap-5 bg-[#6332fa] text-white px-10 py-5 rounded-full font-bold transition-all duration-300 shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[8px]">
+                <div class="relative h-[32px] overflow-hidden">
+                    <div class="flex flex-col text-2xl max-md:text-xl transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                        <span class="leading-[32px]">View All Blogs</span>
+                        <span class="leading-[32px]">Explore More</span>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" 
+                         alt="Icon" class="w-8 h-8 md:w-10 md:h-10">
+                </div>
+            </a>
+        </div>
+    </div>
+<div class="relative w-full overflow-hidden bg-white z-10">
+        <div class="animate-ticker scale-y-[-1]">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f9057fd14b8c72bb954e2_Element%20Ticker%20Image.png" alt="wavy-bottom" class="h-14 md:h-28">
+        </div>
+    </div>
+</section>
+<!-- gallery section   -->
+<section class="py-24 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center mb-16 animate-fade-in">
+            <span class="uppercase tracking-[0.3em] font-comic text-[11px] font-bold text-gray-400 block mb-10">
+                Special Moments
+            </span>
+            <h2 class="gallery-title text-7xl max-md:text-xl  text-[#1a1a1a] uppercase mb-4">             
+                 <span>  Moments That <span class="inline-block align-middle w-12 md:w-20 h-1 bg-[#1a1a1a] mx-2"></span> Shape</span>
+              <span class="block mt-7 max-md:mt-2">  Early Childhood</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+            
+            <div class="md:col-span-4 group relative overflow-hidden rounded-[40px] h-[550px] cursor-pointer">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b99e3cacbcc52764f6f4e_Gallery%20Image%2001.png" 
+                     alt="Baby" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+                <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 flex flex-col gap-6">
+                <div class="group relative overflow-hidden rounded-[40px] h-[263px] cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19edaa97ce313283a0_Gallery%20Image%2002.png" 
+                         alt="Child Playing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-[40px] h-[263px] cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19a011b846bd835803_Gallery%20Image%2003.png" 
+                         alt="Reading" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 group relative overflow-hidden rounded-[40px] h-[550px] cursor-pointer">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19298ac33a29ab296c_Gallery%20Image%2004.png" 
+                     alt="Happy Child" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+               <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- FOOTER SECTION  -->
+<footer class="relative pt-12 md:pt-20 overflow-hidden">
+    
+    <div class="relative w-full min-h-fit md:min-h-screen flex flex-col justify-between">
+        
+        <div class="absolute inset-0 z-0 opacity-40 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959142201f7dfdad3156325_5db9e8f478031af1990e342ebdbe983a_Footer%20BG.png" 
+                 class="w-full h-full object-cover object-top scale-110" alt="Cloud BG">
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
+             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+        
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
+             class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
+
+        <div class="relative z-20 container mx-auto px-4 md:px-6 text-center pt-16 md:pt-32">
+            <span class="text-white text-xs font-comic md:text-base font-black uppercase tracking-[0.3em] mb-4 md:mb-6 block opacity-95">
+                Connect With Us
+            </span>
+            
+            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+
+                   <span> Love Care And</span>
+              <span class="block mt-7 max-md:mt-2"> Learning Together</span>
+            </h2>
+
+            <div class="max-w-2xl mx-auto font-comic relative group px-2">
+                <form class="flex flex-col md:flex-row items-center gap-4 p-2">
+                    <input type="email" 
+                           placeholder="Enter Email Address..." 
+                           class="w-full bg-white text-gray-900 px-6 md:px-8 py-4 md:py-5 rounded-2xl md:rounded-full text-base md:text-lg font-bold focus:outline-none placeholder-gray-400 shadow-lg"
+                           required>
+                    
+                    <button type="submit" class="w-full font-boldo md:w-auto whitespace-nowrap -mt-4 max-md:mt-0 bg-[#ff00ba] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl md:rounded-full font-bold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] md:shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px] md:hover:translate-y-[8px] text-lg md:text-xl">
+                        Subscribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+                <a href="#" class="hover:opacity-70 transition-all">Home</a>
+                <a href="#" class="hover:opacity-70 transition-all">About</a>
+                <a href="#" class="hover:opacity-70 transition-all">Programs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Pricing</a>
+                <a href="#" class="hover:opacity-70 transition-all">Blogs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Gallery</a>
+                <a href="#" class="hover:opacity-70 transition-all">Contact</a>
+            </div>
+
+            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+                <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-10">
+                    <a href="#" class="hover:text-white transition-colors">License</a>
+                    <a href="#" class="hover:text-white transition-colors">Changelog</a>
+                    <a href="#" class="hover:text-white transition-colors">Style Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
+                 class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
+                 alt="Nurivelle 3D Text">
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPT SECTION -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY - Nurivelle - Premium Kids Care & Skincare</title>
+    <meta name="description" content="Premium care for your little ones with natural, safe ingredients.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-[#333]">
+<!-- NAVBAR SECTION -->
+        <header id="main-header" class="fixed  top-0 left-0 w-full z-[100] nav-glass">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" id="header-logo" aria-label="Nurivelle Home">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-9 ">
+                </a>
+            <div class="flex items-center gap-12">
+                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+                    
+                    <li class="relative dropdown-group">
+                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                           <a href="services.html"> Services </a>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
+                        </div>
+                    </li>
+
+                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-200 overflow-hidden relative group">
+                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+                        <span>Free Enquiry</span>
+                        <span class="absolute top-full left-0">Free Enquiry</span>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+                </a>
+
+                <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1 w-10 h-10" aria-label="Toggle Menu">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div id="mega-menu" class="fixed inset-0 z-[90] font-comic font-black pointer-events-none">
+    
+    <div id="menu-panel" class="bg-white w-full h-full lg:h-auto lg:w-[90%] lg:max-w-[1200px] pt-32 lg:mx-auto lg:mt-24 lg:rounded-[32px] lg:border lg:border-stone-200 overflow-y-auto p-6 shadow-2xl pointer-events-auto transition-transform duration-500 -translate-y-full">
+        
+        <div class="flex justify-end lg:hidden mb-4"></div>
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="hidden md:block w-[35%] h-[420px] rounded-[24px] overflow-hidden relative">
+                <div class="swiper mySwiper h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Kids Care">
+                            <div class="card-overlay"></div>
+                            <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Our Quality <span class="ml-2">→</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-[65%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-10 lg:pb-0">
+                <a href="index.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Home">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Home <span class="ml-2">→</span></div>
+                </a>
+                <a href="about.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="About">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">About <span class="ml-2">→</span></div>
+                </a>
+                <a href="services.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Services">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Services <span class="ml-2">→</span></div>
+                </a>
+                <a href="gallery.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Gallery">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Gallery <span class="ml-2">→</span></div>
+                </a>
+                <a href="blog.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Blog">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Blogs <span class="ml-2">→</span></div>
+                </a>
+                <a href="contact.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Contact">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Contact <span class="ml-2">→</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- GALLERY HERO SECTION -->
+<header class="relative w-full min-h-[60vh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
+                 class="w-full h-full object-cover opacity-40" alt="Background">
+        </div>
+
+         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f562de3c879ee34670fa2_Gallery%20Hero%20Element%2001.png" class="animate-bounce relative max-md:hidden -left-[30em] top-20" alt="">
+
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6dfbbcb0713a9adc1_image%2026.png" 
+             class="absolute left-[-5%] top-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block" alt="Decor Left" />
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6543a290c585b6402_image%2025.png" 
+             class="absolute right-[-5%] bottom-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block" alt="Decor Right" />
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                
+                <div class="flex flex-wrap items-center justify-center gap-2 ml-20 max-md:mt-28 max-md:ml-1 md:gap-4 mb-3 max-md:mb-4">
+                    <h1 class="text-8xl max-md:text-5xl font-black text-gray-900 tracking-tighter">BA</h1>
+                    
+                    <div class="">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b94426795e6ccc6b02602_image%20329.png" 
+                             alt="Icon" 
+                             class="h-28  max-md:h-16 w-auto rounded-2xl md:rounded-full " />
+                    </div>
+                    
+                    <h1 class="text-8xl max-md:text-5xl font-black text-gray-900 tracking-tighter">BY</h1>
+                    
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7cbdb720542d3935cd0e_b1cb5baaa12670cd0dd1f8357a499a7d_Inner%20Hero%20Text%20Side%20Element.png" 
+                         class="w-6 md:w-10 animate-bounce  max-md:hidden" alt="star" />
+                </div>
+
+                <div class="flex flex-wrap items-center mt-8 max-md:mt-1 justify-center -ml-8 max-md:-ml-14 gap-2 md:gap-4">              
+                   <div class="flex flex-wrap items-center justify-center gap-2 ml-20 max-md:ml-10 md:gap-4 mb-2 max-md:mb-16">
+                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7be2c1ee6c0a91952b3a_Inner%20Hero%20Text%20Side%20Element.png" 
+                         class="w-6 md:w-10 animate-bounce max-md:hidden" alt="star" />
+                     <h1 class="text-8xl max-md:text-5xl font-black text-gray-900 tracking-tighter">SMILES </h1>
+
+                    <h1 class="text-8xl max-md:text-5xl font-black text-gray-900 tracking-tighter">Z</h1>
+                    
+                    <div class="">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2c935a7a7fdc82b36f6c_Contact%20Hero%20Title%20Inner%20Image.png" 
+                             alt="Icon" 
+                             class="h-40 max-md:h-20 max-md:-mt-8 -mt-12 w-auto rounded-2xl md:rounded-full " />
+                    </div>
+                    
+                    <h1 class="text-8xl max-md:text-5xl font-black text-gray-900 tracking-tighter">NE</h1>
+                    
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7cbdb720542d3935cd0e_b1cb5baaa12670cd0dd1f8357a499a7d_Inner%20Hero%20Text%20Side%20Element.png" 
+                         class="w-6 md:w-10 animate-bounce  max-md:hidden" alt="star" />
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f562d8a99555125b82f14_Gallery%20Hero%20Element%2002.png" class="relative max-md:hidden -right-[32em] -top-20" alt="">
+    </header>
+<!-- GALLERY ALL SECTIO  -->
+<div class="max-w-6xl max-md:mx-5 max-md:mt-16 mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[200px]">
+        
+        <div class="reveal col-span-2 md:col-span-4 row-span-2 relative overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-gray-200 group">
+            <video id="myVideo" autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="https://cdn.prod.website-files.com/6946266171296e600d9c960c%2F695b9749662b2637d09d62a6_4933781_Person_Human_1920x1080_mp4.mp4" type="video/mp4">
+            </video>
+            
+            <div class="absolute top-4 right-4 md:top-6 md:right-6 z-40">
+               <button id="videoBtn" class="bg-[#FF00CC] p-3 md:p-4 rounded-full shadow-lg hover:scale-110 transition-transform">
+                  <img id="videoIcon" src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695baa884dae6aea68223987_Play%20state%20Icon.png" class="w-5 h-5 md:w-6 md:h-6 invert">
+                </button>
+            </div>
+        </div>
+
+        <div class="reveal col-span-1 row-span-2 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b99e3cacbcc52764f6f4e_Gallery%20Image%2001.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Baby">
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+        <div class="reveal col-span-1 row-span-1 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19edaa97ce313283a0_Gallery%20Image%2002.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+        <div class="reveal col-span-1 md:col-span-2 row-span-2 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19298ac33a29ab296c_Gallery%20Image%2004.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+        <div class="reveal col-span-1 row-span-1 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19a011b846bd835803_Gallery%20Image%2003.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+        <div class="reveal col-span-2 row-span-2 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19c69a961df1691598_Gallery%20Image%2005.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+        <div class="reveal col-span-1 md:col-span-2 row-span-1 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19443e1d06a7f8d1e2_Gallery%20Image%2006.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+         <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+        <div class="reveal col-span-1 md:col-span-2 row-span-1 relative overflow-hidden rounded-[1.2rem] md:rounded-[1.5rem] bg-white group cursor-pointer">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a1b574ddd3ce1808ab9_Gallery%20Image%2007.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+         <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                <div class="insta-pulse shadow-lg"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- FOOTER SECTION  -->
+<footer class="relative pt-12 md:pt-20 overflow-hidden">
+    
+    <div class="relative w-full min-h-fit md:min-h-screen flex flex-col justify-between">
+        
+        <div class="absolute inset-0 z-0 opacity-40 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959142201f7dfdad3156325_5db9e8f478031af1990e342ebdbe983a_Footer%20BG.png" 
+                 class="w-full h-full object-cover object-top scale-110" alt="Cloud BG">
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
+             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+        
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
+             class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
+
+        <div class="relative z-20 container mx-auto px-4 md:px-6 text-center pt-16 md:pt-32">
+            <span class="text-white text-xs font-comic md:text-base font-black uppercase tracking-[0.3em] mb-4 md:mb-6 block opacity-95">
+                Connect With Us
+            </span>
+            
+            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+
+                   <span> Love Care And</span>
+              <span class="block mt-7 max-md:mt-2"> Learning Together</span>
+            </h2>
+
+            <div class="max-w-2xl mx-auto font-comic relative group px-2">
+                <form class="flex flex-col md:flex-row items-center gap-4 p-2">
+                    <input type="email" 
+                           placeholder="Enter Email Address..." 
+                           class="w-full bg-white text-gray-900 px-6 md:px-8 py-4 md:py-5 rounded-2xl md:rounded-full text-base md:text-lg font-bold focus:outline-none placeholder-gray-400 shadow-lg"
+                           required>
+                    
+                    <button type="submit" class="w-full font-boldo md:w-auto whitespace-nowrap -mt-4 max-md:mt-0 bg-[#ff00ba] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl md:rounded-full font-bold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] md:shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px] md:hover:translate-y-[8px] text-lg md:text-xl">
+                        Subscribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+                <a href="#" class="hover:opacity-70 transition-all">Home</a>
+                <a href="#" class="hover:opacity-70 transition-all">About</a>
+                <a href="#" class="hover:opacity-70 transition-all">Programs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Pricing</a>
+                <a href="#" class="hover:opacity-70 transition-all">Blogs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Gallery</a>
+                <a href="#" class="hover:opacity-70 transition-all">Contact</a>
+            </div>
+
+            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+                <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-10">
+                    <a href="#" class="hover:text-white transition-colors">License</a>
+                    <a href="#" class="hover:text-white transition-colors">Changelog</a>
+                    <a href="#" class="hover:text-white transition-colors">Style Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
+                 class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
+                 alt="Nurivelle 3D Text">
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPT SECTION -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

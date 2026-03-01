@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES - Nurivelle - Premium Kids Care & Skincare</title>
+    <meta name="description" content="Premium care for your little ones with natural, safe ingredients.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-[#333]">
+<!-- NAVBAR SECTION -->
+     <header id="main-header" class="fixed  top-0 left-0 w-full z-[100] nav-glass">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" id="header-logo" aria-label="Nurivelle Home">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-9 ">
+                </a>
+            <div class="flex items-center gap-12">
+                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+                    
+                    <li class="relative dropdown-group">
+                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                           <a href="services.html"> Services </a>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
+                        </div>
+                    </li>
+
+                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-200 overflow-hidden relative group">
+                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+                        <span>Free Enquiry</span>
+                        <span class="absolute top-full left-0">Free Enquiry</span>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+                </a>
+
+                <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1 w-10 h-10" aria-label="Toggle Menu">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div id="mega-menu" class="fixed inset-0 z-[90] font-comic font-black pointer-events-none">
+    
+    <div id="menu-panel" class="bg-white w-full h-full lg:h-auto lg:w-[90%] lg:max-w-[1200px] pt-32 lg:mx-auto lg:mt-24 lg:rounded-[32px] lg:border lg:border-stone-200 overflow-y-auto p-6 shadow-2xl pointer-events-auto transition-transform duration-500 -translate-y-full">
+        
+        <div class="flex justify-end lg:hidden mb-4"></div>
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="hidden md:block w-[35%] h-[420px] rounded-[24px] overflow-hidden relative">
+                <div class="swiper mySwiper h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Kids Care">
+                            <div class="card-overlay"></div>
+                            <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Our Quality <span class="ml-2">→</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-[65%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-10 lg:pb-0">
+                <a href="index.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Home">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Home <span class="ml-2">→</span></div>
+                </a>
+                <a href="about.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="About">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">About <span class="ml-2">→</span></div>
+                </a>
+                <a href="services.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Services">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Services <span class="ml-2">→</span></div>
+                </a>
+                <a href="gallery.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Gallery">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Gallery <span class="ml-2">→</span></div>
+                </a>
+                <a href="blog.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Blog">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Blogs <span class="ml-2">→</span></div>
+                </a>
+                <a href="contact.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Contact">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Contact <span class="ml-2">→</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SERVICE HERO SECTION -->
+<header class="relative w-full min-h-[60vh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
+                 class="w-full h-full object-cover opacity-40" alt="Background">
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6dfbbcb0713a9adc1_image%2026.png" 
+             class="absolute left-[-5%] top-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block" alt="Decor Left" />
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6543a290c585b6402_image%2025.png" 
+             class="absolute right-[-5%] bottom-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block" alt="Decor Right" />
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                
+                <div class="flex flex-wrap items-center justify-center gap-2 ml-20 max-md:ml-10 md:gap-4 mb-2 md:mb-6">
+                    <h1 class="text-4xl sm:text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">PR</h1>
+                    
+                    <div class="">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b2e88a1bbdd9c89707c60_Inner%20Hero%20Image.png" 
+                             alt="Icon" 
+                             class="h-10 sm:h-16 md:h-24 w-auto rounded-2xl md:rounded-full " />
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">GRAMS</h1>
+                    
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7cbdb720542d3935cd0e_b1cb5baaa12670cd0dd1f8357a499a7d_Inner%20Hero%20Text%20Side%20Element.png" 
+                         class="w-6 md:w-10 animate-bounce" alt="star" />
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center -ml-8 max-md:-ml-4 gap-2 md:gap-4">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7be2c1ee6c0a91952b3a_Inner%20Hero%20Text%20Side%20Element.png" 
+                         class="w-6 md:w-10 animate-bounce" alt="star" />
+                    
+                    <h1 class="text-4xl sm:text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">AND</h1>
+                    
+                    <div class="delay-1">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b2e88ad7115ab4e0fff82_Inner%20Hero%20Image-1.png" 
+                             alt="Icon" 
+                             class="h-10 sm:h-16 md:h-24 w-auto rounded-2xl md:rounded-full" />
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl md:text-8xl font-black text-gray-900 tracking-tighter">ACTIVITIES</h1>
+                </div>
+
+            </div>
+        </div>
+    </header>
+<!-- all the other sections  -->
+  <main class="hidden lg:block max-w-7xl mx-auto px-10 py-2 ">
+        <header class="text-center mb-16">
+            <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-8">Our Programs</p>
+       <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+            <span> Programs Designed</span>
+              <span class="block mt-7 max-md:mt-2">For Every Child.</span>
+        </h2>
+        </header>
+
+        <div class="stack-container -mb-[23em] ">
+            <div class="desktop-card card-1">
+  <article class="bg-[#dbc6ff] rounded-[50px] shadow-2xl mt-28 flex h-[520px] w-full border border-white/40 overflow-hidden">
+
+    <!-- LEFT IMAGE -->
+    <div class="w-[35%] p-7">
+      <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png"
+        class="w-full h-full object-cover rounded-[40px]">
+    </div>
+
+    <!-- CENTER CONTENT -->
+    <div class="w-[40%] p-12 flex flex-col justify-between">
+
+      <div>
+        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9f1ef1be24912cd37f_Program%20Card%20Icon%2001.png"
+          class="w-14 h-14 mb-4">
+
+        <h2 class="text-4xl font-black text-slate-900 mb-1">
+          Infant Care
+          <span class="text-lg font-bold text-slate-600 ml-2">
+            0 months–18 months
+          </span>
+        </h2>
+
+        <p class="text-slate-600 text-sm mb-8">
+          Our Infant program is all about providing cozy care and fun experiences for your little one right from the start.
+        </p>
+
+        <div class="ticket-dashed-h mb-8"></div>
+
+        <ul class="space-y-2 font-bold font-comic  text-slate-800">
+          <li class="flex items-center gap-3"><span class="check-circle">✓</span> Tummy Time & Development</li>
+          <li class="flex items-center gap-3"><span class="check-circle">✓</span> Sensory Play</li>
+          <li class="flex items-center gap-3"><span class="check-circle">✓</span> Language & Communication</li>
+           <li class="flex items-center gap-3"><span class="check-circle">✓</span>Bonding &Comfort</li>
+        </ul>
+      </div>
+
+      <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+
+    </div>
+
+    <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">0 months-18 months</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+
+  </article>
+            </div>
+            <div class="desktop-card card-2">
+                <article class="bg-[#8ec371] rounded-[50px] mt-16 shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+                    <div class="w-[35%] p-7">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cec9488a257375bf18d_Thumbnail%20Image%2004.png" class="w-full h-full object-cover rounded-[40px]">
+                    </div>
+                    <div class="w-[40%] p-12 flex flex-col justify-between">
+                        <div>
+                            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cca2811a654e06c8569_Program%20Card%20Icon%2002.png" class="w-14 h-14 mb-4" alt="">
+                            <h2 class="text-4xl font-black text-slate-900 mb-1">Toddlers <span class="text-lg font-bold text-slate-800 ml-2">18 months–3 Years</span></h2>
+                            <p class="text-slate-900/70 text-sm mb-8">Our toddler program is focused on nurturing curiosity and supporting early development through playful exploration.</p>
+                            <div class="ticket-dashed-h border-black/10 mb-8"></div>
+                            <ul class="space-y-2 font-bold font-comic text-slate-900">
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Creative Play</li>
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Story-time & Language</li>
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Exploration</li>
+                                <li class="flex items-center gap-3"><span class="check-circle">✓</span>Music &Movement</li>
+                            </ul>
+                        </div>
+                          <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>  
+     </div>
+                      <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col text-black justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">18 months–3 Years</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+                </article>
+            </div>
+            <div class="desktop-card card-3">
+                <article class="bg-[#e87053] rounded-[50px] mt-6 text-black shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+                    <div class="w-[35%] p-7">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552e21d779887479095db5_Thumbnail%20Image%2003.png" class="w-full h-full object-cover rounded-[40px]">
+                    </div>
+                    <div class="w-[40%] p-12 flex flex-col justify-between text-black">
+                        <div>
+<img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695530eb03eab3b018215095_Program%20Card%20Icon%2003.png"  class="w-14 h-14 mb-4" alt="">                            <h2 class="text-4xl font-black mb-1">Preschoolers <span class="text-lg font-bold opacity-80 ml-2">3-5 Years</span></h2>
+                            <p class="text-black text-sm mb-8">Preparing young minds for their next big step in education with spark and creativity.</p>
+                            <div class="ticket-dashed-h border-white/20 mb-8"></div>
+                            <ul class="space-y-2 font-bold font-comic">
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> STEM Exploration</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Creative Arts</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Outdoor Play</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Outdoor Play &Nature</li>
+                            </ul>
+                        </div>
+                        <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>  
+     </div>
+                      <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col text-black justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">3-5 Years</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+                </article>
+            </div>
+            <div class="desktop-card card-4">
+                <article class="bg-[#dbc6ff] rounded-[50px] -mt-4 text-black shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+                    <div class="w-[35%] p-7">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552fb07d339900368c93f5_Thumbnail%20Image%2002.png" class="w-full h-full object-cover rounded-[40px]">
+                    </div>
+                    <div class="w-[40%] p-12 flex flex-col justify-between text-black">
+                        <div>
+<img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552fbe7da98b10dacf26c5_Program%20Card%20Icon%2004.png"  class="w-14 h-14 mb-4" alt=""> <h2 class="text-4xl font-black mb-1">Tiny tots <span class="text-lg font-bold opacity-80 ml-2">5-6 Years</span></h2>
+                            <p class="text-black text-sm mb-8">Tiny Tots is a vibrant preschool program that ignites imagination and equips young learners for their educational journey ahead.</p>
+                            <div class="ticket-dashed-h border-white/20 mb-8"></div>
+                            <ul class="space-y-2 font-bold font-comic">
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Artistic Adventures</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Science and Tech Discovery</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Creative Storytelling</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Nature Fun</li>
+                            </ul>
+                        </div>
+                        <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>  
+     </div>
+                      <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col text-black justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">5-6 Years</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+                </article>
+            </div>
+            <div class="desktop-card card-5">
+                <article class="bg-[#8ec371] rounded-[50px] mt-12 text-black shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+                    <div class="w-[35%] p-7">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69553117cdad424e7cd568e4_Thumbnail%20Image%2001.png" class="w-full h-full object-cover rounded-[40px]">
+                    </div>
+                    <div class="w-[40%] p-12 flex flex-col justify-between text-black">
+                        <div>
+<img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/6955311b6575436e2cf97a8e_Program%20Card%20Icon%2005.png"  class="w-14 h-14 mb-4" alt=""><h2 class="text-4xl font-black mb-1">Little ones
+ <span class="text-lg font-bold opacity-80 ml-2">6-7 Years</span></h2>
+                            <p class="text-black text-sm mb-8">Our preschool program ignites creativity and sets the stage for children's future learning adventures.</p>
+                            <div class="ticket-dashed-h border-white/20 mb-8"></div>
+                            <ul class="space-y-2 font-bold font-comic">
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Creative Arts for Kids</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>STEM for Kids</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Story Adventures</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Nature Play for Kids</li>
+                            </ul>
+                        </div>
+                        <!-- ✅ CORRECT BUTTON -->
+      <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-2.5 rounded-full font-semibold
+        transition-all duration-300 mt-5
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[20px] overflow-hidden">
+          <div class="flex flex-col text-sm font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[20px]">Learn More</span>
+            <span class="leading-[20px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>  
+     </div>
+                      <!-- RIGHT SIDE INFO -->
+    <div class="w-[25%] p-12 ticket-dashed-v flex flex-col text-black justify-between">
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Start Date</p>
+        <p class="text-md font-black font-boldo">Flexible Enrollment</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Students Ages</p>
+        <p class="text-md font-black font-boldo">6-7 Years</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Program Duration</p>
+        <p class="text-md font-black font-boldo">Half or Full Day</p>
+      </div>
+
+      <div class="ticket-dashed-h"></div>
+
+      <div>
+        <p class="text-[10px] font-black text-black uppercase tracking-widest">Expertise</p>
+        <p class="text-md font-black font-boldo">Trained & Certified</p>
+      </div>
+
+    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+         <header class="text-center lg:hidden mb-16">
+            <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-3">Why Choose Us</p>
+            <h2 class="text-6xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+               <span> Programs Designed</span>
+              <span class="block mt-7 max-md:mt-2">For Every Child.</span>
+            </h2>
+        </header>
+        
+        <div class="lg:hidden swiper mySwiper px-5 overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-[#dbc6ff] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl max-md:text-2xl font-black text-slate-900 leading-tight">Infant Care</h2>
+                        <p class="text-xl font-bold text-slate-600 mt-1 mb-4">0 months–18 months</p>
+                        <p class="text-slate-600 mb-6 text-sm">Our Infant program is all about providing cozy care and fun experiences for your little one.</p>
+                        <div class="ticket-dashed-h mb-6"></div>
+                        <ul class="space-y-4 mb-8  font-comic font-bold text-slate-800">
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Tummy Time</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Sensory Play</li>
+                             <li class="flex items-center gap-3"><span class="check-circle">✓</span> Language & Communication</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Bonding &Comfort</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] font-boldo items-center overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>                     </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-[#8ec371] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cec9488a257375bf18d_Thumbnail%20Image%2004.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl max-md:text-2xl font-black text-slate-900 leading-tight">Toddlers</h2>
+                        <p class="text-xl font-bold text-slate-800 mt-1 mb-4">18 months–3 Years</p>
+                        <p class="text-slate-900/70 mb-6 text-sm">Nurturing curiosity and supporting early development through playful exploration.</p>
+                        <div class="ticket-dashed-h border-black/10 mb-6"></div>
+                        <ul class="space-y-4 mb-8  font-comic font-bold text-slate-900">
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Creative Play</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Fun</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Exploration</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Music &Movement</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] font-boldo items-center overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                 </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-[#e87053] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552e21d779887479095db5_Thumbnail%20Image%2003.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl max-md:text-2xl font-black text-black leading-tight">Preschoolers</h2>
+                        <p class="text-xl font-bold text-black mt-1 mb-4">3-5 Years</p>
+                        <p class="text-black mb-6 text-sm">Sparking creativity and preparing children for the next stage of learning.</p>
+                        <div class="ticket-dashed-h border-white/20 mb-6"></div>
+                        <ul class="space-y-4   font-comic b-8 font-bold text-black">
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> STEM Fun</li>
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Creative Arts</li>
+                       <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Play</li>
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Play &Nature</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300 mt-6
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] font-boldo items-center overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                    </div>
+                </div>
+
+                 <div class="swiper-slide">
+                    <div class="bg-[#dbc6ff] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552fb07d339900368c93f5_Thumbnail%20Image%2002.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl max-md:text-2xl font-black text-slate-900 leading-tight">Tiny tots</h2>
+                        <p class="text-xl font-bold text-slate-800 mt-1 mb-4">5-6 Years</p>
+                        <p class="text-slate-900/70 mb-6 text-sm">Tiny Tots is a vibrant preschool program that ignites imagination and equips young learners for their educational journey ahead.</p>
+                        <div class="ticket-dashed-h border-black/10 mb-6"></div>
+                        <ul class="space-y-4 mb-8  font-comic font-bold text-slate-900">
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Artistic Adventures</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Science and Tech Discovery</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Creative Storytelling</li>
+                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Outdoor Nature Fun</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] font-boldo items-center overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                 </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-[#8ec371] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
+                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69553117cdad424e7cd568e4_Thumbnail%20Image%2001.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+                        <h2 class="text-4xl max-md:text-2xl font-black text-black leading-tight">Little ones</h2>
+                        <p class="text-xl font-bold text-black mt-1 mb-4">6-7 Years</p>
+                        <p class="text-black mb-6 text-sm">Our preschool program ignites creativity and sets the stage for children's future learning adventures.</p>
+                        <div class="ticket-dashed-h border-white/20 mb-6"></div>
+                        <ul class="space-y-4   font-comic b-8 font-bold text-black">
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Creative Arts for Kids</li>
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>STEM for Kids</li>
+                       <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Story Adventures</li>
+                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Nature Play for Kids</li>
+                        </ul>
+<a href="/"
+        class="group relative inline-flex items-center justify-center gap-1 w-full
+        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
+        transition-all duration-300 mt-6
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[19px] font-boldo items-center overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[18px]">Learn More</span>
+            <span class="leading-[18px]">Learn More</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- FOOTER SECTION  -->
+<footer class="relative pt-12 md:pt-20 overflow-hidden">
+    
+    <div class="relative w-full min-h-fit md:min-h-screen flex flex-col justify-between">
+        
+        <div class="absolute inset-0 z-0 opacity-40 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959142201f7dfdad3156325_5db9e8f478031af1990e342ebdbe983a_Footer%20BG.png" 
+                 class="w-full h-full object-cover object-top scale-110" alt="Cloud BG">
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
+             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+        
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
+             class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
+
+        <div class="relative z-20 container mx-auto px-4 md:px-6 text-center pt-16 md:pt-32">
+            <span class="text-white text-xs font-comic md:text-base font-black uppercase tracking-[0.3em] mb-4 md:mb-6 block opacity-95">
+                Connect With Us
+            </span>
+            
+            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+
+                   <span> Love Care And</span>
+              <span class="block mt-7 max-md:mt-2"> Learning Together</span>
+            </h2>
+
+            <div class="max-w-2xl mx-auto font-comic relative group px-2">
+                <form class="flex flex-col md:flex-row items-center gap-4 p-2">
+                    <input type="email" 
+                           placeholder="Enter Email Address..." 
+                           class="w-full bg-white text-gray-900 px-6 md:px-8 py-4 md:py-5 rounded-2xl md:rounded-full text-base md:text-lg font-bold focus:outline-none placeholder-gray-400 shadow-lg"
+                           required>
+                    
+                    <button type="submit" class="w-full font-boldo md:w-auto whitespace-nowrap -mt-4 max-md:mt-0 bg-[#ff00ba] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl md:rounded-full font-bold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] md:shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px] md:hover:translate-y-[8px] text-lg md:text-xl">
+                        Subscribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+                <a href="#" class="hover:opacity-70 transition-all">Home</a>
+                <a href="#" class="hover:opacity-70 transition-all">About</a>
+                <a href="#" class="hover:opacity-70 transition-all">Programs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Pricing</a>
+                <a href="#" class="hover:opacity-70 transition-all">Blogs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Gallery</a>
+                <a href="#" class="hover:opacity-70 transition-all">Contact</a>
+            </div>
+
+            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+                <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-10">
+                    <a href="#" class="hover:text-white transition-colors">License</a>
+                    <a href="#" class="hover:text-white transition-colors">Changelog</a>
+                    <a href="#" class="hover:text-white transition-colors">Style Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
+                 class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
+                 alt="Nurivelle 3D Text">
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPT SECTION -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

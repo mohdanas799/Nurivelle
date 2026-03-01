@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT - Nurivelle - Premium Kids Care & Skincare</title>
+    <meta name="description" content="Premium care for your little ones with natural, safe ingredients.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-[#333] bg-white">
+<!-- NAVBAR SECTION -->
+      <header id="main-header" class="fixed  top-0 left-0 w-full z-[100] nav-glass">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" id="header-logo" aria-label="Nurivelle Home">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-9 ">
+                </a>
+            <div class="flex items-center gap-12">
+                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+                    
+                    <li class="relative dropdown-group">
+                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                           <a href="services.html"> Services </a>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
+                        </div>
+                    </li>
+
+                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-200 overflow-hidden relative group">
+                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+                        <span>Free Enquiry</span>
+                        <span class="absolute top-full left-0">Free Enquiry</span>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+                </a>
+
+                <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1 w-10 h-10" aria-label="Toggle Menu">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div id="mega-menu" class="fixed inset-0 z-[90] font-comic font-black pointer-events-none">
+    
+    <div id="menu-panel" class="bg-white w-full h-full lg:h-auto lg:w-[90%] lg:max-w-[1200px] pt-32 lg:mx-auto lg:mt-24 lg:rounded-[32px] lg:border lg:border-stone-200 overflow-y-auto p-6 shadow-2xl pointer-events-auto transition-transform duration-500 -translate-y-full">
+        
+        <div class="flex justify-end lg:hidden mb-4"></div>
+
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="hidden md:block w-[35%] h-[420px] rounded-[24px] overflow-hidden relative">
+                <div class="swiper mySwiper h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Kids Care">
+                            <div class="card-overlay"></div>
+                            <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Our Quality <span class="ml-2">→</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-[65%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-10 lg:pb-0">
+                <a href="index.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Home">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Home <span class="ml-2">→</span></div>
+                </a>
+                <a href="about.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="About">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">About <span class="ml-2">→</span></div>
+                </a>
+                <a href="services.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Services">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Services <span class="ml-2">→</span></div>
+                </a>
+                <a href="gallery.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Gallery">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Gallery <span class="ml-2">→</span></div>
+                </a>
+                <a href="blog.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Blog">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Blogs <span class="ml-2">→</span></div>
+                </a>
+                <a href="contact.html" class="grid-card h-32 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Contact">
+                    <div class="card-overlay"></div>
+                    <div class="absolute bottom-5 left-5 text-white font-bold">Contact <span class="ml-2">→</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CONTACT HERO SECTION -->
+<header class="relative w-full min-h-[60vh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
+    
+    <div class="absolute inset-0 z-0 animate-reveal">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
+             class="w-full h-full object-cover opacity-40" alt="Background">
+    </div>
+
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6dfbbcb0713a9adc1_image%2026.png" 
+         class="absolute left-[-5%] top-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block animate-reveal delay-2" alt="Decor Left" />
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6543a290c585b6402_image%2025.png" 
+         class="absolute right-[-5%] bottom-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block animate-reveal delay-2" alt="Decor Right" />
+
+    <div class="container mx-auto px-4 mt-44 max-md:mt-0 relative z-10">
+        <div class="flex flex-col items-center text-center">
+            
+            <div class="flex flex-wrap items-center justify-center gap-2 ml-20 max-md:mt-28 max-md:ml-4 md:gap-4 mb-3 max-md:-mb-1 animate-reveal delay-1">
+                <h1 class="text-8xl max-md:text-4xl font-black text-gray-900 tracking-tighter">GR</h1>
+                
+               <div>
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2c935a7a7fdc82b36f6c_Contact%20Hero%20Title%20Inner%20Image.png" 
+                         alt="Icon" 
+                         class="h-36 max-md:h-20 max-md:-mt-8 -mt-12 w-auto rounded-2xl md:rounded-full hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h1 class="text-8xl max-md:text-4xl font-black text-gray-900 tracking-tighter">WING</h1>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center -ml-8 mt-3 max-md:-ml- gap-2 md:gap-4 animate-reveal delay-2">              
+               <div class="flex flex-wrap items-center justify-center gap-2 ml-20 max-md:ml-10 max-md:w-100 md:gap-4 mb-2 max-md:mb-16">
+                <h1 class="text-8xl max-md:text-4xl font-black text-gray-900 tracking-tighter">TOGETHER KINDLY</h1>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2f957dac5285cff63978_664f987c934aedaec3b980cd_chat-dynamic-color%201.png" 
+         class="relative max-md:hidden -right-[32em] -top-80 w-32 animate-bounce" alt="Chat Icon">
+</header>
+<!-- CONTACT GET IN TOUCH SECTION  -->
+<section class="w-full max-w-7xl bg-[#D9C9FF] items-center justify-center mx-auto my-10 rounded-[40px] p-8 md:p-16 shadow-sm">
+        
+        <div class="text-center mb-10">
+            <span class="text-xs font-bold tracking-widest text-gray-800 uppercase">Get In Touch!</span>
+            <h2 class="text-4xl max-md:text-3xl title-font text-gray-900 mt-2">Send a Message</h2>
+        </div>
+
+        <div class="bg-white rounded-[32px] p-6 md:p-10 flex flex-col md:flex-row gap-10">
+            
+            <div class="w-full md:w-2/5">
+                <div class="rounded-3xl overflow-hidden h-full">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a35e4088eb0f2d3907937_Contact%20Image.png" 
+                         alt="Mother and Child" 
+                         class="w-full h-full object-cover min-h-[300px]">
+                </div>
+            </div>
+
+            <div class="w-full md:w-3/5">
+                <h3 class="text-xl font-black text-gray-900 mb-6 uppercase">Fill The Form!</h3>
+                
+                <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[10px] font-bold uppercase text-gray-600">Name*</label>
+                        <input type="text" placeholder="Alex Johnson" 
+                               class="w-full border-2 border-dashed border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[10px] font-bold uppercase text-gray-600">Phone*</label>
+                        <input type="tel" placeholder="Phone Number" 
+                               class="w-full border-2 border-dashed border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[10px] font-bold uppercase text-gray-600">Email*</label>
+                        <input type="email" placeholder="Alex Johnson" 
+                               class="w-full border-2 border-dashed border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[10px] font-bold uppercase text-gray-600">Select Service*</label>
+                        <div class="relative">
+                            <select class="w-full appearance-none border-2 border-dashed border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors bg-transparent">
+                                <option>Qualified Caregiver</option>
+                                <option>Infant Care</option>
+                                <option>Toddlers</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 md:col-span-2">
+                        <label class="text-[10px] font-bold uppercase text-gray-600">Subject*</label>
+                        <input type="text" placeholder="Enter Subject" 
+                               class="w-full border-2 border-dashed border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors">
+                    </div>
+
+                    <div class="flex flex-col gap-1 md:col-span-2">
+                        <label class="text-[10px] font-bold uppercase text-gray-600">Messages*</label>
+                        <textarea placeholder="Tell Us More About Projects..." rows="3" 
+                                  class="w-full border-2 border-dashed border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors resize-none"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2 mt-2">
+                       <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[25px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-xl transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]">SUBMIT NOW</span>
+            <span class="leading-[28px]">SUBMIT NOW</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-9 h-9">
+      </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- CONTACT INFO SECTION   -->
+<div class="relative w-full overflow-hidden leading-[0] right-0 z-10">
+    <div class="animate-ticker transform scale-y-[-1]">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4cf866f2e56f7b158c38_Element%202.png" alt="wavy-bottom" class="h-14 md:h-28 w-auto">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4cf866f2e56f7b158c38_Element%202.png" alt="wavy-bottom" class="h-14 md:h-28 w-auto">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4cf866f2e56f7b158c38_Element%202.png" alt="wavy-bottom" class="h-14 md:h-28 w-auto">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4cf866f2e56f7b158c38_Element%202.png" alt="wavy-bottom" class="h-14 md:h-28 w-auto">
+    </div>
+</div>
+    <section class="bg-[#DBC6FF] py-20 px-6 -mt-1">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+            
+            <div class="w-full lg:w-1/3 text-left">
+                <div class="inline-block bg-transparent border border-gray-800 rounded-full px-4 py-1 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-900">Quick Contact</span>
+                </div>
+                <h2 class="text-5xl max-md:text-3xl mt-6 title-font text-gray-900 mb-8">
+                        <span>WE ARE HERE</span>
+              <span class="block mt-5 max-md:mt-2">FOR YOU!</span>
+                </h2>
+                <div class="w-32 h-32">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5788a3f129799e05c850_Quick%20Contact%20Image.png" 
+                         alt="Contact Icon" class="w-full h-auto animate-bounce">
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-white border-2 border-dashed border-gray-400 rounded-[40px] p-10 flex flex-col items-center text-center transition-transform hover:scale-105 duration-300">
+                    <div class="mb-6">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a58ee517bcce3c029b5b9_Quick%20Contact%20Card%20Image%2002.png" 
+                             alt="Support" class="h-24 w-auto">
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4">Support 24/7</h3>
+                    <p class="text-gray-600 text-sm mb-8 leading-relaxed">
+                        Interested in learning more about TaskHub? Our sales team is here to provide you with a tailored demo.
+                    </p>
+                    <a href="tel:01798952682"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[26px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-xl transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]">Call Us Now</span>
+            <span class="leading-[28px]">Call Us Now</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                </div>
+
+                <div class="bg-white border-2 border-dashed border-gray-400 rounded-[40px] p-10 flex flex-col items-center text-center transition-transform hover:scale-105 duration-300">
+                    <div class="mb-6">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a58eeca5fc1e3797743a1_Quick%20Contact%20Card%20Image%2001.png" 
+                             alt="Get in touch" class="h-24 w-auto">
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4">Get In Touch</h3>
+                    <p class="text-gray-600 text-sm mb-8 leading-relaxed">
+                        We’re here to help! Whether you have a question about TaskHub’s features, need assistance.
+                    </p>
+                    <a href="mailto:info@gmail.com"
+        class="group relative inline-flex items-center gap-3 mt-6 w-fit
+        bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[26px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-xl transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]">Email Us Now</span>
+            <span class="leading-[28px]">Email Us Now</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-5 h-5">
+      </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- MAP SECTION  -->
+        <section class="relative w-full h-[600px] md:h-[750px] overflow-hidden group font-sans">
+    
+    <div class="absolute inset-0 z-0">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a481041ae3ff7101999c3_Map%20Image.png" 
+             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Map">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#6322FF]/40 via-[#6322FF]/10 to-transparent z-10"></div>
+    </div>
+
+    <div class="absolute inset-0 z-20 flex items-center justify-center p-4">
+        <div class="relative flex flex-col items-center">
+            
+            <a href="https://maps.google.com" 
+               target="_blank" 
+               class="relative bg-white/90 backdrop-blur-md p-1 rounded-[28px] transition-all duration-500 hover:-translate-y-3 block mb-6 
+                      shadow-[0_20px_50px_rgba(223, 206, 254)] border border-white/50 group/card">
+                
+                <div class="bg-white rounded-[24px] p-6 flex flex-col min-w-[280px]">
+                    <div class="flex justify-between items-start gap-4">
+                        <div>
+                            <h4 class="text-lg font-black text-gray-900 leading-tight">500 New York Rd</h4>
+                            <p class="text-[12px] text-gray-500 font-medium mt-1">Browns Mills, NJ 08015, USA</p>
+                        </div>
+                        <div class="bg-purple-50 p-2.5 rounded-xl group-hover/card:bg-[#6322FF] transition-all shadow-sm">
+                            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f7db07b37c633d4ca3196_78a1686828e114417b132c498b81291a_Directions%20Icon.svg" 
+                                 class="w-5 h-5 group-hover/card:invert transition-all" alt="Directions">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 mt-5 pt-4 border-t border-gray-100">
+                        <span class="text-sm font-bold text-gray-800">4.5</span>
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f7db07b37c633d4ca3197_a374310fecf8c07e08d179d11ee11493_Stars.png" 
+                             class="h-3 w-auto" alt="Stars">
+                        <span class="text-[11px] text-gray-400 underline font-medium">10 Reviews</span>
+                    </div>
+
+                    <div class="mt-4 text-[11px] font-black text-[#6322FF] uppercase tracking-wider flex items-center gap-1.5">
+                        View larger map
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <div class="relative">
+                <div class="absolute -inset-4 bg-purple-500/40 rounded-full blur-xl animate-pulse"></div>
+                <div class="bg-[#6322FF] p-3.5 rounded-full border-[5px] border-white shadow-lg animate-bounce relative z-10">
+                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+</section>
+  <!-- <div class="ralative bottom-0 left-0 w-full overflow-hidden leading-[0] z-30 pointer-events-none">
+        <div class="bg-[rgba(99,34,255,0.4)] backdrop-blur-sm pt-4">
+            <div class="animate-marquee-infinite flex whitespace-nowrap">
+                <div class="flex min-w-full">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4a7cc2bb1ae6dfcea68e_Element%201.png" 
+                         class="h-10 md:h-16 w-1/2 object-cover" alt="wave">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4a7cc2bb1ae6dfcea68e_Element%201.png" 
+                         class="h-10 md:h-16 w-1/2 object-cover" alt="wave">
+                </div>
+                <div class="flex min-w-full">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4a7cc2bb1ae6dfcea68e_Element%201.png" 
+                         class="h-10 md:h-16 w-1/2 object-cover" alt="wave">
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4a7cc2bb1ae6dfcea68e_Element%201.png" 
+                         class="h-10 md:h-16 w-1/2 object-cover" alt="wave">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- faq section -->
+<section class="py-12 md:py-24 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+        
+        <div class="space-y-4 text-left">
+            <span class="uppercase tracking-[0.2em] mb-16 font-comic text-[10px] md:text-xs font-bold text-gray-500">
+                Parents Question
+            </span>
+            <h2 class="faq-title text-7xl max-md:text-2xl lg:text-6xl text-[#1a1a1a] uppercase">
+                 <span> Answers For</span>
+              <span class="block mt-7 max-md:mt-2">Parents</span>
+            </h2>
+        </div>
+
+        <div class="space-y-3 md:space-y-4 font-comic" x-data="{ selected: 1 }">
+            
+            <div class="border border-dashed border-gray-400 f rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 1 ? selected = 1 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What ages do you accept?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 1 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 1" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 2 ? selected = 2 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What are your operating hours?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 2 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 2" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 3 ? selected = 3 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">Is your center licensed?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 3 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 3" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
+                <button @click="selected !== 4 ? selected = 4 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
+                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">How do you ensure safety?</span>
+                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
+                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
+                             :class="selected === 4 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
+                    </div>
+                </button>
+                <div x-show="selected === 4" x-collapse>
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION  -->
+<footer class="relative pt-12 md:pt-20 overflow-hidden">
+    
+    <div class="relative w-full min-h-fit md:min-h-screen flex flex-col justify-between">
+        
+        <div class="absolute inset-0 z-0 opacity-40 overflow-hidden">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959142201f7dfdad3156325_5db9e8f478031af1990e342ebdbe983a_Footer%20BG.png" 
+                 class="w-full h-full object-cover object-top scale-110" alt="Cloud BG">
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
+             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+        
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
+             class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
+
+        <div class="relative z-20 container mx-auto px-4 md:px-6 text-center pt-16 md:pt-32">
+            <span class="text-white text-xs font-comic md:text-base font-black uppercase tracking-[0.3em] mb-4 md:mb-6 block opacity-95">
+                Connect With Us
+            </span>
+            
+            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+
+                   <span> Love Care And</span>
+              <span class="block mt-7 max-md:mt-2"> Learning Together</span>
+            </h2>
+
+            <div class="max-w-2xl mx-auto font-comic relative group px-2">
+                <form class="flex flex-col md:flex-row items-center gap-4 p-2">
+                    <input type="email" 
+                           placeholder="Enter Email Address..." 
+                           class="w-full bg-white text-gray-900 px-6 md:px-8 py-4 md:py-5 rounded-2xl md:rounded-full text-base md:text-lg font-bold focus:outline-none placeholder-gray-400 shadow-lg"
+                           required>
+                    
+                    <button type="submit" class="w-full font-boldo md:w-auto whitespace-nowrap -mt-4 max-md:mt-0 bg-[#ff00ba] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl md:rounded-full font-bold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] md:shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px] md:hover:translate-y-[8px] text-lg md:text-xl">
+                        Subscribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+                <a href="#" class="hover:opacity-70 transition-all">Home</a>
+                <a href="#" class="hover:opacity-70 transition-all">About</a>
+                <a href="#" class="hover:opacity-70 transition-all">Programs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Pricing</a>
+                <a href="#" class="hover:opacity-70 transition-all">Blogs</a>
+                <a href="#" class="hover:opacity-70 transition-all">Gallery</a>
+                <a href="#" class="hover:opacity-70 transition-all">Contact</a>
+            </div>
+
+            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+                <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-10">
+                    <a href="#" class="hover:text-white transition-colors">License</a>
+                    <a href="#" class="hover:text-white transition-colors">Changelog</a>
+                    <a href="#" class="hover:text-white transition-colors">Style Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
+                 class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
+                 alt="Nurivelle 3D Text">
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPT SECTION -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
