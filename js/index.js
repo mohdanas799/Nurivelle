@@ -263,56 +263,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. Mobile View (Stacking Effect - Under 1024px)
 
-    // mm.add("(max-width: 1023px)", () => {
-    //   // Select the cards inside the mobile trigger
-    //   const mobileCards = gsap.utils.toArray(
-    //     "#mobile-cards-triggerr .card-stack-item",
-    //   );
-
-    //   mobileCards.forEach((card, index) => {
-    //     gsap.set(card, {
-    //       zIndex: index,
-    //       // Start all cards except the first one below the container
-    //       yPercent: index === 0 ? 0 : 100,
-    //     });
-    //   });
-
-    //   const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: "#mobile-cards-triggerr",
-    //       start: "top top",
-    //       end: "bottom bottom",
-    //       scrub: 1,
-    //     },
-    //   });
-
-    //   mobileCards.forEach((card, index) => {
-    //     if (index > 0) {
-    //       // Animation for previous card to shrink slightly (About Us effect)
-    //       tl.to(
-    //         mobileCards[index - 1],
-    //         {
-    //           scale: 0.9,
-    //           opacity: 0.6,
-    //           duration: 1,
-    //         },
-    //         `card-${index}`,
-    //       );
-
-    //       // Animation for current card to slide up
-    //       tl.to(
-    //         card,
-    //         {
-    //           yPercent: 0,
-    //           duration: 1,
-    //           ease: "none",
-    //         },
-    //         `card-${index}`,
-    //       );
-    //     }
-    //   });
-    // });
-
     mm.add("(max-width: 1023px)", () => {
   const mobileCards = gsap.utils.toArray('#mobile-cards-triggerr .card-stack-item');
   
