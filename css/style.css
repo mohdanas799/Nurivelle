@@ -8,6 +8,22 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
+        /* Add this to your CSS to ensure the glass effect is fully removed */
+.nav-glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Ocultar barra de scroll en Chrome, Safari y Opera */
+    .lg\:hidden::-webkit-scrollbar {
+        display: none;
+    }
+.no-border {
+    border: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
         /* Dropdown Animation */
         .dropdown-content {
             opacity: 0;

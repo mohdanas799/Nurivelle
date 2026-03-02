@@ -1,306 +1,565 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Elements Initialization
-    const header = document.getElementById('main-header');
-    const menuBtn = document.getElementById('menu-btn');
-    const megaMenu = document.getElementById('mega-menu');
-    const body = document.body;
+  // 1. Elements Initialization
+  const header = document.getElementById("main-header");
+  const menuBtn = document.getElementById("menu-btn");
+  const megaMenu = document.getElementById("mega-menu");
+  const body = document.body;
 
-    // --- VIDEO ON/OFF LOGIC (FIXED) ---
-    // const handleVideoToggle = (videoId, btnId) => {
-    //     const video = document.getElementById(videoId);
-    //     const btn = document.getElementById(btnId);
-    //     if (video && btn) {
-    //         btn.addEventListener("click", () => {
-    //             if (video.paused) {
-    //                 video.play();
-    //                 btn.classList.add('playing'); // Optional: CSS icon change ke liye
-    //             } else {
-    //                 video.pause();
-    //                 btn.classList.remove('playing');
-    //             }
-    //         });
-    //     }
-    // };
+  // --- VIDEO ON/OFF LOGIC (FIXED) ---
+  // const handleVideoToggle = (videoId, btnId) => {
+  //     const video = document.getElementById(videoId);
+  //     const btn = document.getElementById(btnId);
+  //     if (video && btn) {
+  //         btn.addEventListener("click", () => {
+  //             if (video.paused) {
+  //                 video.play();
+  //                 btn.classList.add('playing'); // Optional: CSS icon change ke liye
+  //             } else {
+  //                 video.pause();
+  //                 btn.classList.remove('playing');
+  //             }
+  //         });
+  //     }
+  // };
 
-    // // About Section Video
-    // handleVideoToggle("myVideo", "videoBtn");
-    // // Gallery Section Video
-    // handleVideoToggle("mainVideo", "galleryVideoBtn");
-    // // Background Video (if any)
-    // handleVideoToggle("bgVideo", "bgVideoBtn");
+  // // About Section Video
+  // handleVideoToggle("myVideo", "videoBtn");
+  // // Gallery Section Video
+  // handleVideoToggle("mainVideo", "galleryVideoBtn");
+  // // Background Video (if any)
+  // handleVideoToggle("bgVideo", "bgVideoBtn");
 
-const handleVideoToggle = (videoId, btnId) => {
-        const video = document.getElementById(videoId);
-        const btn = document.getElementById(btnId);
-        
-        // Yahan apne icons ke URL daalein
-        const playIcon = "https://cdn.prod.website-files.com/6946266171296e600d9c960c/695bad1458151d0a8de6af31_Icon.png";
-        // Pause icon ke liye placeholder URL (Aap apna asset link yahan daal sakte hain)
-        const pauseIcon = "https://cdn.prod.website-files.com/6946266171296e600d9c960c/695baa884dae6aea68223987_Play%20state%20Icon.png"; 
+  const handleVideoToggle = (videoId, btnId) => {
+    const video = document.getElementById(videoId);
+    const btn = document.getElementById(btnId);
 
-        if (video && btn) {
-            const iconImg = btn.querySelector('img');
+    // Yahan apne icons ke URL daalein
+    const playIcon =
+      "https://cdn.prod.website-files.com/6946266171296e600d9c960c/695bad1458151d0a8de6af31_Icon.png";
+    // Pause icon ke liye placeholder URL (Aap apna asset link yahan daal sakte hain)
+    const pauseIcon =
+      "https://cdn.prod.website-files.com/6946266171296e600d9c960c/695baa884dae6aea68223987_Play%20state%20Icon.png";
 
-            // Agar video autoplay ho raha hai, to pause icon dikhao
-            if (!video.paused) {
-                iconImg.src = pauseIcon;
-            }
+    if (video && btn) {
+      const iconImg = btn.querySelector("img");
 
-            btn.addEventListener("click", () => {
-                if (video.paused) {
-                    video.play();
-                    iconImg.src = pauseIcon; // Icon badal kar Pause kar do
-                    btn.classList.add('playing');
-                } else {
-                    video.pause();
-                    iconImg.src = playIcon; // Icon badal kar Play kar do
-                    btn.classList.remove('playing');
-                }
-            });
+      // Agar video autoplay ho raha hai, to pause icon dikhao
+      if (!video.paused) {
+        iconImg.src = pauseIcon;
+      }
+
+      btn.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          iconImg.src = pauseIcon; // Icon badal kar Pause kar do
+          btn.classList.add("playing");
+        } else {
+          video.pause();
+          iconImg.src = playIcon; // Icon badal kar Play kar do
+          btn.classList.remove("playing");
         }
-    };
+      });
+    }
+  };
 
-    // Initialize all video buttons
-    handleVideoToggle("myVideo", "videoBtn");
-    handleVideoToggle("mainVideo", "galleryVideoBtn");
-    handleVideoToggle("bgVideo", "bgVideoBtn");
+  // Initialize all video buttons
+  handleVideoToggle("myVideo", "videoBtn");
+  handleVideoToggle("mainVideo", "galleryVideoBtn");
+  handleVideoToggle("bgVideo", "bgVideoBtn");
 
-    
-    // 2. Navbar Scroll Animation (Pill Effect)
-    window.addEventListener('scroll', () => {
-        if (header) {
-            if (window.scrollY > 50) {
-                header.classList.add('header-pill');
+  // 2. Navbar Scroll Animation (Pill Effect)
+  window.addEventListener("scroll", () => {
+    if (header) {
+      if (window.scrollY > 50) {
+        header.classList.add("header-pill");
+      } else {
+        header.classList.remove("header-pill");
+      }
+    }
+  });
+
+  // 3. Mega Menu Toggle
+  if (menuBtn && megaMenu) {
+    menuBtn.addEventListener("click", () => {
+      const isActive = megaMenu.classList.toggle("active");
+      menuBtn.classList.toggle("active-burger");
+      body.style.overflow = isActive ? "hidden" : "auto";
+    });
+  }
+
+  // 4. Reveal Animation
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach((el) => revealObserver.observe(el));
+
+  // 5. Counter Animation
+  const counterObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = +counter.getAttribute("data-target");
+          const speed = 200;
+          const updateCount = () => {
+            const count = +counter.innerText;
+            const inc = target / speed;
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 20);
             } else {
-                header.classList.remove('header-pill');
+              counter.innerText = target;
             }
+          };
+          updateCount();
+          obs.unobserve(counter);
         }
+      });
+    },
+    { threshold: 0.8 },
+  );
+
+  document
+    .querySelectorAll(".counter")
+    .forEach((c) => counterObserver.observe(c));
+
+  // 6. Swiper Initializations
+  if (typeof Swiper !== "undefined") {
+    new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: { delay: 3000 },
+      speed: 1000,
+      effect: "fade",
     });
 
-    // 3. Mega Menu Toggle
-    if (menuBtn && megaMenu) {
-        menuBtn.addEventListener('click', () => {
-            const isActive = megaMenu.classList.toggle('active');
-            menuBtn.classList.toggle('active-burger');
-            body.style.overflow = isActive ? 'hidden' : 'auto';
-        });
-    }
-
-    // 4. Reveal Animation
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-
-    // 5. Counter Animation
-    const counterObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = +counter.getAttribute("data-target");
-                const speed = 200;
-                const updateCount = () => {
-                    const count = +counter.innerText;
-                    const inc = target / speed;
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-                obs.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.8 });
-
-    document.querySelectorAll(".counter").forEach((c) => counterObserver.observe(c));
-
-    // 6. Swiper Initializations
-    if (typeof Swiper !== 'undefined') {
-        new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 3000 },
-            speed: 1000,
-            effect: "fade",
-        });
-
-        new Swiper(".mySwiper1", {
-            slidesPerView: "auto",
-            centeredSlides: true,
-            spaceBetween: 20,
-            grabCursor: true,
-        });
-    }
+    new Swiper(".mySwiper1", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 20,
+      grabCursor: true,
+    });
+  }
 });
 
 // 7. GSAP Animations (Pinned Sections)
+// document.addEventListener("DOMContentLoaded", () => {
+//     if (typeof gsap !== 'undefined') {
+//         gsap.registerPlugin(ScrollTrigger);
+//         let mm = gsap.matchMedia();
+
+//         // --- SECTION 1: WHY CHOOSE US ANIMATIONS ---
+
+//         // Desktop Spread Effect
+//         mm.add("(min-width: 1024px)", () => {
+//             const cards = gsap.utils.toArray(".card-item");
+//             if (cards.length) {
+//                 gsap.timeline({
+//                     scrollTrigger: {
+//                         trigger: ".trigger-area",
+//                         start: "top top",
+//                         end: "+=300%",
+//                         scrub: 1,
+//                         pin: ".sticky-box",
+//                         pinSpacing: true,
+//                     },
+//                 })
+//                 .to(cards[0], { xPercent: -150, rotation: -12, opacity: 1 }, 0)
+//                 .to(cards[1], { xPercent: -50, rotation: -4, opacity: 1 }, 0)
+//                 .to(cards[2], { xPercent: 50, rotation: 4, opacity: 1 }, 0)
+//                 .to(cards[3], { xPercent: 150, rotation: 12, opacity: 1 }, 0);
+//             }
+//         });
+
+//         // Mobile Stacking Effect
+//         mm.add("(max-width: 1023px)", () => {
+//             const stackCards = gsap.utils.toArray('.card-stack-item');
+//             stackCards.forEach((card, index) => {
+//                 gsap.set(card, { zIndex: index });
+//                 if (index !== 0) {
+//                     gsap.set(card, { yPercent: 120, rotate: index % 2 === 0 ? 5 : -5 });
+//                 }
+//             });
+
+//             const tl = gsap.timeline({
+//                 scrollTrigger: {
+//                     trigger: ".trigger-area",
+//                     start: "top top",
+//                     end: "+=180%",
+//                     scrub: 0.5,
+//                     pin: ".sticky-box",
+//                     pinSpacing: true,
+//                     anticipatePin: 1
+//                 }
+//             });
+
+//             stackCards.forEach((card, index) => {
+//                 if (index > 0) {
+//                     tl.to(card, { yPercent: 0, rotate: 0, duration: 1, ease: "none" }, "+=0.4");
+//                 }
+//             });
+//         });
+
+//         // --- SECTION 2: EXPERIENCE SECTION ANIMATION ---
+//         // Ye hamesha chalega (Desktop + Mobile dono par)
+//         const expSection = document.querySelector("#experience-section");
+//         if (expSection) {
+//             gsap.timeline({
+//                 scrollTrigger: {
+//                     trigger: "#experience-section",
+//                     start: "top 80%",
+//                     toggleActions: "play none none reverse"
+//                 }
+//             })
+//             .to("#experience-section", { y: 0, opacity: 1, duration: 1 })
+//             .to(".experience-card", {
+//                 y: 0,
+//                 opacity: 1,
+//                 stagger: 0.15,
+//                 duration: 0.8,
+//                 ease: "back.out(1.7)"
+//             }, "-=0.5");
+//         }
+//     }
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-    if (typeof gsap !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-        let mm = gsap.matchMedia();
+  if (typeof gsap !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+    let mm = gsap.matchMedia();
 
-        // --- SECTION 1: WHY CHOOSE US ANIMATIONS ---
-        
-        // Desktop Spread Effect
-        mm.add("(min-width: 1024px)", () => {
-            const cards = gsap.utils.toArray(".card-item");
-            if (cards.length) {
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".trigger-area",
-                        start: "top top",
-                        end: "+=300%",
-                        scrub: 1,
-                        pin: ".sticky-box",
-                        pinSpacing: true,
-                    },
-                })
-                .to(cards[0], { xPercent: -150, rotation: -12, opacity: 1 }, 0)
-                .to(cards[1], { xPercent: -50, rotation: -4, opacity: 1 }, 0)
-                .to(cards[2], { xPercent: 50, rotation: 4, opacity: 1 }, 0)
-                .to(cards[3], { xPercent: 150, rotation: 12, opacity: 1 }, 0);
-            }
+    // --- SECTION 1: WHY CHOOSE US ANIMATIONS ---
+
+    // 1. Desktop View (Spread Effect - 1024px and above)
+    mm.add("(min-width: 1024px)", () => {
+      const cards = gsap.utils.toArray(".card-item");
+      if (cards.length) {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".trigger-area",
+              start: "top top",
+              end: "+=300%",
+              scrub: 1,
+              pin: ".sticky-box",
+              pinSpacing: true,
+            },
+          })
+          .to(cards[0], { xPercent: -150, rotation: -12, opacity: 1 }, 0)
+          .to(cards[1], { xPercent: -50, rotation: -4, opacity: 1 }, 0)
+          .to(cards[2], { xPercent: 50, rotation: 4, opacity: 1 }, 0)
+          .to(cards[3], { xPercent: 150, rotation: 12, opacity: 1 }, 0);
+      }
+    });
+
+    // 2. Mobile View (Stacking Effect - Under 1024px)
+    // mm.add("(max-width: 1023px)", () => {
+    //     const stackCards = gsap.utils.toArray('.card-stack-item');
+
+    //     // Initial positioning for mobile stacking
+    //     stackCards.forEach((card, index) => {
+    //         gsap.set(card, {
+    //             zIndex: index,
+    //             position: "absolute" // Ensure they are on top of each other initially
+    //         });
+
+    //         if (index !== 0) {
+    //             // Start cards below the screen
+    //             gsap.set(card, { yPercent: 130, rotate: index % 2 === 0 ? 5 : -5 });
+    //         }
+    //     });
+
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ".trigger-area",
+    //             start: "top top",
+    //             end: "+=250%", // Mobile scroll length
+    //             scrub: 0.5,
+    //             pin: ".sticky-box",
+    //             pinSpacing: true,
+    //             anticipatePin: 1
+    //         }
+    //     });
+
+    //     // Card stacking sequence
+    //     stackCards.forEach((card, index) => {
+    //         if (index > 0) {
+    //             tl.to(card, {
+    //                 yPercent: 0,
+    //                 rotate: 0,
+    //                 duration: 1,
+    //                 ease: "power2.out"
+    //             }, "-=0.2"); // Staggered entry
+    //         }
+    //     });
+    // });
+
+    mm.add("(max-width: 1023px)", () => {
+      // Select the cards inside the mobile trigger
+      const mobileCards = gsap.utils.toArray(
+        "#mobile-cards-triggerr .card-stack-item",
+      );
+
+      mobileCards.forEach((card, index) => {
+        gsap.set(card, {
+          zIndex: index,
+          // Start all cards except the first one below the container
+          yPercent: index === 0 ? 0 : 100,
         });
+      });
 
-        // Mobile Stacking Effect
-        mm.add("(max-width: 1023px)", () => {
-            const stackCards = gsap.utils.toArray('.card-stack-item');
-            stackCards.forEach((card, index) => {
-                gsap.set(card, { zIndex: index });
-                if (index !== 0) {
-                    gsap.set(card, { yPercent: 120, rotate: index % 2 === 0 ? 5 : -5 });
-                }
-            });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#mobile-cards-triggerr",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".trigger-area",
-                    start: "top top",
-                    end: "+=180%",
-                    scrub: 0.5,
-                    pin: ".sticky-box",
-                    pinSpacing: true,
-                    anticipatePin: 1
-                }
-            });
+      mobileCards.forEach((card, index) => {
+        if (index > 0) {
+          // Animation for previous card to shrink slightly (About Us effect)
+          tl.to(
+            mobileCards[index - 1],
+            {
+              scale: 0.9,
+              opacity: 0.6,
+              duration: 1,
+            },
+            `card-${index}`,
+          );
 
-            stackCards.forEach((card, index) => {
-                if (index > 0) {
-                    tl.to(card, { yPercent: 0, rotate: 0, duration: 1, ease: "none" }, "+=0.4");
-                }
-            });
-        });
-
-        // --- SECTION 2: EXPERIENCE SECTION ANIMATION ---
-        // Ye hamesha chalega (Desktop + Mobile dono par)
-        const expSection = document.querySelector("#experience-section");
-        if (expSection) {
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#experience-section",
-                    start: "top 80%",
-                    toggleActions: "play none none reverse"
-                }
-            })
-            .to("#experience-section", { y: 0, opacity: 1, duration: 1 })
-            .to(".experience-card", { 
-                y: 0, 
-                opacity: 1, 
-                stagger: 0.15, 
-                duration: 0.8, 
-                ease: "back.out(1.7)" 
-            }, "-=0.5");
+          // Animation for current card to slide up
+          tl.to(
+            card,
+            {
+              yPercent: 0,
+              duration: 1,
+              ease: "none",
+            },
+            `card-${index}`,
+          );
         }
+      });
+    });
+
+    // --- SECTION 2: EXPERIENCE SECTION ANIMATION ---
+    // This runs on both Desktop and Mobile
+    const expSection = document.querySelector("#experience-section");
+    if (expSection) {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#experience-section",
+            start: "top 85%", // Starts a bit earlier for smoother look
+            toggleActions: "play none none reverse",
+          },
+        })
+        .fromTo(
+          expSection,
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1 },
+        )
+        .fromTo(
+          ".experience-card",
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "back.out(1.7)",
+          },
+          "-=0.6", // Overlap with parent animation
+        );
     }
+  }
 });
-
-
 
 // FONT STYLE ..............
 
 tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            comic: ['"Comic Neue"', 'cursive'],
-            boldo: ["Boldonse"],
-          },
-        }
+  theme: {
+    extend: {
+      fontFamily: {
+        comic: ['"Comic Neue"', "cursive"],
+        boldo: ["Boldonse"],
+      },
+    },
+  },
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("main-header");
+  const menuBtn = document.getElementById("menu-btn");
+  const megaMenu = document.getElementById("mega-menu");
+  const menuPanel = document.getElementById("menu-panel");
+  const headerLogo = document.getElementById("header-logo");
+
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+
+  let isMenuOpen = false;
+
+  menuBtn.addEventListener("click", () => {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+      // Open Actions
+      megaMenu.classList.remove("pointer-events-none");
+      menuPanel.classList.remove("-translate-y-full");
+      menuPanel.classList.add("translate-y-0");
+
+      if (window.innerWidth < 1024) {
+        // 1. Hide Logo
+        headerLogo.style.opacity = "0";
+        headerLogo.style.pointerEvents = "none";
+
+        // 2. Hide Header Background (Making it transparent)
+        header.style.backgroundColor = "transparent";
+        header.classList.remove("nav-glass");
+
+        // 3. Transform Burger to X
+        bar1.style.transform = "rotate(45deg) translate(6px, 6px)";
+        bar2.style.opacity = "0";
+        bar3.style.transform = "rotate(-45deg) translate(6px, -6px)";
+
+        // IMPORTANT: Change button position to Absolute
+        // Taaki ye menu panel ke saath scroll ho jaye
+        menuBtn.style.position = "absolute";
       }
+
+      document.body.style.overflow = "hidden";
+    } else {
+      // Close Actions
+      menuPanel.classList.add("-translate-y-full");
+      menuPanel.classList.remove("translate-y-0");
+
+      // Reset Styles
+      headerLogo.style.opacity = "1";
+      headerLogo.style.pointerEvents = "auto";
+      header.style.backgroundColor = "";
+      header.classList.add("nav-glass");
+
+      bar1.style.transform = "none";
+      bar2.style.opacity = "1";
+      bar3.style.transform = "none";
+
+      // Reset button position
+      menuBtn.style.position = "";
+
+      setTimeout(() => {
+        megaMenu.classList.add("pointer-events-none");
+        document.body.style.overflow = "";
+      }, 500);
     }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('main-header');
-    const menuBtn = document.getElementById('menu-btn');
-    const megaMenu = document.getElementById('mega-menu');
-    const menuPanel = document.getElementById('menu-panel');
-    const headerLogo = document.getElementById('header-logo');
-    
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-
-    let isMenuOpen = false;
-
-    menuBtn.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-
-        if (isMenuOpen) {
-            // Open Actions
-            megaMenu.classList.remove('pointer-events-none');
-            menuPanel.classList.remove('-translate-y-full');
-            menuPanel.classList.add('translate-y-0');
-
-            if (window.innerWidth < 1024) {
-                // 1. Hide Logo
-                headerLogo.style.opacity = '0';
-                headerLogo.style.pointerEvents = 'none';
-
-                // 2. Hide Header Background (Making it transparent)
-                header.style.backgroundColor = 'transparent';
-                header.classList.remove('nav-glass');
-
-                // 3. Transform Burger to X
-                bar1.style.transform = 'rotate(45deg) translate(6px, 6px)';
-                bar2.style.opacity = '0';
-                bar3.style.transform = 'rotate(-45deg) translate(6px, -6px)';
-
-                // IMPORTANT: Change button position to Absolute 
-                // Taaki ye menu panel ke saath scroll ho jaye
-                menuBtn.style.position = 'absolute';
-            }
-
-            document.body.style.overflow = 'hidden';
-        } else {
-            // Close Actions
-            menuPanel.classList.add('-translate-y-full');
-            menuPanel.classList.remove('translate-y-0');
-
-            // Reset Styles
-            headerLogo.style.opacity = '1';
-            headerLogo.style.pointerEvents = 'auto';
-            header.style.backgroundColor = '';
-            header.classList.add('nav-glass');
-
-            bar1.style.transform = 'none';
-            bar2.style.opacity = '1';
-            bar3.style.transform = 'none';
-            
-            // Reset button position
-            menuBtn.style.position = '';
-
-            setTimeout(() => {
-                megaMenu.classList.add('pointer-events-none');
-                document.body.style.overflow = '';
-            }, 500);
-        }
-    });
+  });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("main-header");
+  const logo = document.getElementById("header-logo");
+  const cta = document.getElementById("header-cta");
+  const menuBtn = document.getElementById("menu-btn");
+  const megaMenu = document.getElementById("mega-menu");
+  const body = document.body;
+
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+
+  let isMenuOpen = false;
+
+  const toggleMenu = () => {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+      // 1. Show Mega Menu
+      megaMenu.classList.remove(
+        "translate-x-full",
+        "opacity-0",
+        "pointer-events-none",
+      );
+      megaMenu.classList.add(
+        "translate-x-0",
+        "opacity-100",
+        "pointer-events-auto",
+      );
+
+      // 2. Animate Hamburger to 'X'
+      bar1.style.transform = "rotate(45deg) translate(5px, 5px)";
+      bar2.style.opacity = "0";
+      bar3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+
+      // 3. COMPLETE HIDE for Header Background & Logo
+      logo.style.opacity = "0";
+      logo.style.visibility = "hidden"; // Completely hidden from interaction
+      if (cta) {
+        cta.style.opacity = "0";
+        cta.style.visibility = "hidden";
+      }
+
+      header.classList.remove("nav-glass");
+      header.classList.add("no-border"); // Removes glass border
+      header.style.backgroundColor = "transparent";
+      header.style.boxShadow = "none";
+      header.style.backdropFilter = "none";
+
+      body.style.overflow = "hidden";
+    } else {
+      // 1. Hide Mega Menu
+      megaMenu.classList.add(
+        "translate-x-full",
+        "opacity-0",
+        "pointer-events-none",
+      );
+      megaMenu.classList.remove(
+        "translate-x-0",
+        "opacity-100",
+        "pointer-events-auto",
+      );
+
+      // 2. Animate 'X' back to Hamburger
+      bar1.style.transform = "none";
+      bar2.style.opacity = "1";
+      bar3.style.transform = "none";
+
+      // 3. RESTORE Header Style
+      logo.style.opacity = "1";
+      logo.style.visibility = "visible";
+      if (cta) {
+        cta.style.opacity = "1";
+        cta.style.visibility = "visible";
+      }
+
+      header.classList.add("nav-glass");
+      header.classList.remove("no-border");
+      header.style.backgroundColor = "";
+      header.style.boxShadow = "";
+      header.style.backdropFilter = "";
+
+      body.style.overflow = "";
+    }
+  };
+
+  menuBtn.addEventListener("click", toggleMenu);
+
+  // Close menu when clicking links
+  const navLinks = megaMenu.querySelectorAll("a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+});

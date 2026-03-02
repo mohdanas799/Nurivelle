@@ -21,12 +21,13 @@
 </head>
 <body class="text-[#333] overflow-x-hidden">
 <!-- NAVBAR SECTION -->
-    <header id="main-header" class="fixed  top-0 left-0 w-full z-[100] nav-glass">
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="/" id="header-logo" aria-label="Nurivelle Home">
-                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-9 ">
-                </a>
-            <div class="flex items-center gap-12">
+<header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
+        </a>
+
+         <div class="flex items-center gap-12">
                 <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
                     <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
                     <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
@@ -49,8 +50,9 @@
                 </ul>
             </div>
 
-            <div class="flex items-center gap-4">
-                <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-200 overflow-hidden relative group">
+
+        <div class="flex items-center gap-4">
+              <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-purple-200 overflow-hidden relative group">
                     <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
                         <span>Free Enquiry</span>
                         <span class="absolute top-full left-0">Free Enquiry</span>
@@ -58,68 +60,65 @@
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
                 </a>
 
-                <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1 w-10 h-10" aria-label="Toggle Menu">
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
-                    <div class="wave-bar"></div>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <div id="mega-menu" class="fixed inset-0 z-[90] font-comic font-black pointer-events-none">
-    
-    <div id="menu-panel" class="bg-white w-full h-full lg:h-auto lg:w-[90%] lg:max-w-[1200px] pt-32 lg:mx-auto lg:mt-24 lg:rounded-[32px] lg:border lg:border-stone-200 overflow-y-auto p-6 shadow-2xl pointer-events-auto transition-transform duration-500 -translate-y-full">
-        
-        <div class="flex justify-end lg:hidden mb-4"></div>
+            <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
+                <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+                <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+                <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            </button>
+        </div>
+    </nav>
+</header>
 
-        <div class="flex flex-col md:flex-row gap-6">
-            <div class="hidden md:block w-[35%] h-[420px] rounded-[24px] overflow-hidden relative">
-                <div class="swiper mySwiper h-full">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Kids Care">
-                            <div class="card-overlay"></div>
-                            <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Our Quality <span class="ml-2">→</span></div>
-                        </div>
-                    </div>
+<div id="mega-menu" class="fixed inset-0 z-[120] bg-[#DDE4E8] flex flex-col p-6 pt-24 transition-all duration-500 translate-x-full opacity-0 pointer-events-none lg:hidden overflow-y-auto">
+    <nav class="flex-shrink-0">
+        <ul class="flex flex-col gap-5 text-xl font-black font-comic text-slate-900">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <div class="flex justify-between items-center cursor-pointer" onclick="document.getElementById('mobile-services-drop').classList.toggle('hidden')">
+                    <span><a href="services.html">Services</a></span>
+                    <span class="text-sm">▼</span>
                 </div>
-            </div>
+                <ul id="mobile-services-drop" class="hidden mt-3 ml-4 flex flex-col gap-3 text-base font-bold text-slate-700 border-l-2 border-[#4C1D95] pl-4">
+                    <li><a href="#">Service Detail One</a></li>
+                    <li><a href="#">Service Detail Two</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-            <div class="w-full md:w-[65%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-10 lg:pb-0">
-                <a href="index.html" class="grid-card h-32 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Home">
-                    <div class="card-overlay"></div>
-                    <div class="absolute bottom-5 left-5 text-white font-bold">Home <span class="ml-2">→</span></div>
+    <div class="mt-6 flex flex-col gap-6 pb-10">
+        <div class="flex justify-center items-center gap-8">
+            <a href="tel:#" class="text-slate-800">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <div class="relative">
+                <a href="#" class="text-[#25D366]">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.527 1.947.887 3.144.887 3.181 0 5.767-2.586 5.767-5.766 0-3.18-2.587-5.766-5.765-5.766zm3.375 8.203c-.144.405-.833.778-1.148.821-.309.042-.601.063-1.008-.097-.248-.098-1.04-.401-1.979-1.234-.73-.648-1.226-1.448-1.369-1.693-.143-.245-.015-.377.108-.499.11-.11.245-.285.368-.428.123-.142.164-.244.245-.408.081-.163.041-.305-.02-.428-.061-.123-.549-1.323-.753-1.813-.199-.477-.402-.413-.549-.42-.14-.007-.3-.008-.46-.008s-.421.061-.641.305c-.22.244-.838.819-.838 2.003 0 1.184.858 2.324.978 2.488.12.164 1.688 2.574 4.09 3.613.571.247 1.015.395 1.362.505.573.182 1.094.156 1.506.095.459-.067 1.411-.577 1.61-.1.135-.199.1.53-.2.624-.131z"/></svg>
                 </a>
-                <a href="about.html" class="grid-card h-32 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="About">
-                    <div class="card-overlay"></div>
-                    <div class="absolute bottom-5 left-5 text-white font-bold">About <span class="ml-2">→</span></div>
-                </a>
-                <a href="services.html" class="grid-card h-32 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Services">
-                    <div class="card-overlay"></div>
-                    <div class="absolute bottom-5 left-5 text-white font-bold">Services <span class="ml-2">→</span></div>
-                </a>
-                <a href="gallery.html" class="grid-card h-32 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Gallery">
-                    <div class="card-overlay"></div>
-                    <div class="absolute bottom-5 left-5 text-white font-bold">Gallery <span class="ml-2">→</span></div>
-                </a>
-                <a href="blog.html" class="grid-card h-32 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Blog">
-                    <div class="card-overlay"></div>
-                    <div class="absolute bottom-5 left-5 text-white font-bold">Blogs <span class="ml-2">→</span></div>
-                </a>
-                <a href="contact.html" class="grid-card h-32 md:h-auto">
-                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80" loading="lazy" class="w-full h-full object-cover rounded-2xl" alt="Contact">
-                    <div class="card-overlay"></div>
-                    <div class="absolute bottom-5 left-5 text-white font-bold">Contact <span class="ml-2">→</span></div>
-                </a>
+                <span class="absolute -top-1 -right-1 bg-red-600 text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <a href="#" class="bg-[#5C7C8A] text-white py-3.5 px-8 rounded-full text-xs font-bold tracking-widest uppercase shadow-md text-center">
+                Request an Appointment
+            </a>
+        </div>
+        <div class="flex items-center justify-between px-2">
+            <div class="flex gap-5 text-lg text-slate-900">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="w-12 h-12 bg-white rounded-full border-4 border-[#5C7C8A] flex items-center justify-center shadow-lg overflow-hidden">
+                 <img src="https://cdn-icons-png.flaticon.com/512/2864/2864283.png" class="w-7 h-7 opacity-70" alt="Icon">
             </div>
         </div>
     </div>
 </div>
+
 <!-- HERO SECTION -->
 <header class="relative h-[80em] max-md:h-[52em] flex items-center justify-center overflow-hidden py-20">
         
@@ -386,7 +385,7 @@
         
         <a href="/" class="group relative inline-flex items-center mt-7 gap-5 bg-[#6332fa] text-white px-10 py-5 rounded-full font-bold transition-all duration-300 shadow-[0_8px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[8px]">
                 <div class="relative h-[32px] max-md:h-[32px] font-boldo overflow-hidden">
-                    <div class="flex flex-col text-2xl max-md:text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                    <div class="flex flex-col text-2xl max-md:text-sm transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
                         <span class="leading-[32px]">Enquiry For Free</span>
                         <span class="leading-[32px]">Enquiry For Free</span>
                     </div>
@@ -398,7 +397,7 @@
             </a>
     </section>
 
-    <div class="trigger-area relative h-[400vh] max-md:h-[260vh] w-full">
+    <div class="trigger-area max-md:hidden relative h-[400vh] max-md:h-[0vh] w-full">
         <div class="sticky-box sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
             <div class="relative w-full h-full max-w-6xl flex items-center justify-center px-6">
                 
@@ -433,8 +432,46 @@
             </div>
         </div>
     </div>
- <!-- experience section  -->
-    <section id="experience-section" class="experience py-20 px-4 opacity-0 translate-y-20">
+
+  <div id="mobile-cards-triggerr" class="lg:hidden relative h-[4250vh] w-full px-4">
+    <div class="sticky top-20 h-[90vh] w-full flex items-center justify-center overflow-hidden">
+        
+        <div class="relative w-full h-[400px] flex items-center justify-center">
+            
+            <article class="card-stack-item absolute inset-0 w-full h-full bg-stone-200 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 transition-all duration-500">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5184f0f9633090453952_Why%20Choose%20Card%20Image.png" alt="Small Group" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                    <p class="text-white font-boldo text-xl uppercase leading-tight tracking-wide">Small Group<br>Attention</p>
+                </div>
+            </article>
+
+            <article class="card-stack-item absolute inset-0 w-full h-full bg-stone-200 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 transition-all duration-500">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e51834f1d55f72657b182_Why%20Choose%20Card%20Image-1.png" alt="Safe Environment" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                    <p class="text-white font-boldo text-xl uppercase leading-tight tracking-wide">Safe, Loving<br>Environment</p>
+                </div>
+            </article>
+
+            <article class="card-stack-item absolute inset-0 w-full h-full bg-stone-200 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 transition-all duration-500">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5183d153500411ac6752_Why%20Choose%20Card%20Image-2.png" alt="Qualified Educators" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                    <p class="text-white font-boldo text-xl uppercase leading-tight tracking-wide">Qualified<br>Educators</p>
+                </div>
+            </article>
+
+            <article class="card-stack-item absolute inset-0 w-full h-full bg-stone-200 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 transition-all duration-500">
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5182f212d5ff26eb6845_Why%20Choose%20Card%20Image-3.png" alt="Learning" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                    <p class="text-white font-boldo text-xl uppercase leading-tight tracking-wide">Learning<br>Through Play</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</div>
+
+    <!-- experience section  -->
+    <section id="experience-section" class="experience py-20 px-4 max-md:mt-[00vh] opacity-0 translate-y-20">
         <div class="max-w-6xl mx-auto bg-[#dcd4ff] rounded-[40px] p-8 md:p-16">
             
             <div class="text-center mb-12">
@@ -733,109 +770,82 @@
                Programs Designed<br>For Every Child.
             </h2>
         </header>
+
+<div class="lg:hidden w-full overflow-x-auto overflow-y-hidden px-5 pb-8 scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none;">
+    <div class="flex gap-5 w-max snap-x snap-mandatory">
         
-        <div class="lg:hidden swiper mySwiper px-5 overflow-hidden">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="bg-[#f4f3ec] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
-                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
-                        <h2 class="text-4xl max-md:text-2xl font-black text-slate-900 leading-tight">Infant Care</h2>
-                        <p class="text-xl font-bold text-slate-600 mt-1 mb-4">0 months–18 months</p>
-                        <p class="text-slate-600 mb-6 text-sm">Our Infant program is all about providing cozy care and fun experiences for your little one.</p>
-                        <div class="ticket-dashed-h mb-6"></div>
-                        <ul class="space-y-4 mb-8 font-comic font-bold text-slate-800">
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Tummy Time</li>
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Sensory Play</li>
-                             <li class="flex items-center gap-3"><span class="check-circle">✓</span> Language & Communication</li>
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Bonding &Comfort</li>
-                        </ul>
-<a href="/"
-        class="group relative inline-flex items-center justify-center gap-1 w-full
-        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
-        transition-all duration-300
-        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
-
-        <div class="relative h-[19px] items-center font-boldo overflow-hidden">
-          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
-            <span class="leading-[18px]">Learn More</span>
-            <span class="leading-[18px]">Learn More</span>
-          </div>
-        </div>
-
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
-          alt="Icon"
-          class="w-5 h-5">
-      </a>                     </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="bg-[#8ec371] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
-                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cec9488a257375bf18d_Thumbnail%20Image%2004.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
-                        <h2 class="text-4xl font-black max-md:text-2xl text-slate-900 leading-tight">Toddlers</h2>
-                        <p class="text-xl font-bold text-slate-800 mt-1 mb-4">18 months–3 Years</p>
-                        <p class="text-slate-900/70 mb-6 text-sm">Nurturing curiosity and supporting early development through playful exploration.</p>
-                        <div class="ticket-dashed-h border-black/10 mb-6"></div>
-                        <ul class="space-y-4 mb-8 font-comic font-bold text-slate-900">
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Creative Play</li>
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Fun</li>
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Exploration</li>
-                            <li class="flex items-center gap-3"><span class="check-circle">✓</span>Music &Movement</li>
-                        </ul>
-<a href="/"
-        class="group relative inline-flex items-center justify-center gap-1 w-full
-        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
-        transition-all duration-300
-        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
-
-        <div class="relative h-[19px] items-center font-boldo overflow-hidden">
-          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
-            <span class="leading-[18px]">Learn More</span>
-            <span class="leading-[18px]">Learn More</span>
-          </div>
-        </div>
-
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
-          alt="Icon"
-          class="w-5 h-5">
-      </a>
-                 </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="bg-[#e87053] rounded-[45px] p-6 shadow-xl border border-white w-full max-w-[340px]">
-                        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552e21d779887479095db5_Thumbnail%20Image%2003.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
-                        <h2 class="text-4xl font-black max-md:text-2xl text-black leading-tight">Preschoolers</h2>
-                        <p class="text-xl font-bold text-black mt-1 mb-4">3-5 Years</p>
-                        <p class="text-black mb-6 text-sm">Sparking creativity and preparing children for the next stage of learning.</p>
-                        <div class="ticket-dashed-h border-white/20 mb-6"></div>
-                        <ul class="space-y-4 mb-8 font-comic font-bold text-black">
-                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> STEM Fun</li>
-                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Creative Arts</li>
-                       <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Play</li>
-                            <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span>Outdoor Play &Nature</li>
-                        </ul>
-<a href="/"
-        class="group relative inline-flex items-center justify-center gap-1 w-full
-        bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold
-        transition-all duration-300
-        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
-
-        <div class="relative h-[19px] items-center font-bold overflow-hidden">
-          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
-            <span class="leading-[18px]">Learn More</span>
-            <span class="leading-[18px]">Learn More</span>
-          </div>
-        </div>
-
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
-          alt="Icon"
-          class="w-5 h-5">
-      </a>
+        <div class="snap-center bg-[#f4f3ec] rounded-2xl p-6 shadow-xl border border-white w-[85vw] max-w-[340px] flex-shrink-0">
+            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+            <h2 class="text-4xl max-md:text-2xl font-black text-slate-900 leading-tight">Infant Care</h2>
+            <p class="text-xl font-bold text-slate-600 mt-1 mb-4">0 months–18 months</p>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">Our Infant program is all about providing cozy care and fun experiences for your little one.</p>
+            <div class="ticket-dashed-h mb-6 border-t border-dashed border-slate-300"></div>
+            <ul class="space-y-4 mb-8 font-comic font-bold text-slate-800">
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Tummy Time</li>
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Sensory Play</li>
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Language & Communication</li>
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Bonding & Comfort</li>
+            </ul>
+            <a href="/" class="group relative inline-flex items-center justify-center gap-1 w-full bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+                <div class="relative h-[19px] items-center font-boldo overflow-hidden">
+                    <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                        <span class="leading-[18px]">Learn More</span>
+                        <span class="leading-[18px]">Learn More</span>
                     </div>
                 </div>
-            </div>
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" alt="Icon" class="w-5 h-5">
+            </a>
         </div>
-<!-- Testimonials section  -->
+
+        <div class="snap-center bg-[#8ec371] rounded-2xl p-6 shadow-xl border border-white w-[85vw] max-w-[340px] flex-shrink-0">
+            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552cec9488a257375bf18d_Thumbnail%20Image%2004.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+            <h2 class="text-4xl font-black max-md:text-2xl text-slate-900 leading-tight">Toddlers</h2>
+            <p class="text-xl font-bold text-slate-800 mt-1 mb-4">18 months–3 Years</p>
+            <p class="text-slate-900/70 mb-6 text-sm leading-relaxed">Nurturing curiosity and supporting early development through playful exploration.</p>
+            <div class="ticket-dashed-h border-black/10 mb-6 border-t border-dashed border-slate-700/20"></div>
+            <ul class="space-y-4 mb-8 font-comic font-bold text-slate-900">
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Creative Play</li>
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Fun</li>
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Outdoor Exploration</li>
+                <li class="flex items-center gap-3"><span class="check-circle">✓</span> Music & Movement</li>
+            </ul>
+            <a href="/" class="group relative inline-flex items-center justify-center gap-1 w-full bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+                <div class="relative h-[19px] items-center font-boldo overflow-hidden">
+                    <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                        <span class="leading-[18px]">Learn More</span>
+                        <span class="leading-[18px]">Learn More</span>
+                    </div>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" alt="Icon" class="w-5 h-5">
+            </a>
+        </div>
+
+        <div class="snap-center bg-[#e87053] rounded-2xl p-6 shadow-xl border border-white w-[85vw] max-w-[340px] flex-shrink-0">
+            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552e21d779887479095db5_Thumbnail%20Image%2003.png" class="w-full h-64 object-cover rounded-[35px] mb-6">
+            <h2 class="text-4xl font-black max-md:text-2xl text-black leading-tight">Preschoolers</h2>
+            <p class="text-xl font-bold text-black mt-1 mb-4">3-5 Years</p>
+            <p class="text-black mb-6 text-sm leading-relaxed">Sparking creativity and preparing children for the next stage of learning.</p>
+            <div class="ticket-dashed-h border-white/20 mb-6 border-t border-dashed border-white/40"></div>
+            <ul class="space-y-4 mb-8 font-comic font-bold text-black">
+                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> STEM Fun</li>
+                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Creative Arts</li>
+                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Outdoor Play</li>
+                <li class="flex items-center gap-3"><span class="check-circle" style="background:black; color:white">✓</span> Play & Nature</li>
+            </ul>
+            <a href="/" class="group relative inline-flex items-center justify-center gap-1 w-full bg-[#6332fa] text-white px-5 py-4 rounded-full font-semibold transition-all duration-300 shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+                <div class="relative h-[19px] items-center font-bold overflow-hidden">
+                    <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                        <span class="leading-[18px]">Learn More</span>
+                        <span class="leading-[18px]">Learn More</span>
+                    </div>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" alt="Icon" class="w-5 h-5">
+            </a>
+        </div>
+    </div>
+</div>
+
+  <!-- Testimonials section  -->
 <section class="py-20 px-6 " 
          x-data="{ 
             active: 0, 
