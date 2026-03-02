@@ -6,29 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
   // --- VIDEO ON/OFF LOGIC (FIXED) ---
-  // const handleVideoToggle = (videoId, btnId) => {
-  //     const video = document.getElementById(videoId);
-  //     const btn = document.getElementById(btnId);
-  //     if (video && btn) {
-  //         btn.addEventListener("click", () => {
-  //             if (video.paused) {
-  //                 video.play();
-  //                 btn.classList.add('playing'); // Optional: CSS icon change ke liye
-  //             } else {
-  //                 video.pause();
-  //                 btn.classList.remove('playing');
-  //             }
-  //         });
-  //     }
-  // };
-
-  // // About Section Video
-  // handleVideoToggle("myVideo", "videoBtn");
-  // // Gallery Section Video
-  // handleVideoToggle("mainVideo", "galleryVideoBtn");
-  // // Background Video (if any)
-  // handleVideoToggle("bgVideo", "bgVideoBtn");
-
   const handleVideoToggle = (videoId, btnId) => {
     const video = document.getElementById(videoId);
     const btn = document.getElementById(btnId);
@@ -152,85 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 7. GSAP Animations (Pinned Sections)
-// document.addEventListener("DOMContentLoaded", () => {
-//     if (typeof gsap !== 'undefined') {
-//         gsap.registerPlugin(ScrollTrigger);
-//         let mm = gsap.matchMedia();
-
-//         // --- SECTION 1: WHY CHOOSE US ANIMATIONS ---
-
-//         // Desktop Spread Effect
-//         mm.add("(min-width: 1024px)", () => {
-//             const cards = gsap.utils.toArray(".card-item");
-//             if (cards.length) {
-//                 gsap.timeline({
-//                     scrollTrigger: {
-//                         trigger: ".trigger-area",
-//                         start: "top top",
-//                         end: "+=300%",
-//                         scrub: 1,
-//                         pin: ".sticky-box",
-//                         pinSpacing: true,
-//                     },
-//                 })
-//                 .to(cards[0], { xPercent: -150, rotation: -12, opacity: 1 }, 0)
-//                 .to(cards[1], { xPercent: -50, rotation: -4, opacity: 1 }, 0)
-//                 .to(cards[2], { xPercent: 50, rotation: 4, opacity: 1 }, 0)
-//                 .to(cards[3], { xPercent: 150, rotation: 12, opacity: 1 }, 0);
-//             }
-//         });
-
-//         // Mobile Stacking Effect
-//         mm.add("(max-width: 1023px)", () => {
-//             const stackCards = gsap.utils.toArray('.card-stack-item');
-//             stackCards.forEach((card, index) => {
-//                 gsap.set(card, { zIndex: index });
-//                 if (index !== 0) {
-//                     gsap.set(card, { yPercent: 120, rotate: index % 2 === 0 ? 5 : -5 });
-//                 }
-//             });
-
-//             const tl = gsap.timeline({
-//                 scrollTrigger: {
-//                     trigger: ".trigger-area",
-//                     start: "top top",
-//                     end: "+=180%",
-//                     scrub: 0.5,
-//                     pin: ".sticky-box",
-//                     pinSpacing: true,
-//                     anticipatePin: 1
-//                 }
-//             });
-
-//             stackCards.forEach((card, index) => {
-//                 if (index > 0) {
-//                     tl.to(card, { yPercent: 0, rotate: 0, duration: 1, ease: "none" }, "+=0.4");
-//                 }
-//             });
-//         });
-
-//         // --- SECTION 2: EXPERIENCE SECTION ANIMATION ---
-//         // Ye hamesha chalega (Desktop + Mobile dono par)
-//         const expSection = document.querySelector("#experience-section");
-//         if (expSection) {
-//             gsap.timeline({
-//                 scrollTrigger: {
-//                     trigger: "#experience-section",
-//                     start: "top 80%",
-//                     toggleActions: "play none none reverse"
-//                 }
-//             })
-//             .to("#experience-section", { y: 0, opacity: 1, duration: 1 })
-//             .to(".experience-card", {
-//                 y: 0,
-//                 opacity: 1,
-//                 stagger: 0.15,
-//                 duration: 0.8,
-//                 ease: "back.out(1.7)"
-//             }, "-=0.5");
-//         }
-//     }
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined") {
@@ -261,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // 2. Mobile View (Stacking Effect - Under 1024px)
+    // 2. Mobile View (Stacking Effect - Under 1024px) 
 
     mm.add("(max-width: 1023px)", () => {
   const mobileCards = gsap.utils.toArray('#mobile-cards-triggerr .card-stack-item');
