@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const megaMenu = document.getElementById("mega-menu");
   const body = document.body;
 
-  // --- VIDEO ON/OFF LOGIC (FIXED) ---
   const handleVideoToggle = (videoId, btnId) => {
     const video = document.getElementById(videoId);
     const btn = document.getElementById(btnId);
@@ -129,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 7. GSAP Animations (Pinned Sections)
-
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -137,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- SECTION 1: WHY CHOOSE US ANIMATIONS ---
 
-    // 1. Desktop View (Spread Effect - 1024px and above)
+    // Desktop Spread Effect
     mm.add("(min-width: 1024px)", () => {
       const cards = gsap.utils.toArray(".card-item");
       if (cards.length) {
@@ -159,67 +157,54 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // 2. Mobile View (Stacking Effect - Under 1024px) 
-
+    // Mobile Stacking Effect
     mm.add("(max-width: 1023px)", () => {
-  const mobileCards = gsap.utils.toArray('#mobile-cards-triggerr .card-stack-item');
-  
-  mobileCards.forEach((card, index) => {
-    gsap.set(card, { 
-      zIndex: index,
-      yPercent: index === 0 ? 0 : 100 // Pehla card screen par, baaki niche
+      const stackCards = gsap.utils.toArray(".card-stack-item");
+      stackCards.forEach((card, index) => {
+        gsap.set(card, { zIndex: index });
+        if (index !== 0) {
+          gsap.set(card, { yPercent: 120, rotate: index % 2 === 0 ? 5 : -5 });
+        }
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".trigger-area",
+          start: "top top",
+          end: "+=180%",
+          scrub: 0.5,
+          pin: ".sticky-box",
+          pinSpacing: true,
+          anticipatePin: 1,
+        },
+      });
+
+      stackCards.forEach((card, index) => {
+        if (index > 0) {
+          tl.to(
+            card,
+            { yPercent: 0, rotate: 0, duration: 1, ease: "none" },
+            "+=0.4",
+          );
+        }
+      });
     });
-  });
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#mobile-cards-triggerr",
-      start: "top top",
-      end: "bottom bottom", // Poore container ki height tak animation chale ga
-      scrub: 0.5, // Super fast response to touch
-    }
-  });
-
-  mobileCards.forEach((card, index) => {
-    if (index > 0) {
-      // Previous card animation (Scale and Fade)
-      tl.to(mobileCards[index - 1], {
-        scale: 0.9,
-        opacity: 0.5,
-        duration: 1,
-        ease: "power1.inOut"
-      }, `card-${index}`);
-
-      // Current card animation (Slide Up FAST)
-      tl.to(card, {
-        yPercent: 0,
-        duration: 1,
-        ease: "power2.out"
-      }, `card-${index}-=0.4`); // 80% overlap taaki cards turant ek ke baad ek aayein
-    }
-  });
-});
 
     // --- SECTION 2: EXPERIENCE SECTION ANIMATION ---
-    // This runs on both Desktop and Mobile
+    // Ye hamesha chalega (Desktop + Mobile dono par)
     const expSection = document.querySelector("#experience-section");
     if (expSection) {
       gsap
         .timeline({
           scrollTrigger: {
             trigger: "#experience-section",
-            start: "top 85%", // Starts a bit earlier for smoother look
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         })
-        .fromTo(
-          expSection,
-          { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1 },
-        )
-        .fromTo(
+        .to("#experience-section", { y: 0, opacity: 1, duration: 1 })
+        .to(
           ".experience-card",
-          { y: 40, opacity: 0 },
           {
             y: 0,
             opacity: 1,
@@ -227,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 0.8,
             ease: "back.out(1.7)",
           },
-          "-=0.6", // Overlap with parent animation
+          "-=0.5",
         );
     }
   }
@@ -246,73 +231,73 @@ tailwind.config = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.getElementById("main-header");
-  const menuBtn = document.getElementById("menu-btn");
-  const megaMenu = document.getElementById("mega-menu");
-  const menuPanel = document.getElementById("menu-panel");
-  const headerLogo = document.getElementById("header-logo");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const header = document.getElementById("main-header");
+//   const menuBtn = document.getElementById("menu-btn");
+//   const megaMenu = document.getElementById("mega-menu");
+//   const menuPanel = document.getElementById("menu-panel");
+//   const headerLogo = document.getElementById("header-logo");
 
-  const bar1 = document.getElementById("bar1");
-  const bar2 = document.getElementById("bar2");
-  const bar3 = document.getElementById("bar3");
+//   const bar1 = document.getElementById("bar1");
+//   const bar2 = document.getElementById("bar2");
+//   const bar3 = document.getElementById("bar3");
 
-  let isMenuOpen = false;
+//   let isMenuOpen = false;
 
-  menuBtn.addEventListener("click", () => {
-    isMenuOpen = !isMenuOpen;
+//   menuBtn.addEventListener("click", () => {
+//     isMenuOpen = !isMenuOpen;
 
-    if (isMenuOpen) {
-      // Open Actions
-      megaMenu.classList.remove("pointer-events-none");
-      menuPanel.classList.remove("-translate-y-full");
-      menuPanel.classList.add("translate-y-0");
+//     if (isMenuOpen) {
+//       // Open Actions
+//       megaMenu.classList.remove("pointer-events-none");
+//       menuPanel.classList.remove("-translate-y-full");
+//       menuPanel.classList.add("translate-y-0");
 
-      if (window.innerWidth < 1024) {
-        // 1. Hide Logo
-        headerLogo.style.opacity = "0";
-        headerLogo.style.pointerEvents = "none";
+//       if (window.innerWidth < 1024) {
+//         // 1. Hide Logo
+//         headerLogo.style.opacity = "0";
+//         headerLogo.style.pointerEvents = "none";
 
-        // 2. Hide Header Background (Making it transparent)
-        header.style.backgroundColor = "transparent";
-        header.classList.remove("nav-glass");
+//         // 2. Hide Header Background (Making it transparent)
+//         header.style.backgroundColor = "transparent";
+//         header.classList.remove("nav-glass");
 
-        // 3. Transform Burger to X
-        bar1.style.transform = "rotate(45deg) translate(6px, 6px)";
-        bar2.style.opacity = "0";
-        bar3.style.transform = "rotate(-45deg) translate(6px, -6px)";
+//         // 3. Transform Burger to X
+//         bar1.style.transform = "rotate(45deg) translate(6px, 6px)";
+//         bar2.style.opacity = "0";
+//         bar3.style.transform = "rotate(-45deg) translate(6px, -6px)";
 
-        // IMPORTANT: Change button position to Absolute
-        // Taaki ye menu panel ke saath scroll ho jaye
-        menuBtn.style.position = "absolute";
-      }
+//         // IMPORTANT: Change button position to Absolute
+//         // Taaki ye menu panel ke saath scroll ho jaye
+//         menuBtn.style.position = "absolute";
+//       }
 
-      document.body.style.overflow = "hidden";
-    } else {
-      // Close Actions
-      menuPanel.classList.add("-translate-y-full");
-      menuPanel.classList.remove("translate-y-0");
+//       document.body.style.overflow = "hidden";
+//     } else {
+//       // Close Actions
+//       menuPanel.classList.add("-translate-y-full");
+//       menuPanel.classList.remove("translate-y-0");
 
-      // Reset Styles
-      headerLogo.style.opacity = "1";
-      headerLogo.style.pointerEvents = "auto";
-      header.style.backgroundColor = "";
-      header.classList.add("nav-glass");
+//       // Reset Styles
+//       headerLogo.style.opacity = "1";
+//       headerLogo.style.pointerEvents = "auto";
+//       header.style.backgroundColor = "";
+//       header.classList.add("nav-glass");
 
-      bar1.style.transform = "none";
-      bar2.style.opacity = "1";
-      bar3.style.transform = "none";
+//       bar1.style.transform = "none";
+//       bar2.style.opacity = "1";
+//       bar3.style.transform = "none";
 
-      // Reset button position
-      menuBtn.style.position = "";
+//       // Reset button position
+//       menuBtn.style.position = "";
 
-      setTimeout(() => {
-        megaMenu.classList.add("pointer-events-none");
-        document.body.style.overflow = "";
-      }, 500);
-    }
-  });
-});
+//       setTimeout(() => {
+//         megaMenu.classList.add("pointer-events-none");
+//         document.body.style.overflow = "";
+//       }, 500);
+//     }
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("main-header");
@@ -410,3 +395,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// JS to detect when card reaches its sticky position
+const updateCards = () => {
+            const wrappers = document.querySelectorAll('.card-wrapper');
+            
+            wrappers.forEach((wrapper) => {
+                const rect = wrapper.getBoundingClientRect();
+                const offset = parseInt(wrapper.getAttribute('data-offset'));
+
+                // Agar card apne top-margin position par pahunch gaya hai
+                if (rect.top <= offset + 5) { 
+                    wrapper.classList.add('is-stuck');
+                } else {
+                    wrapper.classList.remove('is-stuck');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', updateCards);
+        // Initial run
+        updateCards();

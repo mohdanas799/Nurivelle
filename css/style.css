@@ -1,575 +1,347 @@
- body {  background-color: white; }
- p{font-family: 'Comic Neue'}
- h1, h2, h3, h4, h5, h6 { font-family: 'Boldonse', sans-serif; }
-        /* Glassmorphism for Desktop Nav */
-        .nav-glass {
-            background:#c09ef7;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        /* Add this to your CSS to ensure the glass effect is fully removed */
-.nav-glass {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* ============================================================
+   1. GLOBAL STYLES & TYPOGRAPHY
+   ============================================================ */
+body { 
+    background-color: white; 
 }
-/* Ocultar barra de scroll en Chrome, Safari y Opera */
-    .lg\:hidden::-webkit-scrollbar {
-        display: none;
-    }
+
+p { 
+    font-family: 'Comic Neue', cursive; 
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Boldonse', sans-serif; 
+}
+
+/* Neubrutalism Global Utilities */
+.dashed-border { 
+    border: 2px dashed #00000033; 
+}
+
+.bg-brand-purple { 
+    background-color: #d1c4ff; 
+}
+
+.bg-btn-purple { 
+    background-color: #6332fa; 
+}
+
+/* ============================================================
+   2. NAVIGATION & HEADER SECTION
+   ============================================================ */
+#main-header {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+/* Desktop Glass Effect */
+.nav-glass {
+    background: #c09ef7;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Scroll Animation: Pill Shape (Centered) */
+.header-pill {
+    top: 1.2rem !important;
+    width: 90% !important;
+    max-width: 1100px;
+    border-radius: 999px;
+    background: #c09ef7;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+}
+
+/* Header UI Tweaks */
 .no-border {
     border: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
 }
 
-        /* Dropdown Animation */
-        .dropdown-content {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-        .dropdown-group:hover .dropdown-content {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        /* Wavy Menu Icon (Mobile Only) */
-        .wave-bar {
-            width: 28px;
-            height: 4px;
-            background-color: #4C1D95;
-            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
-            mask-repeat: repeat-x;
-            background-size: 12px 100%;
-            transition: 0.3s;
-        }
-
-        .menu-active .wave-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); mask-image: none; border-radius: 2px; }
-        .menu-active .wave-bar:nth-child(2) { opacity: 0; }
-        .menu-active .wave-bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); mask-image: none; border-radius: 2px; }
-
-        /* Mega Menu Panel Movement */
-        #menu-panel { transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1); }
-        #menu-panel.open { transform: translateY(0); }
-
-        /* Card Visuals */
-        .grid-card { position: relative; border-radius: 24px; overflow: hidden; height: 180px; }
-        .grid-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s transform; }
-        .grid-card:hover img { transform: scale(1.08); }
-        .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5), transparent); }
-        
-        .cta-btn-inner span { transition: 0.4s transform; }
-        .cta-btn:hover .cta-btn-inner span { transform: translateY(-100%); }
-
-
-        .hero-bg-purple { background-color: #7B2CBF; }
-
-        /* Webflow-style Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Continuous Floating Animation for Decorative Images */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        .animate-float { animation: float 5s ease-in-out infinite; }
-
-        /* Spinning 'O' icon */
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow { animation: spin-slow 8s linear infinite; }
-
-        /* Button Hover Text Slide Effect */
-        .btn-text-slide { transition: transform 0.4s ease; }
-        .primary-button:hover .btn-text-slide { transform: translateY(-100%); }
-
- @keyframes floatCloud {
-            0% { transform: translateY(-10%) translateX(0) rotate(0deg); opacity: 0; }
-            20% { opacity: 0.6; }
-            80% { opacity: 0.6; }
-            100% { transform: translateY(110vh) translateX(100px) rotate(20deg); opacity: 0; }
-        }
-        @keyframes subtleFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        .cloud-particle {
-            position: absolute;
-            pointer-events: none;
-            animation: floatCloud linear infinite;
-            z-index: 10;
-            filter: brightness(0) invert(1); /* Makes the cloud white for the purple background */
-        }
-        .animate-float { animation: subtleFloat 4s ease-in-out infinite; }
-        .hero-bg-purple { background-color: #7B2CBF; } /* Matching the screenshot purple */
-/* Nurivelle Text Slide Animation */
-    .btn-text-slide { 
-        transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1); 
-    }
-    .primary-button:hover .btn-text-slide { 
-        transform: translateY(-100%); 
-    }
-     
-    .dashed-border { border: 2px dashed #00000033; }
-        /* Custom Purple for the main container */
-        .bg-brand-purple { background-color: #d1c4ff; }
-        /* Custom Purple for the button */
-        .bg-btn-purple { background-color: #6332fa; }
-
-        /* Seamless Infinite Scroll Animation */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-ticker {
-            display: flex;
-            width: max-content;
-            animation: scroll 30s linear infinite;
-        }
-        /* Top-Right Background Image Animation */
-        .features-card-bg {
-            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            transform: scale(0) translate(15%, -15%);
-            opacity: 0;
-        }
-        .group:hover .features-card-bg {
-            transform: scale(1) translate(0, 0);
-            opacity: 1;
-        }
-
-        .bg-brand-purple { background-color: #d1c4ff; }
-        .dashed-border { border: 2px dashed #00000033; }
-        
-        /* Smooth Counter Animation */
-        .counter-animate {
-            transition: all 2s cubic-bezier(0.1, 0, 0, 1);
-        }
-
-        /* .... */
-
-        .card-stack-item { 
-            position: absolute; 
-            will-change: transform, opacity;
-            transform-origin: center center;
-        }
-
-        .card-shadow {
-            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.18);
-        }
-        
-        /* Custom dashed border */
-        .dashed-border {
-            border: 2px dashed #1a1a1a;
-        }
-
-        /* Smooth card hover */
-        .experience-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .experience-card:hover {
-            transform: scale(1.03);
-            background-color: #ffffff;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-
-        /* Desktop Stacking logic */
-        @media (min-width: 1024px) {
-            .stack-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-bottom: 300px;
-            }
-            .desktop-card {
-                position: sticky;
-                width: 100%;
-                top: 40px; 
-                margin-bottom: 150px;
-                transition: transform 0.4s ease;
-            }
-            .card-1 { z-index: 1; top: 40px; }
-            .card-2 { z-index: 2; top: 80px; }
-            .card-3 { z-index: 3; top: 120px; }
-            .card-4 { z-index: 4; top: 160px; }
-            .card-5 { z-index: 5; top: 200px; }
-        }
-
-        /* Exact Ticket Borders */
-        .ticket-dashed-v { border-left: 1.5px dashed rgba(0,0,0,0.2); }
-        .ticket-dashed-h { border-bottom: 1.5px dashed rgba(0,0,0,0.2); }
-
-        /* Button Shadow Style */
-        .btn-premium {
-            background-color: #6c38ff;
-            box-shadow: 0 8px 0 0 #000;
-            transition: all 0.1s;
-        }
-        .btn-premium:active {
-            transform: translateY(4px);
-            box-shadow: 0 4px 0 0 #000;
-        }
-
-        .check-circle {
-            width: 24px;
-            height: 24px;
-            background: #222;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            flex-shrink: 0;
-        }
-
-        /* Swiper Mobile Customization */
-        .swiper{
-            width: 100%;
-            padding: 20px 0 50px 0;
-        }
-        .swiper-slide {
-            height: auto;
-            display: flex;
-            justify-content: center;
-        }
-
-        .faq-title { 
-            font-weight: 900; 
-            line-height: 1.0; 
-            letter-spacing: -0.05em;
-        }
-
-        .gallery-title {
-            font-weight: 900;
-            line-height: 1.0;
-            letter-spacing: -0.05em;
-        }
-
-        /* The Pink Instagram Hover Animation */
-        .insta-pulse {
-            position: relative;
-            width: 48px;
-            height: 48px;
-            background-color: #ff00ba;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            z-index: 2;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform: scale(0);
-        }
-
-        .group:hover .insta-pulse {
-            transform: scale(1);
-        }
-
-        /* The Outer Expanding Ring Effect */
-        .insta-pulse::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid #ff00ba;
-            border-radius: 50%;
-            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-            opacity: 0;
-        }
-
-        .group:hover .insta-pulse::after {
-            opacity: 1;
-        }
-
-        @keyframes pulse-ring {
-            0% { transform: scale(1); opacity: 1; }
-            80%, 100% { transform: scale(2.5); opacity: 0; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 1.2s ease-out forwards;
-        }
-
-        /* Floating Animation for Sun and Plane */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-
-/* ABOUT HERO SECTION .......................................  */
-
-        /* Infinite Scroll Animation */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-ticker {
-            display: flex;
-            width: max-content;
-            animation: scroll 15s linear infinite;
-        }
-
-        /* Custom animation for the progress bars */
-        @keyframes fillProgress {
-            from { width: 0%; }
-            to { width: var(--progress-width); }
-        }
-
-        .animate-progress {
-            animation: fillProgress 2s ease-in-out forwards;
-        }
-
-        /* Spinning badge animation */
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .animate-spin-custom {
-            animation: spin-slow 12s linear infinite;
-        }
-
-        /* Custom Rounded Corner for the Image */
-        .custom-image-clip {
-            border-radius: 60px 60px 60px 60px;
-        }
-
-        /* Button Hover Effect */
-        .btn-hover:hover .icon-circle {
-            transform: translateX(5px);
-        }
-
-        /* Custom Marquee Animation for Moving Clouds */
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-            display: flex;
-            width: 200%;
-            animation: scroll 30s linear infinite;
-        }
-        /* The specific flower/star shape mask for the profile images */
-        .member-mask {
-            clip-path: polygon(50% 0%, 63% 5%, 72% 15%, 83% 13%, 89% 23%, 100% 30%, 97% 43%, 100% 56%, 93% 68%, 91% 81%, 79% 84%, 68% 94%, 53% 91%, 40% 98%, 26% 92%, 14% 92%, 8% 80%, 0% 70%, 5% 57%, 2% 43%, 6% 31%, 14% 19%, 24% 16%, 35% 6%);
-        }
-
-    /* Force Active State - !important is necessary to override Tailwind's default bg/border */
-        .tab-active {
-            background-color: #DBC6FF !important; /* Nurivelle Purple */
-            border-style: solid !important;
-            border-color: #000000 !important;
-            opacity: 1 !important;
-            transition: all 0.3s ease;
-        }
-
-        /* Neubrutalism Image Border */
-        .food-image-border {
-            border: 2px dashed #000000;
-            border-radius: 2rem;
-        }
-
-        /* Scrolling Text Animation for the Pink Ribbon */
-    @keyframes scrollText {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-    .animate-ribbon-text {
-        display: flex;
-        width: max-content;
-        animation: scrollText 30s linear infinite;
-    }
-
-    /* Slanted Effect for the Ribbon */
-    .ribbon-slant {
-        transform: translateY(50%) rotate(-2.5deg) scale(1.1);
-        background-color: #FF00CC; /* Bright Pink */
-        border-top: 2px solid #000;
-        border-bottom: 2px solid #000;
-    }
-
-    /* Dashed Border Styling */
-    .dashed-img-container {
-        border: 2px dashed #000;
-        border-radius: 50px;
-        padding: 12px;
-    }
-
-    /* SERVICES .................................... */
-
-    @keyframes fadeInScale {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-        .animate-hero-img {
-            animation: fadeInScale 1s ease-out forwards;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Instagram Pulse Animation */
-        .insta-pulse {
-            background: white;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 20px;
-            color: #E1306C;
-            transform: scale(0);
-            transition: transform 0.3s ease;
-        }
-        .group:hover .insta-pulse {
-            transform: scale(1);
-        }
-
-        @keyframes fadeInUp {
-  from {
+/* Dropdown Menu Animation */
+.dropdown-content {
     opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dropdown-group:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   3. MOBILE MEGA MENU SECTION
+   ============================================================ */
+#mega-menu {
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#mega-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#menu-panel {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(-120%);
+}
+
+#mega-menu.active #menu-panel {
+    transform: translateY(0);
+}
+
+/* Hide Scrollbar for Mobile Menu */
+.lg\:hidden::-webkit-scrollbar {
+    display: none;
+}
+
+/* Burger Menu Icon (Wave Bars) */
+.wave-bar {
+    width: 26px;
+    height: 3px;
+    background-color: #4C1D95;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Burger Animation to X */
+.active-burger .wave-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.active-burger .wave-bar:nth-child(2) { opacity: 0; }
+.active-burger .wave-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   4. HERO & DECORATIVE ANIMATIONS
+   ============================================================ */
+.hero-bg-purple { 
+    background-color: #7B2CBF; 
+}
+
+/* Floating Elements (Sun, Plane, Clouds) */
+@keyframes subtleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+.animate-float { 
+    animation: subtleFloat 4s ease-in-out infinite; 
+}
+
+/* Spinning slow icons */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow { 
+    animation: spin-slow 8s linear infinite; 
+}
+.animate-spin-custom {
+    animation: spin-slow 12s linear infinite;
+}
+
+/* Hero Image Entry Animation */
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.animate-hero-img {
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+/* ============================================================
+   5. BUTTONS & CTA SECTION
+   ============================================================ */
+/* Button Hover Text Slide Effect */
+.cta-btn-inner span { 
+    transition: 0.4s transform; 
+}
+.cta-btn:hover .cta-btn-inner span { 
+    transform: translateY(-100%); 
+}
+
+.btn-text-slide { 
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1); 
+}
+.primary-button:hover .btn-text-slide { 
+    transform: translateY(-100%); 
+}
+
+/* Neubrutalism Premium Button */
+.btn-premium {
+    background-color: #6c38ff;
+    box-shadow: 0 8px 0 0 #000;
+    transition: all 0.1s;
+}
+.btn-premium:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 0 #000;
+}
+
+/* ============================================================
+   6. CARDS, STACKING & GRID SECTION
+   ============================================================ */
+/* Generic Grid Cards */
+.grid-card { 
+    position: relative; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    height: 160px; 
+    cursor: pointer; 
+}
+.grid-card img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: 0.5s transform; 
+}
+.grid-card:hover img { 
+    transform: scale(1.1); 
+}
+.card-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); 
+}
+
+/* GSAP/Scroll Stacking Cards */
+.card-stack-item {
+    position: absolute; 
+    will-change: transform, opacity;
+    transform-origin: center center;
+    transition: none !important; 
+}
+
+/* Smooth transition for straightening effect */
+.card-inner {
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
+}
+ /* Sticky activation class (JS handles this) */
+.is-stuck .card-inner {
+    transform: rotate(0deg) translateY(0px) !important;
+    opacity: 1 !important;
+}
+
+/* Desktop Stacking Logic */
+@media (min-width: 1024px) {
+    .desktop-card {
+        position: sticky;
+        width: 100%;
+        top: 40px; 
+        margin-bottom: 150px;
+        transition: transform 0.4s ease;
+    }
+    .card-1 { z-index: 1; top: 40px; }
+    .card-2 { z-index: 2; top: 80px; }
+    .card-3 { z-index: 3; top: 120px; }
+    .card-4 { z-index: 4; top: 160px; }
+    .card-5 { z-index: 5; top: 200px; }
+}
+
+/* ============================================================
+   7. TICKERS & MARQUEE SECTION
+   ============================================================ */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-ticker, .animate-scroll, .animate-marquee-infinite {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+/* Pink Slanted Ribbon Ticker */
+.ribbon-slant {
+    transform: translateY(50%) rotate(-2.5deg) scale(1.1);
+    background-color: #FF00CC; 
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.animate-ribbon-text {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+/* ============================================================
+   8. MISC UI COMPONENTS (FAQs, GALLERY, MASKING)
+   ============================================================ */
+/* Swiper Customization */
+.swiper {
+    width: 100%;
+    padding: 20px 0 50px 0;
+}
+
+/* Flower/Star Shape Mask */
+.member-mask {
+    clip-path: polygon(50% 0%, 63% 5%, 72% 15%, 83% 13%, 89% 23%, 100% 30%, 97% 43%, 100% 56%, 93% 68%, 91% 81%, 79% 84%, 68% 94%, 53% 91%, 40% 98%, 26% 92%, 14% 92%, 8% 80%, 0% 70%, 5% 57%, 2% 43%, 6% 31%, 14% 19%, 24% 16%, 35% 6%);
+}
+
+/* Instagram Hover Pulse */
+.insta-pulse {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background-color: #ff00ba;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0);
+}
+
+.group:hover .insta-pulse {
+    transform: scale(1);
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 1; }
+    80%, 100% { transform: scale(2.5); opacity: 0; }
+}
+
+.insta-pulse::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid #ff00ba;
+    border-radius: 50%;
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    opacity: 0;
+}
+
+.group:hover .insta-pulse::after {
+    opacity: 1;
+}
+
+/* Reveal on Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.active {
     opacity: 1;
     transform: translateY(0);
-  }
 }
-
-.animate-reveal {
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-
-/* Custom Ticker / Wavy Border Animation if needed, 
-           but here we use the image provided in your snippet */
-        .wavy-top {
-            mask-image: url('https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a4cf866f2e56f7b158c38_Element%202.png');
-            mask-size: contain;
-            mask-repeat: repeat-x;
-        }
-
-        /* Smooth Moving Animation for Bottom Ticker */
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .animate-marquee-infinite {
-            display: flex;
-            width: 200%;
-            animation: marquee 20s linear infinite;
-        }
-
-        /* Purple Map Tint Overlay */
-        .map-tint {
-            background-color: rgba(99, 34, 255, 0.15);
-            mix-blend-mode: multiply;
-        }
-
-
-        /* ///////////////////////////////////// */
-
-        #main-header {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            z-index: 1000;
-            margin: 0 auto;
-        }
-
-        /* SCROLL ANIMATION: Pill Shape (Centered) */
-        .header-pill {
-            top: 1.2rem !important;
-            width: 90% !important;
-            max-width: 1100px;
-            border-radius: 999px;
-            background: #c09ef7;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding-top: 0.4rem !important;
-            padding-bottom: 0.4rem !important;
-        }
-
-        /* --- Mega Menu --- */
-        #mega-menu {
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-            opacity: 0;
-            visibility: hidden;
-        }
-        #mega-menu.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-        #menu-panel {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            transform: translateY(-120%);
-        }
-        #mega-menu.active #menu-panel {
-            transform: translateY(0);
-        }
-
-        /* Burger Menu Wave Bars */
-        .wave-bar {
-            width: 26px;
-            height: 3px;
-            background-color: #4C1D95;
-            border-radius: 2px;
-            transition: 0.3s ease;
-        }
-        .active-burger .wave-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-        .active-burger .wave-bar:nth-child(2) { opacity: 0; }
-        .active-burger .wave-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-        /* Grid Card Styling */
-        .grid-card { position: relative; border-radius: 20px; overflow: hidden; height: 160px; cursor: pointer; }
-        .grid-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s transform; }
-        .grid-card:hover img { transform: scale(1.1); }
-        .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); }
-
-        .card-stack-item {
-    position: absolute; /* Mobile par zaroori hai stacking ke liye */
-    transition: none !important; /* GSAP aur CSS transitions aapas mein ladte hain */
-}
-
