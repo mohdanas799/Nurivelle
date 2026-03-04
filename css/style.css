@@ -226,16 +226,17 @@ h1, h2, h3, h4, h5, h6 {
     transition: none !important; 
 }
 
-/* Smooth transition for straightening effect */
+/* Smooth transition for straightening effect only */
 .card-inner {
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
-}
- /* Sticky activation class (JS handles this) */
-.is-stuck .card-inner {
-    transform: rotate(0deg) translateY(0px) !important;
-    opacity: 1 !important;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Opacity transition hata di gayi hai */
 }
 
+/* Sticky activation class */
+.is-stuck .card-inner {
+    transform: rotate(0deg) translateY(0px) !important;
+    /* Opacity control yahan se hata diya hai taaki HTML wali opacity hi chale */
+}
 /* Desktop Stacking Logic */
 @media (min-width: 1024px) {
     .desktop-card {

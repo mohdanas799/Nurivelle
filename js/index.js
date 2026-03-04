@@ -331,21 +331,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // JS to detect when card reaches its sticky position
 const updateCards = () => {
-            const wrappers = document.querySelectorAll('.card-wrapper');
-            
-            wrappers.forEach((wrapper) => {
-                const rect = wrapper.getBoundingClientRect();
-                const offset = parseInt(wrapper.getAttribute('data-offset'));
+    const wrappers = document.querySelectorAll('.card-wrapper');
+    
+    wrappers.forEach((wrapper) => {
+        const rect = wrapper.getBoundingClientRect();
+        const offset = parseInt(wrapper.getAttribute('data-offset'));
 
-                // Agar card apne top-margin position par pahunch gaya hai
-                if (rect.top <= offset + 5) { 
-                    wrapper.classList.add('is-stuck');
-                } else {
-                    wrapper.classList.remove('is-stuck');
-                }
-            });
-        };
+        // Agar card apne top position par pahunch gaya hai
+        if (rect.top <= offset + 5) { 
+            wrapper.classList.add('is-stuck');
+        } else {
+            wrapper.classList.remove('is-stuck');
+        }
+    });
+};
 
-        window.addEventListener('scroll', updateCards);
-        // Initial run
-        updateCards();
+window.addEventListener('scroll', updateCards);
+// Initial run for page load
+updateCards();
