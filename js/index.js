@@ -351,15 +351,17 @@ window.addEventListener('scroll', updateCards);
 updateCards();
 
 
-// Page load hone ke 2 seconds baad popup dikhane ke liye
-    window.onload = function() {
+// 3 Seconds (3000ms) ke baad popup dikhane ke liye
+    window.addEventListener('load', function() {
         setTimeout(function() {
-            document.getElementById('popup-overlay').classList.remove('hidden');
-            document.getElementById('popup-overlay').classList.add('flex');
-        }, 5000); 
-    };
+            const popup = document.getElementById('popup-overlay');
+            popup.classList.remove('hidden');
+            popup.classList.add('flex');
+        }, 3000); // 3 seconds delay
+    });
 
     // Close button function
     function closePopup() {
-        document.getElementById('popup-overlay').style.display = 'none';
+        const popup = document.getElementById('popup-overlay');
+        popup.style.display = 'none';
     }

@@ -39,54 +39,47 @@
 <body class="text-[#333] overflow-x-hidden">
  
     <!-- POPUP SECTION -->
-    <div id="popup-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4">
+    <div id="popup-overlay" class="hidden fixed inset-0 z-[9999] items-center justify-center bg-black/70 p-4 transition-opacity duration-500">
     
     <div class="relative flex w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl md:flex-row">
         
-        <button onclick="closePopup()" class="absolute right-4 top-4 z-10 text-2xl text-gray-500 hover:text-black focus:outline-none">
+        <button onclick="closePopup()" class="absolute right-4 top-4 z-20 text-3xl text-gray-400 hover:text-black focus:outline-none">
             &times;
         </button>
 
-        <div class="flex items-center justify-center bg-white md:w-5/12 md:items-end">
+        <div class="flex items-center justify-center bg-white md:w-5/12">
             <img 
                 src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d0049ff90d81c3c8efc34_About%20Us%20Card%20Image%2002.png" 
-                alt="Dr. Jamal Akhtar Azmi" 
-                class="mt-8 h-40 w-40 rounded-full border-4 border-white object-cover shadow-lg md:m-0 md:h-full md:w-full md:rounded-none md:border-0 md:shadow-none"
+                alt="Nurivelle" 
+                class="mt-10 h-32 w-32 rounded-full border-4 border-[#FF00BF] object-cover shadow-lg md:m-0 md:h-full md:w-full md:rounded-none md:border-0 md:shadow-none"
             >
         </div>
 
-        <div class="flex flex-col justify-center p-8 text-center md:w-7/12 md:p-12 md:text-left">
-            <h2 class="font-serif text-3xl font-bold leading-tight text-gray-900 md:text-5xl">
+        <div class="flex flex-col justify-center p-6 text-center md:w-7/12 md:p-12 md:text-left">
+            <h2 class="font-serif text-2xl font-bold leading-tight text-gray-900 md:text-5xl">
                 Book Your <br class="hidden md:block"> Appointment
             </h2>
             
-            <p class="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
-                Experience the art of clinical excellence at Nurivelle. From advanced skin transformations to hair restoration, book your private consultation with our experts and start your journey to radiant confidence.
+            <p class="mt-4 text-sm leading-relaxed text-gray-600 md:text-lg">
+                Experience the art of clinical excellence at <strong>Nurivelle</strong>. From advanced skin transformations to hair restoration, book your private consultation with our experts.
             </p>
 
             <div class="mt-8 flex justify-center md:justify-start">
-                <a href="/"
-        class="group relative inline-flex items-center gap-3 w-fit
-        bg-[#FF00BF] text-white px-5 py-3.5 rounded-full font-semibold
-        transition-all duration-300
-        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
-
-        <div class="relative h-[25px] font-boldo overflow-hidden">
-          <div class="flex flex-col text-lg max-md:text-sm transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
-            <span class="leading-[28px]"> Contact Us </span>
-            <span class="leading-[28px]"> Contact Us </span>
-          </div>
-        </div>
-
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
-          alt="Icon"
-          class="w-9 h-9">
-      </a>
+                <a href="https://wa.me/YOUR_NUMBER" class="group relative inline-flex items-center gap-3 w-fit bg-[#FF00BF] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_4px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[4px]">
+                    <div class="relative h-[24px] overflow-hidden">
+                        <div class="flex flex-col text-base font-boldo transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                            <span class="leading-[24px]">Contact Us</span>
+                            <span class="leading-[24px]">Contact Us</span>
+                        </div>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png" alt="Icon" class="w-6 h-6">
+                </a>
             </div>
         </div>
-
     </div>
 </div>
+
+
 <!-- NAVBAR SECTION -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
      <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
