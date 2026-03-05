@@ -57,7 +57,7 @@
                     </svg>
                 </button>
 
-                <div class="absolute top-full left-0 mt-8 w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
+                <div class="absolute top-full left-0 mt-9 rounded-br-xl rounded-bl-xl w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
                             opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
                             transition-all duration-300 z-50">
                     <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail One</a>
@@ -170,8 +170,7 @@
 
 <!-- ALL SERVICES SECTION  -->
 
-
-<div class="max-w-7xl mx-auto max-lg:mx-5 max-md:mx-4 mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div x-data="{ openForm: false }" class="max-w-7xl mx-auto max-lg:mx-5 max-md:mx-4 mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
     
     <div class="lg:col-span-8 space-y-10 order-1">
         
@@ -185,7 +184,7 @@
             <p class="text-slate-600 leading-relaxed">
                 The journey to transform your child's future begins with a simple step. Contact Dr. Gursev Sandlas today to arrange a consultation. Together, we can pave the way for your child's brighter, healthier tomorrow. Your child's happiness is our ultimate goal, and we're here to guide you every step of the way.
             </p>
-             <a href="/"
+             <button @click="openForm = true"
         class="group relative inline-flex items-center gap-3 w-fit
         bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
         transition-all duration-300
@@ -201,7 +200,7 @@
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
           alt="Icon"
           class="w-9 h-9">
-      </a>
+      </button>
         </div>
 
         <hr class="border-slate-200">
@@ -241,7 +240,7 @@
         <div class="bg-[#e2dbff] p-10 rounded-[40px] text-center space-y-6">
             <h2 class="text-2xl max-md:text-sm font-black text-slate-900">Making Hypospadias Treatment Less Scary for Kids</h2>
             <p class="text-slate-700 ">Helping your child thrive with successful surgical outcomes and compassionate care.</p>
-            <a href="/"
+            <button @click="openForm = true"
         class="group relative inline-flex items-center gap-3 w-fit
         bg-white text-white px-5 py-3.5 rounded-full font-semibold
         transition-all duration-300
@@ -257,13 +256,13 @@
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png"
           alt="Icon"
           class="w-9 h-9">
-      </a>
+      </button>
         </div>
     </div>
 
     <aside class="lg:col-span-4 self-start sticky top-10 space-y-8 order-2">
         
-        <div class="bg-white border-2  mt-20 border-[#e2dbff] p-8 rounded-[40px] shadow-xl space-y-6">
+        <div class="bg-white border-2 max-md:hidden max-lg:hidden mt-20 border-[#e2dbff] p-8 rounded-[40px] shadow-xl space-y-6">
             <h3 class="text-xl font-black text-center text-slate-900 bg-[#e2dbff] -mx-8 -mt-8 py-4 rounded-t-[38px]">Book An Appointment</h3>
             <form class="space-y-4">
                 <input type="text" placeholder="Name*" class="w-full p-3 rounded-full border-2 border-dotted border-slate-300 focus:outline-[#6332fa] focus:border-solid">
@@ -276,23 +275,21 @@
                 </select>
                 <textarea placeholder="Message*" rows="3" class="w-full p-3 rounded-xl border-2 border-dotted border-slate-300 focus:outline-[#6332fa] focus:border-solid"></textarea>
                 
-                 <a href="/"
-        class="group relative inline-flex items-center gap-3 w-fit
-        bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
-        transition-all duration-300
-        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+                <a href="/"
+                      class="group relative inline-flex items-center gap-3 w-fit
+                      bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
+                      transition-all duration-300
+                      shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
 
-        <div class="relative h-[25px] font-boldo overflow-hidden">
-          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
-            <span class="leading-[28px]">SUBMIT NOW</span>
-            <span class="leading-[28px]">SUBMIT NOW</span>
-          </div>
-        </div>
-
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
-          alt="Icon"
-          class="w-9 h-9">
-      </a>
+                <div class="relative h-[25px] font-boldo overflow-hidden">
+                    <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                     <span class="leading-[28px]">SUBMIT NOW</span>
+                     <span class="leading-[28px]">SUBMIT NOW</span>
+                     </div>
+                </div>
+                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+                      alt="Icon" class="w-9 h-9">
+                </a>
             </form>
         </div>
 
@@ -324,9 +321,67 @@
                 </a>
             </div>
         </div>
-
     </aside>
+
+<div x-show="openForm" 
+     x-transition:enter="transition ease-out duration-500"
+     x-transition:enter-start="translate-x-full"
+     x-transition:enter-end="translate-x-0"
+     x-transition:leave="transition ease-in duration-500"
+     x-transition:leave-start="translate-x-0"
+     x-transition:leave-end="translate-x-full"
+     class="fixed inset-0 z-[100] bg-black/20 backdrop-blur-sm flex items-end justify-center md:items-center"
+     style="display: none;">
+
+    <div @click="openForm = false" class="absolute inset-0"></div>
+
+    <div class="relative w-full max-w-lg mx-auto mt-44 mb-auto px-4 z-[110]">
+        
+        <button @click="openForm = false" class="absolute -top-14 left-0 max-md:left-2 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all shadow-lg border border-slate-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div class="bg-white border-2 border-[#e2dbff] rounded-[30px] shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+            
+            <h3 class="text-xl font-black text-center text-slate-900 bg-[#e2dbff] py-4 px-6 uppercase tracking-tight">
+                Book An Appointment
+            </h3>
+            
+            <form class="p-6 space-y-3 overflow-y-auto">
+                <input type="text" placeholder="Name*" class="w-full p-3 text-sm rounded-full border-2 border-dotted border-slate-300 focus:outline-[#6332fa] bg-slate-50/50">
+                
+                <input type="email" placeholder="E-mail*" class="w-full p-3 text-sm rounded-full border-2 border-dotted border-slate-300 focus:outline-[#6332fa] bg-slate-50/50">
+                
+                <input type="tel" placeholder="Phone Number*" class="w-full p-3 text-sm rounded-full border-2 border-dotted border-slate-300 focus:outline-[#6332fa] bg-slate-50/50">
+                
+                <select class="w-full p-3 text-sm rounded-full border-2 border-dotted border-slate-300 text-slate-500 focus:outline-[#6332fa] bg-slate-50/50">
+                    <option>--Select Location--</option>
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                </select>
+                
+                <textarea placeholder="Message*" rows="2" class="w-full p-3 text-sm rounded-[20px] border-2 border-dotted border-slate-300 focus:outline-[#6332fa] bg-slate-50/50"></textarea>
+                
+                <button type="submit" class="group relative inline-flex items-center gap-3 w-fit
+                         bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
+                          transition-all duration-300
+                         shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+                    <div class="relative h-[25px] font-boldo overflow-hidden">
+                       <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+                         <span class="leading-[28px]">SUBMIT NOW</span>
+                         <span class="leading-[28px]">SUBMIT NOW</span>
+                       </div>
+                    </div>
+                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"alt="Icon"class="w-9 h-9">
+                    </button>
+            </form>
+        </div>
+    </div>
 </div>
+
+</div>
+
 
 
 

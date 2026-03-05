@@ -57,7 +57,7 @@
                     </svg>
                 </button>
 
-                <div class="absolute top-full left-0 mt-8 w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
+                <div class="absolute top-full left-0 mt-9 rounded-br-xl rounded-bl-xl w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
                             opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
                             transition-all duration-300 z-50">
                     <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail One</a>
@@ -201,6 +201,7 @@
         </div>
 
     </header>
+
 <!-- OUR CORE VALUES SECTION   -->
     <section class="max-w-7xl mx-auto bg-white px-6 py-16 lg:py-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -299,6 +300,7 @@
             </div>
         </div>
     </section>
+
 <!-- TEAM SECTION  -->
  <div class="relative w-full overflow-hidden leading-[0] right-0 z-10">
     <div class="animate-ticker transform scale-y-[-1]">
@@ -420,13 +422,14 @@
     </div>
 
 </section>
+
 <!-- food-routine section  -->
-<section class="py-20">
+<section class="py-20 ">
     <div class="container mx-auto px-4 max-w-7xl">
-        <div class="flex flex-col lg:flex-row gap-12">
+        <div class="flex flex-col lg:flex-row gap-12 top-20">
             
             <div class="lg:w-1/3">
-                <div class="lg:sticky lg:top-24">
+                <div class="lg:sticky top-36">
                     <span class="uppercase tracking-widest text-xs font-bold text-gray-500">Food Routine</span>
                     <h2 class="text-4xl font-black mt-2 mb-10 leading-tight uppercase">Healthy Food<br>Choices</h2>
 
@@ -449,7 +452,7 @@
 
             <div class="lg:w-2/3 space-y-10 lg:space-y-20">
                 
-                <div id="breakfast-sec" class="sticky top-24 food-section p-8 bg-[#DBC6FF] rounded-[3rem] flex flex-col md:flex-row items-center gap-8 shadow-xl border border-white/20">
+                <div id="breakfast-sec" class="sticky top-36 food-section p-8 bg-[#DBC6FF] rounded-[3rem] flex flex-col md:flex-row items-center gap-8 shadow-xl border border-white/20">
                     <div class="w-full md:w-1/2 ">
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d3b03af869bf1b4625_Food%20Image%2003.png" class="rounded-[2rem] w-full max-md:h-[150px] aspect-square object-cover shadow-inner">
                     </div>
@@ -506,7 +509,6 @@
         </div>
     </div>
 </section>
-
 
 <!-- video testimonials section   -->
 <div class="relative overflow-hidden bg-[#DBC6FF]">
@@ -640,7 +642,7 @@
             <span class="uppercase tracking-[0.2em] mb-16 font-comic text-[10px] md:text-xs font-bold text-gray-500">
                 Parents Question
             </span>
-            <h2 class="faq-title text-6xl max-md:text-2xl max-lg:text-4xl text-[#1a1a1a] uppercase">
+            <h2 class="faq-title text-6xl max-md:text-2xl max-lg:text-4xl text-[#1a1a1a] uppercase leading-tight">
                  <span> Answers For</span>
               <span class="block mt-7 max-md:mt-2">Parents</span>
             </h2>
@@ -648,90 +650,89 @@
  
         <div class="space-y-4 md:space-y-6 font-comic" x-data="{ selected: null }">
     
-    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
-        <button @click="selected !== 1 ? selected = 1 : selected = null" 
-                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
-            
-            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What ages do you accept?</span>
-            
-            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
-                 :class="selected === 1 ? 'rotate-180' : 'rotate-0'">
-                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
-                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
-                     :class="selected === 1 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
-            </div>
-        </button>
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-500">
+                <button @click="selected !== 1 ? selected = 1 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+                    
+                    <span class="text-2xl max-md:text-lg font-boldo font-black text-gray-900 pr-4">What ages do you accept?</span>
+                    
+                    <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-1000"
+                         :class="selected === 1 ? 'rotate-180' : 'rotate-0'">
+                        <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                        <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-1000 ease-in-out" 
+                             :class="selected === 1 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+                    </div>
+                </button>
 
-        <div x-show="selected === 1" 
-             x-collapse.duration.500ms
-             x-transition:enter="transition ease-out duration-500"
-             x-transition:enter-start="opacity-0 -translate-y-2"
-             x-transition:enter-end="opacity-100 translate-y-0">
-            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
+                <div class="transition-all duration-[1200ms] ease-in-out overflow-hidden"
+                     :style="selected === 1 ? 'max-height: 500px; opacity: 1;' : 'max-height: 0px; opacity: 0;'">
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
+                    </div>
+                </div>
             </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-500">
+                <button @click="selected !== 2 ? selected = 2 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+                    <span class="text-2xl max-md:text-lg font-boldo font-black text-gray-900 pr-4">What are your operating hours?</span>
+                    <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-1000"
+                         :class="selected === 2 ? 'rotate-180' : 'rotate-0'">
+                        <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                        <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-1000 ease-in-out" 
+                             :class="selected === 2 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+                    </div>
+                </button>
+                <div class="transition-all duration-[1200ms] ease-in-out overflow-hidden"
+                     :style="selected === 2 ? 'max-height: 500px; opacity: 1;' : 'max-height: 0px; opacity: 0;'">
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-500">
+                <button @click="selected !== 3 ? selected = 3 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+                    <span class="text-2xl max-md:text-lg font-boldo font-black text-gray-900 pr-4">Is your center licensed?</span>
+                    <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-1000"
+                         :class="selected === 3 ? 'rotate-180' : 'rotate-0'">
+                        <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                        <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-1000 ease-in-out" 
+                             :class="selected === 3 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+                    </div>
+                </button>
+                <div class="transition-all duration-[1200ms] ease-in-out overflow-hidden"
+                     :style="selected === 3 ? 'max-height: 500px; opacity: 1;' : 'max-height: 0px; opacity: 0;'">
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-500">
+                <button @click="selected !== 4 ? selected = 4 : selected = null" 
+                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+                    <span class="text-2xl max-md:text-lg font-boldo font-black text-gray-900 pr-4">How do you ensure safety?</span>
+                    <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-1000"
+                         :class="selected === 4 ? 'rotate-180' : 'rotate-0'">
+                        <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                        <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-1000 ease-in-out" 
+                             :class="selected === 4 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+                    </div>
+                </button>
+                <div class="transition-all duration-[1200ms] ease-in-out overflow-hidden"
+                     :style="selected === 4 ? 'max-height: 500px; opacity: 1;' : 'max-height: 0px; opacity: 0;'">
+                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                        We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-
-    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
-        <button @click="selected !== 2 ? selected = 2 : selected = null" 
-                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
-            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What are your operating hours?</span>
-            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
-                 :class="selected === 2 ? 'rotate-180' : 'rotate-0'">
-                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
-                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
-                     :class="selected === 2 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
-            </div>
-        </button>
-        <div x-show="selected === 2" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
-            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
-            </div>
-        </div>
-    </div>
-
-    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
-        <button @click="selected !== 3 ? selected = 3 : selected = null" 
-                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
-            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">Is your center licensed?</span>
-            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
-                 :class="selected === 3 ? 'rotate-180' : 'rotate-0'">
-                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
-                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
-                     :class="selected === 3 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
-            </div>
-        </button>
-        <div x-show="selected === 3" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
-            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
-            </div>
-        </div>
-    </div>
-
-    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
-        <button @click="selected !== 4 ? selected = 4 : selected = null" 
-                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
-            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">How do you ensure safety?</span>
-            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
-                 :class="selected === 4 ? 'rotate-180' : 'rotate-0'">
-                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
-                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
-                     :class="selected === 4 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
-            </div>
-        </button>
-        <div x-show="selected === 4" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
-            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
-            </div>
-        </div>
-    </div>
-
-</div>
-    
-    
     </div>
 </section>
+
 <!-- gallery section   -->
 <section class="py-24 px-6 overflow-hidden">
     <div class="max-w-7xl mx-auto">
