@@ -38,52 +38,57 @@
 </head>
 <body class="text-[#333]">
 <!-- NAVBAR SECTION -->
-  <header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
-        </a>
+ <header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
+     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
+    </a>
 
-         <div class="flex items-center gap-12">
-                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
-                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
-                    
-                    <li class="relative dropdown-group">
-                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
-                           <a href="services.html"> Services </a>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
-                        </div>
-                    </li>
+    <div class="flex items-center gap-12">
+        <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+            <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+            
+            <li class="relative group">
+                <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                    <a href="services.html"> Services </a>
+                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
 
-                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
-                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
-                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
-                </ul>
-            </div>
+                <div class="absolute top-full left-0 mt-8 w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
+                            opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
+                            transition-all duration-300 z-50">
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail One</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Two</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Three</a>
+                </div>
+            </li>
+
+            <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+            <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+            <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="flex items-center gap-4">
+<a href="#" class="cta-btn hidden lg:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold font-boldo overflow-hidden relative group">
+    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+        <span class="transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+        <span class="absolute top-full left-0 transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+    </div>
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+</a>
+        <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
+            <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+        </button>
+    </div>
+</nav>
 
 
-        <div class="flex items-center gap-4">
-              <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold  overflow-hidden relative group">
-                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
-                        <span>Free Enquiry</span>
-                        <span class="absolute top-full left-0">Free Enquiry</span>
-                    </div>
-                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
-                </a>
-
-            <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
-                <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-            </button>
-        </div>
-    </nav>
 </header>
 
 <div id="mega-menu" class="fixed inset-0 z-[120] bg-[#d7c6f5] flex flex-col p-6 pt-24 transition-all duration-500 translate-x-full opacity-0 pointer-events-none lg:hidden overflow-y-auto">
@@ -101,6 +106,7 @@
                     <li><a href="#">Service Detail Two</a></li>
                 </ul>
             </li>
+            <li><a href="blog.html">Blogs</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -133,10 +139,10 @@
     </div>
 </div>
 <!-- BLOGS HERO SECTION -->
-<header class="relative w-full min-h-[60vh] md:min-h-screen bg-white flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
+<header class="relative w-full h-[31rem] bg-white flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
     
     <div class="absolute inset-0 z-0 animate-reveal">
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
+        <img src="./assets/bg-image.png" 
              class="w-full h-full object-cover opacity-40" alt="Background">
     </div>
 
@@ -146,10 +152,18 @@
          class="absolute right-[-5%] bottom-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block animate-reveal delay-2" alt="Decor Right" />
 
     <div class="container mx-auto px-4 relative z-10">
+         <nav class="mb-5 mx-[34rem]  max-md:mx-32 max-md:mb-10 max-md:mt-1 max-lg:mx-80 mt-5 justify-center items-center transition-all duration-700 delay-300"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'">
+            <ol class="flex items-center gap-2 text-black font-comic font-bold text-sm md:text-base">
+                <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                <li><span class="opacity-50">/</span></li>
+                <li class="text-black">Blogs</li>
+            </ol>
+        </nav>
         <div class="flex flex-col items-center text-center">
             
             <div class="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-2 md:mb-3 animate-reveal delay-1 md:ml-20">
-                <h1 class="text-8xl max-md:text-4xl font-black text-gray-900 tracking-tighter">NURI</h1>
+                <h1 class="text-8xl max-md:text-4xl max-lg:text-6xl font-black text-gray-900 tracking-tighter">NURI</h1>
                 
                 <div class="flex items-center">
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b24288fdc82391a7e53f2_Blog%20Hero%20Image.png" 
@@ -157,7 +171,7 @@
                          class="h-16 md:h-36 w-auto rounded-2xl md:rounded-full hover:scale-110 transition-transform duration-300" />
                 </div>
 
-                <h1 class="text-8xl max-md:text-4xl font-black text-gray-900 tracking-tighter">VILLE</h1>
+                <h1 class="text-8xl max-md:text-4xl max-lg:text-6xl font-black text-gray-900 tracking-tighter">VILLE</h1>
                 
                 <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7cbdb720542d3935cd0e_b1cb5baaa12670cd0dd1f8357a499a7d_Inner%20Hero%20Text%20Side%20Element.png" 
                      class="w-6 md:w-10 animate-bounce hidden md:block" alt="star" />
@@ -168,7 +182,7 @@
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7be2c1ee6c0a91952b3a_Inner%20Hero%20Text%20Side%20Element.png" 
                          class="w-6 md:w-10 animate-bounce hidden md:block" alt="star" />
                     
-                    <h1 class="text-8xl max-md:text-4xl font-black text-gray-900 tracking-tighter leading-none">UPDATES TODAY.</h1>
+                    <h1 class="text-8xl max-md:text-4xl max-lg:text-6xl font-black text-gray-900 tracking-tighter leading-none">UPDATES TODAY.</h1>
                 </div>
             </div>
 
@@ -183,13 +197,13 @@
         
         <div class="text-center mb-16 animate__animated animate__fadeIn">
             <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-800 mb-8">Blog & News</p>
-           <h2 class="text-7xl max-md:text-xl font-[900] text-[#1a1a1a] leading-[1.1] uppercase tracking-tighter">
+           <h2 class="text-7xl max-md:text-xl max-lg:text-4xl font-[900] text-[#1a1a1a] leading-[1.1] uppercase tracking-tighter">
                   <span>Insights For Confident</span>
               <span class="block mt-7 max-md:mt-2">Parenting Choices</span>
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-3 max-md:grid-cols-1 max-lg:grid-cols-2 gap-8">
             <a href="blogsdetails.html" class="blog-1">
             <article class="bg-[#dbc6ff] rounded-[40px] p-2 border-2 border-dashed border-gray-400 shadow-sm transition-transform duration-300 hover:-translate-y-2 animate__animated animate__fadeInUp">
                 <div class="overflow-hidden rounded-[35px]">
@@ -353,7 +367,7 @@
         </div>
 
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
-             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+             class="absolute left-60 max-md:left-4  max-lg:left-1 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
         
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
              class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
@@ -363,7 +377,7 @@
                 Connect With Us
             </span>
             
-            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+            <h2 class="text-white text-7xl max-md:text-3xl  max-lg:text-5xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
 
                    <span> Love Care And</span>
               <span class="block mt-7 max-md:mt-2"> Learning Together</span>
@@ -384,7 +398,7 @@
         </div>
 
         <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8  max-lg:mb-1 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
                 <a href="#" class="hover:opacity-70 transition-all">Home</a>
                 <a href="#" class="hover:opacity-70 transition-all">About</a>
                 <a href="#" class="hover:opacity-70 transition-all">Programs</a>
@@ -394,25 +408,24 @@
                 <a href="#" class="hover:opacity-70 transition-all">Contact</a>
             </div>
 
-            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+            <div class="flex flex-col font-comic max-md:flex-cols  max-lg:flex-cols justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
                 <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
-                <div class="flex items-center justify-between px-2 max-md:pb-4">
-            <div class="flex gap-5 text-lg text-white  text-slate-900">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-linkedin-in"></i>
-            </div>
-        </div>
+                <div class="flex items-center justify-between px-2  max-lg:py-6 max-md:pb-4">
+                    <div class="flex gap-5 text-lg text-white  text-slate-900">
+                       <i class="fab fa-instagram"></i>
+                       <i class="fab fa-facebook-f"></i>
+                       <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-center gap-4 md:gap-10">
                     <a href="#" class="hover:text-white transition-colors">License</a>
                     <a href="#" class="hover:text-white transition-colors">Changelog</a>
                     <a href="#" class="hover:text-white transition-colors">Style Guide</a>
                 </div>
-                
             </div>
         </div>
 
-        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+        <div class="relative z-10 w-full flex justify-center mt-auto  max-lg:mt-0 pb-4 md:pb-10 pointer-events-none">
             <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
                  class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
                  alt="Nurivelle 3D Text">

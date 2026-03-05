@@ -195,6 +195,28 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================
    6. CARDS, STACKING & GRID SECTION
    ============================================================ */
+
+/* Custom Dotted Line Styles to match your image */
+  .ticket-dashed-h {
+    border-top: 2px dashed rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  .ticket-dashed-v {
+    border-left: 2px dashed rgba(0, 0, 0, 0.2);
+    height: 100%;
+  }
+  .check-circle {
+    background: #000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
 /* Generic Grid Cards */
 .grid-card { 
     position: relative; 
@@ -252,7 +274,22 @@ h1, h2, h3, h4, h5, h6 {
     .card-4 { z-index: 4; top: 260px; }
     .card-5 { z-index: 5; top: 300px; }
 }
-
+/* ============================================================
+    ABOUT US SECTION
+   ============================================================ */
+@keyframes ticker {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-ticker {
+        display: flex;
+        width: 200%;
+        animation: ticker 30s linear infinite;
+    }
+    /* This creates that soft purple shadow/glow from your image */
+    .section-glow-overlay {
+        background: linear-gradient(to bottom, transparent, rgba(219, 198, 255, 0.4) 50%, #DBC6FF 100%);
+    }
 /* ============================================================
    7. TICKERS & MARQUEE SECTION
    ============================================================ */

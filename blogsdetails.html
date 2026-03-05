@@ -39,51 +39,56 @@
 <body class="text-[#333] bg-white">
 <!-- NAVBAR SECTION -->
  <header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
-        </a>
+     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
+    </a>
 
-         <div class="flex items-center gap-12">
-                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
-                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
-                    
-                    <li class="relative dropdown-group">
-                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
-                           <a href="services.html"> Services </a>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
-                        </div>
-                    </li>
+    <div class="flex items-center gap-12">
+        <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+            <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+            
+            <li class="relative group">
+                <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                    <a href="services.html"> Services </a>
+                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
 
-                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
-                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
-                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
-                </ul>
-            </div>
+                <div class="absolute top-full left-0 mt-8 w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
+                            opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
+                            transition-all duration-300 z-50">
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail One</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Two</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Three</a>
+                </div>
+            </li>
+
+            <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+            <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+            <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="flex items-center gap-4">
+<a href="#" class="cta-btn hidden lg:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold font-boldo overflow-hidden relative group">
+    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+        <span class="transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+        <span class="absolute top-full left-0 transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+    </div>
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+</a>
+        <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
+            <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+        </button>
+    </div>
+</nav>
 
 
-        <div class="flex items-center gap-4">
-              <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold  overflow-hidden relative group">
-                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
-                        <span>Free Enquiry</span>
-                        <span class="absolute top-full left-0">Free Enquiry</span>
-                    </div>
-                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
-                </a>
-
-            <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
-                <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-            </button>
-        </div>
-    </nav>
 </header>
 
 <div id="mega-menu" class="fixed inset-0 z-[120] bg-[#d7c6f5] flex flex-col p-6 pt-24 transition-all duration-500 translate-x-full opacity-0 pointer-events-none lg:hidden overflow-y-auto">
@@ -101,6 +106,7 @@
                     <li><a href="#">Service Detail Two</a></li>
                 </ul>
             </li>
+            <li><a href="blog.html">Blogs</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -133,10 +139,10 @@
     </div>
 </div>
 <!-- BLOGS HERO SECTION -->
-<header class="relative w-full min-h-[60vh] md:min-h-screen bg-white flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
+<header class="relative w-full h-[31rem] bg-white flex flex-col items-center justify-center overflow-hidden py-12 md:py-0">
     
     <div class="absolute inset-0 z-0 animate-reveal">
-        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
+        <img src="./assets/bg-image.png" 
              class="w-full h-full object-cover opacity-40" alt="Background">
     </div>
 
@@ -146,12 +152,20 @@
          class="absolute right-[-5%] bottom-1/4 w-20 md:w-48 opacity-50 md:opacity-100 hidden sm:block animate-reveal delay-2" alt="Decor Right" />
 
     <div class="container mx-auto px-4 relative z-10">
+          <nav class="mb-8 mx-[34rem]  max-md:mx-32 max-md:mb-12 max-md:mt-1 max-lg:mx-80 -mt-1 justify-center items-center transition-all duration-700 delay-300"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'">
+            <ol class="flex items-center gap-2 text-black font-comic font-bold text-sm md:text-base">
+                <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                <li><span class="opacity-50">/</span></li>
+                <li class="text-black">Blogs</li>
+            </ol>
+        </nav>
         <div class="flex flex-col items-center text-center">
             
             <div class="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-2 md:mb-3 animate-reveal delay-1 md:ml-20">
-                <h1 class="text-7xl max-md:text-3xl font-black text-gray-900 tracking-tighter">MUSIC</h1>
+                <h1 class="text-7xl max-md:text-3xl max-lg:text-5xl font-black text-gray-900 tracking-tighter">MUSIC</h1>
 
-                <h1 class="text-7xl max-md:text-3xl font-black text-gray-900 tracking-tighter">ENHANCES</h1>
+                <h1 class="text-7xl max-md:text-3xl max-lg:text-5xl font-black text-gray-900 tracking-tighter">ENHANCES</h1>
                 
                 <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7cbdb720542d3935cd0e_b1cb5baaa12670cd0dd1f8357a499a7d_Inner%20Hero%20Text%20Side%20Element.png" 
                      class="w-6 md:w-10 animate-bounce hidden md:block" alt="star" />
@@ -162,7 +176,7 @@
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e7be2c1ee6c0a91952b3a_Inner%20Hero%20Text%20Side%20Element.png" 
                          class="w-6 md:w-10 animate-bounce hidden md:block" alt="star" />
                     
-                    <h1 class="text-7xl max-md:text-3xl font-black text-gray-900 tracking-tighter leading-none">TODDLERS’ GROWTH</h1>
+                    <h1 class="text-7xl max-md:text-3xl max-lg:text-5xl font-black text-gray-900 tracking-tighter leading-none">TODDLERS’ GROWTH</h1>
                 </div>
             </div>
 
@@ -171,70 +185,198 @@
 </header>
 
 <!-- ALL BLOGS SECTION  -->
-    <div class="max-w-7xl mx-auto relative my-20 px-4 md:px-0 bg-white">
-
-    <div class="absolute -right-20 top-0 h-full hidden lg:block">
-        <div class="sticky top-20 flex flex-col gap-4 z-50">
-            <a href="https://www.instagram.com/" target="_blank" class="w-12 h-12 bg-[#D9C9FF] rounded-full flex items-center justify-center shadow-lg hover:bg-purple-600 hover:text-white transition-all">
-                <i class="fab fa-instagram text-xl"></i>
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" class="w-12 h-12 bg-[#D9C9FF] rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 hover:text-white transition-all">
-                <i class="fab fa-facebook-f text-xl"></i>
-            </a>
-            <a href="https://bd.linkedin.com/" target="_blank" class="w-12 h-12 bg-[#D9C9FF] rounded-full flex items-center justify-center shadow-lg hover:bg-blue-800 hover:text-white transition-all">
-                <i class="fab fa-linkedin-in text-xl"></i>
-            </a>
-        </div>
-    </div>
+<div class="max-w-7xl mx-auto max-lg:mx-5 max-md:mx-4 mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white">
     
-    <div class="grid grid-cols-1 font-boldo md:grid-cols-3 gap-4 mb-8">
-        <div class="bg-[#D9C9FF] border-2 border-dashed border-black rounded-2xl p-4 flex gap-2 items-center">
-            <span class="font-bold">Date :</span>
-            <span>March 12, 2026</span>
-        </div>
-        <div class="bg-[#D9C9FF] border-2 border-dashed border-black rounded-2xl p-4 flex gap-2 items-center">
-            <span class="font-bold">Category :</span>
-            <span>Health & Safety</span>
-        </div>
-        <div class="bg-[#D9C9FF] border-2 border-dashed border-black rounded-2xl p-4 flex gap-2 items-center">
-            <span class="font-bold">Writer :</span>
-            <span>Mehrab Hossain</span>
-        </div>
-    </div>
-
-    <div class="rounded-[40px] overflow-hidden mb-12 shadow-sm">
-        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28293081c1869ba4c8ba_Thumbnail%20Image%2008.png" 
-             alt="Happy Toddler" class="w-full object-cover">
-    </div>
-
-    <article class="prose prose-lg max-w-none text-gray-800">
+    <div class="lg:col-span-8 space-y-10 order-1">
         
-        <h2 class="text-2xl max-md:text-xl font-black text-gray-900 mb-6 uppercase">Introduction</h2>
-        <p class="mb-8 leading-relaxed">
-            Music isn’t just fun—it’s a powerful tool for toddlers’ growth. From tapping rhythms to singing along with songs, musical experiences stimulate the brain, strengthen motor skills, and nurture social-emotional development.
-        </p>
-
-        <h3 class="text-2xl max-md:text-xl font-black text-gray-900 mb-6 uppercase">Boosting Brain Skills</h3>
-        <p class="mb-4 leading-relaxed">Listening to and engaging with music activates multiple areas of a toddler’s brain. This stimulation supports:</p>
-        <ul class="list-disc pl-6 space-y-3 mb-8">
-            <li><strong>Memory and recall:</strong> Learning songs and rhymes improves memory skills.</li>
-            <li><strong>Pattern recognition:</strong> Musical rhythms help toddlers recognize sequences and structure.</li>
-            <li><strong>Problem-solving:</strong> Playing instruments or improvising tunes encourages creative thinking.</li>
-        </ul>
-
-        <h3 class="text-2xl max-md:text-xl font-black text-gray-900 mb-6 uppercase">Moving With Music</h3>
-        <p class="mb-8 leading-relaxed">Check out our Programs Designed for Every Child or explore our full library of Parenting Tips & Activities.</p>
-
-        <div class="rounded-[30px] overflow-hidden border-2 border-dashed border-gray-400 mb-12">
-            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b4f30b0ed8b77fb94f504_Blog%20Details%20Image%2008.png" 
-                 alt="Toddler playing" class="w-full">
+        <div class="rounded-[50px] overflow-hidden shadow-sm">
+            <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28293081c1869ba4c8ba_Thumbnail%20Image%2008.png" 
+                 alt="Acute Appendicitis" class="w-full h-[30rem] max-md:h-[20rem] object-cover">
         </div>
 
-        <h3 class="text-2xl max-md:text-xl font-black text-gray-900 mb-6 uppercase">Incorporating Music Easily</h3>
-        <p class="mb-6 leading-relaxed">
-            Toddlers thrive when learning is playful, interactive, and joyful. Integrating music into daily routines encourages cognitive, physical, and emotional growth.
-        </p>
-    </article>
+        <div class="space-y-4">
+            <p class="text-[#6332fa] font-comic text-sm">February 28, 2026 / Blog</p>
+            <h1 class="text-4xl max-md:text-xl max-lg:text-2xl font-black text-slate-900 tracking-tight leading-tight">
+                Acute Appendicitis In Children: Laparoscopy vs. Open Surgery
+            </h1>
+            <p class="text-slate-600 leading-relaxed text-lg">
+                Does acute appendicitis in children require surgery? What are the causes that could be responsible for this? Which treatment options are available? This blog aims to explain acute paediatric appendicitis in detail, along with the causes, treatments and recovery process required.
+            </p>
+        </div>
+
+        <div class="bg-[#6332fa] p-8 rounded-xl text-center space-y-4">
+            <h2 class="text-2xl max-md:text-lg font-black text-white">Worried about acute appendicitis symptoms?</h2>
+             <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#FF00BF] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[25px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-lg max-md:text-sm transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]">Book a Consultation</span>
+            <span class="leading-[28px]">Book a Consultation</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-9 h-9">
+      </a>
+        </div>
+
+        <div class="prose prose-lg max-w-none text-slate-700 space-y-8">
+            
+            <section>
+                <h2 class="text-2xl max-md:text-xl max-lg:text-2xl font-black pb-4 text-black">A] What Is Acute Appendicitis in Children?</h2>
+                <p>
+                    Acute paediatric appendicitis is a condition that is marked by the severe inflammation of the appendix in children. The inflammation here is a result of both blockage and bacterial infection. Appendicitis is most common during adolescence and the teenage years, with the highest incidence in children aged 10-19. Statistically, boys have a higher risk of developing this condition than girls.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl max-md:text-xl max-lg:text-2xl font-black text-black">B] What Causes Paediatric Appendicitis?</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg py-4">Swollen Lymphoid Tissue</h3>
+                        <p>Your appendix includes a higher amount of lymphoid tissue that helps strengthen your immune system. During infections such as colds or flu, this tissue becomes enlarged, blocking your appendix and preventing normal drainage.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg pb-4">A Hard Piece of Stool</h3>
+                        <p>Dry and hard stool can travel into the opening of your appendix and create a blockage. If not treated in time, the infection can further increase and even burst in certain cases.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg pb-4">A Twist in the Appendix</h3>
+                        <p>Although uncommon, the appendix can twist on itself, causing appendicitis. This cuts off blood supply, causing the tissues to swell and eventually become inflamed.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="rounded-[30px] overflow-hidden ">
+                <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b4f30b0ed8b77fb94f504_Blog%20Details%20Image%2008.png" alt="Surgery Prep" class="w-full">
+            </div>
+
+            <section>
+                <h2 class="text-2xl max-md:text-xl max-lg:text-2xl font-black pb-4 text-black">E] Recovery Process After Surgery</h2>
+                <ul class="space-y-4">
+                    <li><strong>Diet:</strong> Clear liquids such as water, soups and rehydration powders are usually focused upon initially.</li>
+                    <li><strong>Light Activities:</strong> Walking can be introduced slowly. Activities involving rough play should be avoided.</li>
+                    <li><strong>Follow-Up:</strong> A follow-up after the first week is always recommended to ensure the child's recovery is proceeding smoothly.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="bg-[#6332fa] p-8 rounded-xl text-center space-y-4">
+            <h2 class="text-2xl max-md:text-xl max-lg:text-2xl font-black text-white">Looking for a trusted paediatric surgeon?</h2>
+            <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#FF00BF] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[25px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-lg max-md:text-sm transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]"> Contact Us </span>
+            <span class="leading-[28px]"> Contact Us </span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-9 h-9">
+      </a>
+        </div>
+
+        <hr class="border-slate-200">
+        <div class="space-y-8">
+            <h3 class="text-2xl font-black text-slate-900 border-b-2 border-slate-100 pb-2">Related Posts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28293081c1869ba4c8ba_Thumbnail%20Image%2008.png" class="rounded-2xl mb-4 w-full h-40 object-cover group-hover:shadow-lg transition-all">
+                    <h4 class="font-bold text-slate-800 group-hover:text-[#6332fa] transition-colors">Paediatric Ureteropelvic Junction Obstruction</h4>
+                    <p class="text-xs text-slate-400 mt-2">December 22, 2026 / Blog</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28293081c1869ba4c8ba_Thumbnail%20Image%2008.png" class="rounded-2xl mb-4 w-full h-40 object-cover group-hover:shadow-lg transition-all">
+                    <h4 class="font-bold text-slate-800 group-hover:text-[#6332fa] transition-colors">Testicular Torsion In Children: Causes & Signs</h4>
+                    <p class="text-xs text-slate-400 mt-2">February 3, 2026 / Blog</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695b28293081c1869ba4c8ba_Thumbnail%20Image%2008.png" class="rounded-2xl mb-4 w-full h-40 object-cover group-hover:shadow-lg transition-all">
+                    <h4 class="font-bold text-slate-800 group-hover:text-[#6332fa] transition-colors">Types of Spina Bifida & Urology Care</h4>
+                    <p class="text-xs text-slate-400 mt-2">December 22, 2026 / Blog</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="lg:col-span-4 self-start sticky top-10 space-y-8 order-2">
+        
+        <div class="bg-white border-4 mt-20 max-lg:mt-0 max-md:mt-0  border-dotted border-[#D9C9FF] p-8 rounded-[40px] shadow-2xl space-y-6">
+            <h3 class="text-xl font-black text-center text-slate-900 bg-[#D9C9FF] -mx-8 -mt-8 py-4 rounded-t-[36px]">Book An Appointment</h3>
+            <form class="space-y-4">
+                <input type="text" placeholder="Name*" class="w-full p-3 rounded-full border-2 border-dotted border-slate-200 focus:outline-none focus:border-[#6332fa] focus:border-solid">
+                <input type="email" placeholder="E-mail*" class="w-full p-3 rounded-full border-2 border-dotted border-slate-200 focus:outline-none focus:border-[#6332fa] focus:border-solid">
+                <input type="tel" placeholder="Phone Number*" class="w-full p-3 rounded-full border-2 border-dotted border-slate-200 focus:outline-none focus:border-[#6332fa] focus:border-solid">
+
+                <select class="w-full p-3 rounded-full border-2 border-dotted border-slate-200 text-slate-500 focus:outline-none focus:border-[#6332fa] focus:border-solid">
+                    <option>--Select Location--</option>
+                </select>
+                <textarea placeholder="Message*" rows="3" class="w-full p-3 rounded-xl border-2 border-dotted border-slate-200 focus:outline-none focus:border-[#6332fa] focus:border-solid"></textarea>
+                
+                <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#6332fa] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[25px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-lg transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]">SUBMIT NOW</span>
+            <span class="leading-[28px]">SUBMIT NOW</span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-9 h-9">
+      </a>
+            </form>
+        </div>
+
+<div class="bg-[#D9C9FF] p-8 rounded-[40px] max-lg:w-full shadow-sm w-full ">
+    <div class="space-y-4">
+        <h3 class="text-xl font-black text-slate-900 uppercase tracking-wider">
+            Share this blog on :
+        </h3>
+        
+        <div class="border-t-2 border-dotted border-slate-600 w-full opacity-40"></div>
+    </div>
+
+    <div class="mt-8 flex flex-col gap-6">
+        <a href="#" class="flex items-center gap-6 group transition-all">
+            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                <i class="fab fa-instagram text-2xl text-slate-800"></i>
+            </div>
+            <span class="text-xl font-bold text-slate-800 group-hover:text-pink-600 transition-colors">Instagram</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-6 group transition-all">
+            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                <i class="fab fa-facebook-f text-2xl text-slate-800"></i>
+            </div>
+            <span class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Facebook</span>
+        </a>
+
+        <a href="#" class="flex items-center gap-6 group transition-all">
+            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                <i class="fab fa-linkedin-in text-2xl text-slate-800"></i>
+            </div>
+            <span class="text-xl font-bold text-slate-800 group-hover:text-blue-800 transition-colors">LinkedIn</span>
+        </a>
+    </div>
+</div>
+    </aside>
 </div>
 
 <!-- FOOTER SECTION  -->
@@ -248,7 +390,7 @@
         </div>
 
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
-             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+             class="absolute left-60 max-md:left-4  max-lg:left-1 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
         
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
              class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
@@ -258,7 +400,7 @@
                 Connect With Us
             </span>
             
-            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+            <h2 class="text-white text-7xl max-md:text-3xl  max-lg:text-5xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
 
                    <span> Love Care And</span>
               <span class="block mt-7 max-md:mt-2"> Learning Together</span>
@@ -279,7 +421,7 @@
         </div>
 
         <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8  max-lg:mb-1 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
                 <a href="#" class="hover:opacity-70 transition-all">Home</a>
                 <a href="#" class="hover:opacity-70 transition-all">About</a>
                 <a href="#" class="hover:opacity-70 transition-all">Programs</a>
@@ -289,25 +431,24 @@
                 <a href="#" class="hover:opacity-70 transition-all">Contact</a>
             </div>
 
-            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+            <div class="flex flex-col font-comic max-md:flex-cols  max-lg:flex-cols justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
                 <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
-                <div class="flex items-center justify-between px-2 max-md:pb-4">
-            <div class="flex gap-5 text-lg text-white  text-slate-900">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-linkedin-in"></i>
-            </div>
-        </div>
+                <div class="flex items-center justify-between px-2  max-lg:py-6 max-md:pb-4">
+                    <div class="flex gap-5 text-lg text-white  text-slate-900">
+                       <i class="fab fa-instagram"></i>
+                       <i class="fab fa-facebook-f"></i>
+                       <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-center gap-4 md:gap-10">
                     <a href="#" class="hover:text-white transition-colors">License</a>
                     <a href="#" class="hover:text-white transition-colors">Changelog</a>
                     <a href="#" class="hover:text-white transition-colors">Style Guide</a>
                 </div>
-                
             </div>
         </div>
 
-        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+        <div class="relative z-10 w-full flex justify-center mt-auto  max-lg:mt-0 pb-4 md:pb-10 pointer-events-none">
             <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
                  class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
                  alt="Nurivelle 3D Text">

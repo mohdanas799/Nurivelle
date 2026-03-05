@@ -36,54 +36,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
-<body>
+<body class="">
 <!-- NAVBAR SECTION -->
   <header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
-        </a>
+     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
+    </a>
 
-         <div class="flex items-center gap-12">
-                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
-                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
-                    
-                    <li class="relative dropdown-group">
-                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
-                           <a href="services.html"> Services </a>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
-                        </div>
-                    </li>
+    <div class="flex items-center gap-12">
+        <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+            <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+            
+            <li class="relative group">
+                <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                    <a href="services.html"> Services </a>
+                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
 
-                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
-                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
-                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
-                </ul>
-            </div>
+                <div class="absolute top-full left-0 mt-8 w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
+                            opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
+                            transition-all duration-300 z-50">
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail One</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Two</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Three</a>
+                </div>
+            </li>
+
+            <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+            <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+            <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="flex items-center gap-4">
+<a href="#" class="cta-btn hidden lg:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold font-boldo overflow-hidden relative group">
+    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+        <span class="transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+        <span class="absolute top-full left-0 transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+    </div>
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+</a>
+        <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
+            <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+        </button>
+    </div>
+</nav>
 
 
-        <div class="flex items-center gap-4">
-              <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold  overflow-hidden relative group">
-                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
-                        <span>Free Enquiry</span>
-                        <span class="absolute top-full left-0">Free Enquiry</span>
-                    </div>
-                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
-                </a>
-
-            <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
-                <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-            </button>
-        </div>
-    </nav>
 </header>
 
 <div id="mega-menu" class="fixed inset-0 z-[120] bg-[#d7c6f5] flex flex-col p-6 pt-24 transition-all duration-500 translate-x-full opacity-0 pointer-events-none lg:hidden overflow-y-auto">
@@ -101,6 +106,7 @@
                     <li><a href="#">Service Detail Two</a></li>
                 </ul>
             </li>
+            <li><a href="blog.html">Blogs</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -133,11 +139,11 @@
     </div>
 </div>
 <!-- ABOUT HERO SECTION  -->
-<header class="relative w-full min-h-screen max-md:-mt-20 flex flex-col items-center justify-center overflow-hidden">
+<header class="relative w-full h-[31rem] max-md:-mt-20  flex flex-col items-center justify-center overflow-hidden">
         
-        <div class="absolute h-screen inset-0 z-0 opacity-40">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
-                 class="w-full h-full object-cover" alt="Background">
+        <div class="absolute inset-0 z-0 bg-white opacity-40">
+            <img src="./assets/bg-image.png" 
+                 class="w-full h-full object-cover " alt="Background">
         </div>
 
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a2ea6dfbbcb0713a9adc1_image%2026.png" 
@@ -146,9 +152,18 @@
              class="absolute right-0 top-1/2 -translate-y-1/2 w-32 md:w-64 z-10 opacity-80" alt="Right Decor">
 
         <div class="container relative z-20" x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 100)">
-            <div class="flex -mt-32 max-md:-mt-16 items-center justify-center space-y-4 md:space-y-0 md:flex-row md:space-x-8">
+
+        <nav class="mb-4 mx-[36rem] max-md:mx-32 max-md:mb-16 max-md:mt-10 max-lg:mx-80  -mt-20 justify-center items-center transition-all duration-700 delay-300"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'">
+            <ol class="flex items-center gap-2 text-white/80 font-comic font-bold text-sm md:text-base">
+                <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                <li><span class="opacity-50">/</span></li>
+                <li class="text-white">About Us</li>
+            </ol>
+        </nav>
+            <div class="flex max-md:-mt-16 -mt20 items-center justify-center space-y-4 md:space-y-0 md:flex-row md:space-x-8">
                 
-                <h1 class="text-8xl max-md:text-5xl max-md:mt-3 font-bold text-white "
+                <h1 class="text-6xl max-md:text-5xl max-md:mt-3 font-bold text-white "
                     :class="loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
                     We
                 </h1>
@@ -156,29 +171,29 @@
                 <div class="w-20 h-20 md:w-40 md:h-40 "
                      :class="loaded ? 'scale-100 opacity-100' : 'scale-50 opacity-0'">
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e70c5d7fdd5480284086f_Inner%20Hero%20Title%20Inner%20Image.png" 
-                         class="w-full h-full object-cover" alt="Inner">
+                         class="w-40 h-40 max-md:h-20 max-md:w-20 object-cover" alt="Inner">
                 </div>
 
-                <h1 class="text-8xl max-md:text-5xl font-bold text-white"
+                <h1 class="text-6xl max-md:text-5xl font-bold text-white"
                     :class="loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
                     Are
                 </h1>
             </div>
         </div>
 
-        <div class="absolute pt-60 w-full text-white">
+        <div class="absolute pt-60 max-md:pt-60 w-full text-white">
             <div class="overflow-hidden whitespace-nowrap">
                 <div class="animate-ticker font-boldo">
                     <div class="flex items-center space-x-12 px-6">
-                        <span class="text-8xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
+                        <span class="text-6xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e73ac5ffe96d9aee6c79c_About%20Hero%20Ticker%20Image%2001.png" class="h-32 max-md:h-20" alt="Icon">
-                        <span class="text-8xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
+                        <span class="text-6xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e73acf4c74e3af79162a3_About%20Hero%20Ticker%20Image%2002.png" class="h-32 max-md:h-20" alt="Icon">
                     </div>
                     <div class="flex items-center space-x-12 px-6">
-                        <span class="text-8xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
+                        <span class="text-6xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e73ac5ffe96d9aee6c79c_About%20Hero%20Ticker%20Image%2001.png" class="h-32 max-md:h-20" alt="Icon">
-                        <span class="text-8xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
+                        <span class="text-6xl max-md:text-5xl font-bold uppercase tracking-tighter">Nurivelle</span>
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e73acf4c74e3af79162a3_About%20Hero%20Ticker%20Image%2002.png" class="h-32 max-md:h-20" alt="Icon">
                     </div>
                 </div>
@@ -187,13 +202,13 @@
 
     </header>
 <!-- OUR CORE VALUES SECTION   -->
-    <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+    <section class="max-w-7xl mx-auto bg-white px-6 py-16 lg:py-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            <div class="space-y-8">
+            <div class="space-y-8  max-lg:mx-auto">
                 <div>
                     <span class="text-xs font-bold font-comic uppercase tracking-widest text-gray-500">Our Core Values</span>
-                    <h1 class="text-5xl max-md:text-2xl font-extrabold text-[#1a1a1a] mt-4 leading-[1.1]">
+                    <h1 class="text-5xl max-md:text-2xl max-lg:text-4xl font-extrabold text-[#1a1a1a] mt-4 leading-[1.1]">
                          <span>CONFIDENT —</span>
               <span class="block mt-5 max-md:mt-5">BEGINNINGS FOR</span>
               <span class="block mt-5 max-md:mt-5">EVERY CHILD.</span>
@@ -241,7 +256,7 @@
                 </div>
             </div>
 
-            <div class="relative flex justify-center lg:justify-end">
+            <div class="relative  flex justify-center lg:justify-end">
                 <div class="absolute top-4 left-40 max-md:left-3 z-10">
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cc45817e983c00027d8ea_About%20Spiner%20Image.png" 
                          alt="Little Hearts Grow with Love" 
@@ -249,7 +264,7 @@
                 </div>
 
                 <div class="relative w-full max-w-md">
-                    <div class="custom-image-clip overflow-hidden border-[12px] border-white shadow-2xl">
+                    <div class="custom-image-clip overflow-hidden ">
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cb5f1063c326be957a130_Why%20Choose%20Image.png" 
                              alt="Child in dinosaur costume" 
                              class="w-full h-auto object-cover">
@@ -299,13 +314,13 @@
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
             <p class="uppercase tracking-widest text-sm font-bold text-gray-400 mb-8">Caring Team</p>
-            <h2 class="text-7xl max-md:text-2xl font-black text-black uppercase leading-tight">
+            <h2 class="text-7xl max-md:text-2xl max-lg:text-4xl font-black text-black uppercase leading-tight">
                 <span>Our Caring Team</span>
               <span class="block mt-5 max-md:mt-2">Behind Nurivelle</span>
             </h2>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto pb-20">
+        <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto pb-32">
             
             <div class="group relative w-full sm:w-[320px] bg-[#F3F5ED] hover:bg-[#FF00CC] border-2 border-dashed border-black rounded-[40px] p-8 transition-all duration-300 ease-in-out text-center cursor-pointer">
                 <div class="mb-6">
@@ -416,15 +431,15 @@
                     <h2 class="text-4xl font-black mt-2 mb-10 leading-tight uppercase">Healthy Food<br>Choices</h2>
 
                     <div class="space-y-4 font-boldo">
-                        <a href="#breakfast-sec" data-target="breakfast-sec" class="tab-link flex items-center justify-between p-4 rounded-full border-2 border-dashed border-black transition-all duration-300">
+                        <a href="#breakfast-sec" class="tab-link flex items-center justify-between p-4 rounded-full border-2 border-dashed border-black transition-all duration-300 hover:bg-black hover:text-white">
                             <span class="font-bold text-lg">In Breakfast</span>
                             <span class="text-sm font-bold opacity-40">04</span>
                         </a>
-                        <a href="#lunch-sec" data-target="lunch-sec" class="tab-link flex items-center justify-between p-4 rounded-full border-2 border-dashed border-black transition-all duration-300">
+                        <a href="#lunch-sec" class="tab-link flex items-center justify-between p-4 rounded-full border-2 border-dashed border-black transition-all duration-300 hover:bg-black hover:text-white">
                             <span class="font-bold text-lg">In Lunch</span>
                             <span class="text-sm font-bold opacity-40">04</span>
                         </a>
-                        <a href="#snack-sec" data-target="snack-sec" class="tab-link flex items-center justify-between p-4 rounded-full border-2 border-dashed border-black transition-all duration-300">
+                        <a href="#snack-sec" class="tab-link flex items-center justify-between p-4 rounded-full border-2 border-dashed border-black transition-all duration-300 hover:bg-black hover:text-white">
                             <span class="font-bold text-lg">Afternoon Snack</span>
                             <span class="text-sm font-bold opacity-40">04</span>
                         </a>
@@ -432,11 +447,11 @@
                 </div>
             </div>
 
-            <div class="lg:w-2/3 space-y-10">
+            <div class="lg:w-2/3 space-y-10 lg:space-y-20">
                 
-                <div id="breakfast-sec" class="food-section scroll-mt-28 p-8 bg-[#DBC6FF]/30 rounded-[3rem] flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-full md:w-1/2">
-                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d3b03af869bf1b4625_Food%20Image%2003.png" class="food-image-border w-full aspect-square object-cover">
+                <div id="breakfast-sec" class="sticky top-24 food-section p-8 bg-[#DBC6FF] rounded-[3rem] flex flex-col md:flex-row items-center gap-8 shadow-xl border border-white/20">
+                    <div class="w-full md:w-1/2 ">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d3b03af869bf1b4625_Food%20Image%2003.png" class="rounded-[2rem] w-full max-md:h-[150px] aspect-square object-cover shadow-inner">
                     </div>
                     <div class="w-full md:w-1/2 space-y-4">
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695ce89c93c2f499c8fef371_Food%20Card%20Icon%2001.svg" class="w-12 h-12">
@@ -451,9 +466,9 @@
                     </div>
                 </div>
 
-                <div id="lunch-sec" class="food-section scroll-mt-28 p-8 bg-[#DBC6FF]/30 rounded-[3rem] flex flex-col md:flex-row items-center gap-8">
+                <div id="lunch-sec" class="sticky top-32 food-section p-8 bg-[#FDE68A] rounded-[3rem] flex flex-col md:flex-row items-center gap-8 shadow-xl border border-white/20">
                     <div class="w-full md:w-1/2">
-                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d38a522a6618f10ec5_Food%20Image%2002.png" class="food-image-border w-full aspect-square object-cover">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d38a522a6618f10ec5_Food%20Image%2002.png" class="rounded-[2rem] max-md:h-[150px] w-full aspect-square object-cover shadow-inner">
                     </div>
                     <div class="w-full md:w-1/2 space-y-4">
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695ce89cc8f6cd2ad4246c4e_Food%20Card%20Icon%2002.svg" class="w-12 h-12">
@@ -468,9 +483,9 @@
                     </div>
                 </div>
 
-                <div id="snack-sec" class="food-section scroll-mt-28 p-8 bg-[#DBC6FF]/30 rounded-[3rem] flex flex-col md:flex-row items-center gap-8">
+                <div id="snack-sec" class="sticky top-40 food-section p-8 bg-[#BBF7D0] rounded-[3rem] flex flex-col md:flex-row items-center gap-8 shadow-xl border border-white/20">
                     <div class="w-full md:w-1/2">
-                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d32d29779b5685d5bd_Food%20Image%2001.png" class="food-image-border w-full aspect-square object-cover">
+                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cd7d32d29779b5685d5bd_Food%20Image%2001.png" class="rounded-[2rem] max-md:h-[150px] w-full aspect-square object-cover shadow-inner">
                     </div>
                     <div class="w-full md:w-1/2 space-y-4">
                         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695ce89cb48bcbf6df749979_Food%20Card%20Icon%2003.svg" class="w-12 h-12">
@@ -485,17 +500,23 @@
                     </div>
                 </div>
 
+                <div class="h-20 lg:h-40"></div>
+
             </div>
         </div>
     </div>
 </section>
- <!-- video testimonials section   -->
-<div class="relative overflow-hidden">
+
+
+<!-- video testimonials section   -->
+<div class="relative overflow-hidden bg-[#DBC6FF]">
     
-    <section class="relative w-full h-[500px] md:h-[650px] overflow-hidden bg-black">
-        <video id="myVideo" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80">
+    <section class="relative w-full h-[500px] md:h-[750px] overflow-hidden bg-black">
+        <video id="myVideo" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-90">
             <source src="https://cdn.prod.website-files.com/6946266171296e600d9c960c%2F695c90acb505cd9a60c551a9_Video_mp4.mp4" type="video/mp4">
         </video>
+
+        <div class="absolute inset-0 section-glow-overlay pointer-events-none"></div>
 
         <div class="absolute top-6 right-6 z-40">
             <button id="videoBtn" onclick="toggleVideo()" class="bg-[#FF00CC] p-4 rounded-full shadow-lg hover:scale-110 transition-transform">
@@ -503,8 +524,8 @@
             </button>
         </div>
 
-         <div class="absolute bottom-0 left-0 w-full leading-[0]">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c91c41d56550e9a9bb241_Linked%20Path.png" class="w-full h-auto" alt="">
+        <div class="absolute bottom-[-2px] left-0 w-full z-30 leading-[0]">
+            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c91c41d56550e9a9bb241_Linked%20Path.png" class="w-full h-auto" alt="wavy divider">
         </div>
     </section>
 
@@ -538,18 +559,18 @@
                 prev() { this.active = (this.active - 1 + this.slides.length) % this.slides.length }
              }">
 
-        <div class="max-w-7xl mx-auto relative z-10">
+        <div class="max-w-7xl mx-auto relative z-10 px-6">
             <div class="text-center mb-16">
-                <span class="text-black font-bold uppercase tracking-widest text-sm opacity-60 mb-8">Testimonials</span>
-                <h2 class="text-7xl max-md:text-2xl font-[900] text-[#1a1a1a] mt-6 leading-[1.1] uppercase tracking-tighter">
-                <span>  What Families Love</span>
-              <span class="block mt-7 max-md:mt-2">Most About Our Care</span>
-            </h2>
+                <span class="text-black font-bold uppercase tracking-widest text-sm opacity-60">Testimonials</span>
+                <h2 class="text-7xl max-md:text-2xl max-lg:text-5xl font-[900] text-[#1a1a1a] mt-6 leading-[1.1] uppercase tracking-tighter">
+                    <span>What Families Love</span>
+                    <span class="block mt-3">Most About Our Care</span>
+                </h2>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 
-                <div class="lg:col-span-8  p-8 md:p-12  relative overflow-hidden">
+                <div class="lg:col-span-8 p-4 relative overflow-hidden">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div x-show="active === index" 
                              x-transition:enter="transition ease-out duration-500"
@@ -558,8 +579,8 @@
                              class="flex flex-col md:flex-row gap-10 items-center h-full">
                             
                             <div class="w-full md:w-1/2">
-                                <div class="dashed-img-container">
-                                    <img :src="slide.img" class="w-full h-[400px] object-cover rounded-[40px]" alt="Testimonial">
+                                <div class="relative">
+                                    <img :src="slide.img" class="w-full h-[450px] object-cover rounded-[40px] shadow-2xl" alt="Testimonial">
                                 </div>
                             </div>
 
@@ -567,20 +588,20 @@
                                 <div class="mb-4">
                                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c97deb03af869bf0f26e7_Stars.png" class="w-32" alt="Stars">
                                 </div>
-                                <h3 class="text-2xl font-bold max-md:text-xl text-gray-900 mb-4" x-text="slide.title"></h3>
-                                <p class="text-gray-600 text-lg mb-8 leading-relaxed" x-text="slide.text"></p>
+                                <h3 class="text-3xl font-bold text-gray-900 mb-4" x-text="slide.title"></h3>
+                                <p class="text-gray-700 text-xl mb-8 leading-relaxed" x-text="slide.text"></p>
                                 
                                 <div class="mb-8">
                                     <h4 class="font-black text-xl text-gray-900 uppercase tracking-tighter" x-text="slide.name"></h4>
-                                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest" x-text="slide.role"></p>
+                                    <p class="text-gray-500 font-bold uppercase text-xs tracking-widest" x-text="slide.role"></p>
                                 </div>
 
                                 <div class="flex gap-4">
-                                    <button @click="prev()" class="bg-[#F3F5ED] hover:bg-gray-200 transition-colors p-3 rounded-2xl border border-gray-100">
-                                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c9989fa6113e0b3882955_Left%20Arrow.svg" class="w-8 h-8">
+                                    <button @click="prev()" class="bg-white/50 hover:bg-white transition-colors p-4 rounded-2xl shadow-sm">
+                                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c9989fa6113e0b3882955_Left%20Arrow.svg" class="w-6 h-6">
                                     </button>
-                                    <button @click="next()" class="bg-[#F3F5ED] hover:bg-gray-200 transition-colors p-3 rounded-2xl border border-gray-100">
-                                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c9989e75cb6846f03cd85_Right%20Arrow.svg" class="w-8 h-8">
+                                    <button @click="next()" class="bg-white/50 hover:bg-white transition-colors p-4 rounded-2xl shadow-sm">
+                                        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695c9989e75cb6846f03cd85_Right%20Arrow.svg" class="w-6 h-6">
                                     </button>
                                 </div>
                             </div>
@@ -588,21 +609,19 @@
                     </template>
                 </div>
 
-                <div class="lg:col-span-4 bg-[#7127FF] rounded-[50px] p-10 max-md:mx-3 flex flex-col justify-between text-white relative overflow-hidden group">
+                <div class="lg:col-span-4 bg-[#7127FF] rounded-[50px] p-10 flex flex-col max-md:flex-col  max-lg:flex-row  justify-between text-white relative overflow-hidden group shadow-xl">
                     <div class="relative z-10">
                         <h3 class="text-3xl font-black mb-6 uppercase leading-tight">Facts &<br>Numbers</h3>
-                        <p class="text-lg opacity-80 leading-snug">of the clients are satisfied in real time and always coming back to updates</p>
+                        <p class="text-lg opacity-80 leading-snug">of the families are satisfied and recommend our care to others.</p>
                     </div>
                     <div class="mt-auto relative z-10">
                         <div class="text-9xl font-black tracking-tighter group-hover:scale-110 transition-transform duration-500">90%</div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-        
     </section>
+
     <div class="realtive w-full overflow-hidden z-10">
         <div class="animate-ticker">
             <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695f75326ed5a2eccd09b373_Element%20Ticker%20Image-p-1080.png" alt="wavy-top" class="h-14 md:h-28">
@@ -612,28 +631,129 @@
         </div>
     </div>
 </div>
+
+<!-- faq section -->
+<section class="py-12 md:py-24 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+        
+        <div class="space-y-4 text-left">
+            <span class="uppercase tracking-[0.2em] mb-16 font-comic text-[10px] md:text-xs font-bold text-gray-500">
+                Parents Question
+            </span>
+            <h2 class="faq-title text-6xl max-md:text-2xl max-lg:text-4xl text-[#1a1a1a] uppercase">
+                 <span> Answers For</span>
+              <span class="block mt-7 max-md:mt-2">Parents</span>
+            </h2>
+        </div>
+ 
+        <div class="space-y-4 md:space-y-6 font-comic" x-data="{ selected: null }">
+    
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 1 ? selected = 1 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What ages do you accept?</span>
+            
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 1 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 1 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+
+        <div x-show="selected === 1" 
+             x-collapse.duration.500ms
+             x-transition:enter="transition ease-out duration-500"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
+            </div>
+        </div>
+    </div>
+
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 2 ? selected = 2 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What are your operating hours?</span>
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 2 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 2 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+        <div x-show="selected === 2" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
+            </div>
+        </div>
+    </div>
+
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 3 ? selected = 3 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">Is your center licensed?</span>
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 3 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 3 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+        <div x-show="selected === 3" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
+            </div>
+        </div>
+    </div>
+
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 4 ? selected = 4 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">How do you ensure safety?</span>
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 4 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 4 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+        <div x-show="selected === 4" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+    
+    </div>
+</section>
 <!-- gallery section   -->
 <section class="py-24 px-6 overflow-hidden">
     <div class="max-w-7xl mx-auto">
         
         <div class="text-center mb-16 animate-fade-in">
-            <span class="uppercase tracking-[0.3em] text-[11px] font-bold text-gray-400 block mb-8">
+            <span class="uppercase tracking-[0.3em] font-comic text-[11px] font-bold text-gray-400 block mb-10">
                 Special Moments
             </span>
-           <h2 class="gallery-title text-7xl max-md:text-xl  text-[#1a1a1a] uppercase mb-4">             
+            <h2 class="gallery-title text-7xl max-md:text-xl max-lg:text-4xl text-[#1a1a1a] uppercase mb-4">             
                  <span>  Moments That <span class="inline-block align-middle w-12 md:w-20 h-1 bg-[#1a1a1a] mx-2"></span> Shape</span>
               <span class="block mt-7 max-md:mt-2">  Early Childhood</span>
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        <div class="grid grid-cols-12 max-md:grid-cols-1 max-lg:grid-cols-1 gap-6 items-stretch">
             
             <div class="md:col-span-4 group relative overflow-hidden rounded-[40px] h-[550px] cursor-pointer">
                 <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b99e3cacbcc52764f6f4e_Gallery%20Image%2001.png" 
                      alt="Baby" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 
-                <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
-                    <div class="insta-pulse">
+                <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
                 </div>
@@ -643,28 +763,28 @@
                 <div class="group relative overflow-hidden rounded-[40px] h-[263px] cursor-pointer">
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19edaa97ce313283a0_Gallery%20Image%2002.png" 
                          alt="Child Playing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
-                        <div class="insta-pulse">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
+                    <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
                     </div>
+                </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-[40px] h-[263px] cursor-pointer">
                     <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19a011b846bd835803_Gallery%20Image%2003.png" 
                          alt="Reading" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
-                        <div class="insta-pulse">
-                             <i class="fa-brands fa-instagram"></i>
-                        </div>
+                    <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
                     </div>
+                </div>
                 </div>
             </div>
 
             <div class="md:col-span-4 group relative overflow-hidden rounded-[40px] h-[550px] cursor-pointer">
                 <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b9a19298ac33a29ab296c_Gallery%20Image%2004.png" 
                      alt="Happy Child" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
-                    <div class="insta-pulse">
+               <div class="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/20">
+                    <div class="insta-pulse shadow-lg">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
                 </div>
@@ -685,7 +805,7 @@
         </div>
 
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
-             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+             class="absolute left-60 max-md:left-4  max-lg:left-1 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
         
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
              class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
@@ -695,7 +815,7 @@
                 Connect With Us
             </span>
             
-            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+            <h2 class="text-white text-7xl max-md:text-3xl  max-lg:text-5xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
 
                    <span> Love Care And</span>
               <span class="block mt-7 max-md:mt-2"> Learning Together</span>
@@ -716,7 +836,7 @@
         </div>
 
         <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8  max-lg:mb-1 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
                 <a href="#" class="hover:opacity-70 transition-all">Home</a>
                 <a href="#" class="hover:opacity-70 transition-all">About</a>
                 <a href="#" class="hover:opacity-70 transition-all">Programs</a>
@@ -726,25 +846,24 @@
                 <a href="#" class="hover:opacity-70 transition-all">Contact</a>
             </div>
 
-            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+            <div class="flex flex-col font-comic max-md:flex-cols  max-lg:flex-cols justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
                 <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
-                <div class="flex items-center justify-between px-2 max-md:pb-4">
-            <div class="flex gap-5 text-lg text-white  text-slate-900">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-linkedin-in"></i>
-            </div>
-        </div>
+                <div class="flex items-center justify-between px-2  max-lg:py-6 max-md:pb-4">
+                    <div class="flex gap-5 text-lg text-white  text-slate-900">
+                       <i class="fab fa-instagram"></i>
+                       <i class="fab fa-facebook-f"></i>
+                       <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-center gap-4 md:gap-10">
                     <a href="#" class="hover:text-white transition-colors">License</a>
                     <a href="#" class="hover:text-white transition-colors">Changelog</a>
                     <a href="#" class="hover:text-white transition-colors">Style Guide</a>
                 </div>
-                
             </div>
         </div>
 
-        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+        <div class="relative z-10 w-full flex justify-center mt-auto  max-lg:mt-0 pb-4 md:pb-10 pointer-events-none">
             <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
                  class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
                  alt="Nurivelle 3D Text">

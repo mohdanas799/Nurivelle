@@ -349,3 +349,17 @@ const updateCards = () => {
 window.addEventListener('scroll', updateCards);
 // Initial run for page load
 updateCards();
+
+
+// Page load hone ke 2 seconds baad popup dikhane ke liye
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('popup-overlay').classList.remove('hidden');
+            document.getElementById('popup-overlay').classList.add('flex');
+        }, 5000); 
+    };
+
+    // Close button function
+    function closePopup() {
+        document.getElementById('popup-overlay').style.display = 'none';
+    }

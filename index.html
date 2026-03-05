@@ -37,53 +37,108 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body class="text-[#333] overflow-x-hidden">
+ 
+    <!-- POPUP SECTION -->
+    <div id="popup-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4">
+    
+    <div class="relative flex w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl md:flex-row">
+        
+        <button onclick="closePopup()" class="absolute right-4 top-4 z-10 text-2xl text-gray-500 hover:text-black focus:outline-none">
+            &times;
+        </button>
+
+        <div class="flex items-center justify-center bg-white md:w-5/12 md:items-end">
+            <img 
+                src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d0049ff90d81c3c8efc34_About%20Us%20Card%20Image%2002.png" 
+                alt="Dr. Jamal Akhtar Azmi" 
+                class="mt-8 h-40 w-40 rounded-full border-4 border-white object-cover shadow-lg md:m-0 md:h-full md:w-full md:rounded-none md:border-0 md:shadow-none"
+            >
+        </div>
+
+        <div class="flex flex-col justify-center p-8 text-center md:w-7/12 md:p-12 md:text-left">
+            <h2 class="font-serif text-3xl font-bold leading-tight text-gray-900 md:text-5xl">
+                Book Your <br class="hidden md:block"> Appointment
+            </h2>
+            
+            <p class="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
+                Experience the art of clinical excellence at Nurivelle. From advanced skin transformations to hair restoration, book your private consultation with our experts and start your journey to radiant confidence.
+            </p>
+
+            <div class="mt-8 flex justify-center md:justify-start">
+                <a href="/"
+        class="group relative inline-flex items-center gap-3 w-fit
+        bg-[#FF00BF] text-white px-5 py-3.5 rounded-full font-semibold
+        transition-all duration-300
+        shadow-[0_6px_0_0_#1a1a1a] hover:shadow-none hover:translate-y-[6px]">
+
+        <div class="relative h-[25px] font-boldo overflow-hidden">
+          <div class="flex flex-col text-lg max-md:text-sm transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2">
+            <span class="leading-[28px]"> Contact Us </span>
+            <span class="leading-[28px]"> Contact Us </span>
+          </div>
+        </div>
+
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a5c29fc711ff077f040df_Button%20Icon.png"
+          alt="Icon"
+          class="w-9 h-9">
+      </a>
+            </div>
+        </div>
+
+    </div>
+</div>
 <!-- NAVBAR SECTION -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-[130] nav-glass transition-all duration-300">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
-        </a>
+     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" id="header-logo" aria-label="Nurivelle Home" class="transition-opacity duration-300">
+        <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69563c978505845a748a738b_Logo.png" alt="Nurivelle Logo" class="h-8">
+    </a>
 
-         <div class="flex items-center gap-12">
-                <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
-                    <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
-                    
-                    <li class="relative dropdown-group">
-                        <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
-                           <a href="services.html"> Services </a>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-content absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-100 p-2 overflow-hidden">
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail One</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Two</a>
-                            <a href="#" class="block px-4 py-3 hover:bg-stone-50 rounded-xl transition-colors text-sm">Service Detail Three</a>
-                        </div>
-                    </li>
+    <div class="flex items-center gap-12">
+        <ul class="hidden lg:flex items-center font-comic font-black gap-8 text-stone-700">
+            <li><a href="index.html" class="hover:text-[#4C1D95] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#4C1D95] transition-colors">About Us</a></li>
+            
+            <li class="relative group">
+                <button class="flex items-center gap-1 hover:text-[#4C1D95] transition-colors">
+                    <a href="services.html"> Services </a>
+                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
 
-                    <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
-                    <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
-                    <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
-                </ul>
-            </div>
+                <div class="absolute top-full left-0 mt-8 w-56 bg-white shadow-xl border border-stone-100 p-2 overflow-hidden 
+                            opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
+                            transition-all duration-300 z-50">
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail One</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Two</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-stone-50 hover:text-[#4C1D95] rounded-xl transition-colors text-sm">Service Detail Three</a>
+                </div>
+            </li>
+
+            <li><a href="gallery.html" class="hover:text-[#4C1D95] transition-colors">Gallery</a></li>
+            <li><a href="blog.html" class="hover:text-[#4C1D95] transition-colors">Blogs</a></li>
+            <li><a href="contact.html" class="hover:text-[#4C1D95] transition-colors">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="flex items-center gap-4">
+<a href="#" class="cta-btn hidden lg:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold font-boldo overflow-hidden relative group">
+    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
+        <span class="transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+        <span class="absolute top-full left-0 transition-transform duration-500 group-hover:-translate-y-full">Free Enquiry</span>
+    </div>
+    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
+</a>
+        <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
+            <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+            <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
+        </button>
+    </div>
+</nav>
 
 
-        <div class="flex items-center gap-4">
-              <a href="#" class="cta-btn hidden font-boldo md:flex items-center gap-3 bg-[#4C1D95] text-white px-6 py-2.5 rounded-full font-semibold  overflow-hidden relative group">
-                    <div class="cta-btn-inner relative h-7 overflow-hidden flex flex-col">
-                        <span>Free Enquiry</span>
-                        <span class="absolute top-full left-0">Free Enquiry</span>
-                    </div>
-                    <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566669e3eb715c36fa0fcd_Nav%20Button%20Image.png" alt="Inquiry" class="w-6 h-6 rounded-full border border-white/30">
-                </a>
-
-            <button id="menu-btn" class="lg:hidden text-[#4C1D95] flex flex-col items-center justify-center gap-1.5 w-10 h-10 z-[140] relative outline-none" aria-label="Toggle Menu">
-                <div id="bar1" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar2" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-                <div id="bar3" class="w-6 h-0.5 bg-current transition-all duration-300"></div>
-            </button>
-        </div>
-    </nav>
 </header>
 
 <div id="mega-menu" class="fixed inset-0 z-[120] bg-[#d7c6f5] flex flex-col p-6 pt-24 transition-all duration-500 translate-x-full opacity-0 pointer-events-none lg:hidden overflow-y-auto">
@@ -101,6 +156,7 @@
                     <li><a href="#">Service Detail Two</a></li>
                 </ul>
             </li>
+            <li><a href="blog.html">Blogs</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -134,17 +190,17 @@
 </div>
 
 <!-- HERO SECTION -->
-<header class="relative h-[43em] max-md:h-[52em] flex items-center justify-center overflow-hidden py-20">
+<header class="relative h-screen  max-md:h-[52em] flex items-center justify-center overflow-hidden py-20">
     
     <div class="absolute inset-0 z-0 max-md:h-[47em] opacity-40">
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/69566ed061d957342f35bf7a_b55672734626d1810b7f0264816e8779_Inner%20Hero%20Bg.png" 
              class="w-full h-full object-cover" alt="Background Pattern">
     </div>
 
-    <div class="absolute top-80 left-32 z-10 hidden md:block animate-float">
+    <div class="absolute top-80 left-32 max-lg:top-48 max-lg:left-10 z-10 hidden md:block animate-float">
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d30975a4b8191b5749630_Hero%20Image-1.png" alt="Hero Top Left">
     </div>
-    <div class="absolute top-36 right-40 z-10 hidden md:block animate-float" style="animation-delay: 1s;">
+    <div class="absolute top-36 right-40 max-lg:top-[27rem] max-lg:right-14 z-10 hidden md:block animate-float" style="animation-delay: 1s;">
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695d3097a664a7333007f28b_Hero%20Image.png" alt="Hero Top Right">
     </div>
 
@@ -212,14 +268,14 @@
     <div class="max-w-7xl mx-auto text-center">
         <header class="mb-12">
             <span class="text-xs font-comic font-black uppercase tracking-[0.2em] text-gray-500 mb-10 block">About Us</span>
-            <h2 class="max-md:text-3xl text-7xl font-boldo font-[900] text-black uppercase tracking-tighter">
+            <h2 class="max-md:text-3xl text-7xl max-lg:text-4xl font-boldo font-[900] text-black uppercase tracking-tighter">
               <span>Growing Children</span>
               <span class="block mt-5 max-md:mt-5">With Love Daily</span>
             </h2>
         </header>
 
         <div class="bg-brand-purple p-4 md:p-8 rounded-[40px] mb-12 relative">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative ">
+            <div class="grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 gap-4 relative ">
                 
                 <article class="sticky top-36 md:static bg-[#f0f4ee] rounded-[32px] p-6 md:p-8 flex flex-col justify-between items-start text-left dashed-border min-h-[320px] md:min-h-[450px] shadow-xl md:shadow-none transition-transform">
                     <div class="w-10 h-10 md:w-12 md:h-12">
@@ -282,7 +338,10 @@
         </div>
     </div>
 </section>
+
+
 <!-- FEATURED SERVICES SECTION  -->
+ 
 <section class="relative bg-[#dbc6ff] overflow-hidden">
     
     <div class="relative w-full bg-white overflow-hidden bg-[#f8f9f5] z-10">
@@ -297,13 +356,13 @@
     <div class="max-w-7xl mx-auto px-5 py-12 md:py-24 text-center">
         <header class="mb-10 md:mb-20">
             <span class="text-[10px] md:text-xs font-comic font-black uppercase tracking-[0.3em] text-black/40 block mb-10">Care Features</span>
-            <h2 class="text-7xl max-md:text-2xl font-boldo font-[900] text-black uppercase tracking-tighter">
+            <h2 class="text-7xl max-md:text-2xl max-lg:text-4xl font-boldo font-[900] text-black uppercase tracking-tighter">
               <span> Carefully Crafted Care</span>
               <span class="block mt-5 max-md:mt-2">For Little Ones</span>
             </h2>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+        <div class="grid grid-cols-3  max-md:grid-cols-1 max-lg:grid-cols-2 gap-4 md:gap-8">
             
             <article class="order-1 md:order-none group relative overflow-hidden rounded-[30px] md:rounded-[50px] p-6 md:p-12 min-h-fit md:min-h-[450px] flex flex-col items-start text-left bg-[#e87155] transition-all hover:-translate-y-1">
                 <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695cec516ded00bb91226b6f_Features%20Card%20Bg%20Image-1.png" class="features-card-bg absolute top-0 right-0 w-32 md:w-56 h-32 md:h-56 z-0 pointer-events-none" alt="bg">
@@ -383,10 +442,11 @@
         </div>
     </div>
 </section>
+
 <!-- why-choose-us section -->
   <section class="pt-20 pb-10 text-center px-4 relative z-10">
         <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-10">Why Choose Us</p>
-        <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+        <h2 class="text-7xl max-md:text-2xl max-lg:text-4xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
              <span> Confident Beginnings</span>
               <span class="block mt-5 max-md:mt-2">For Every Child.</span>
         </h2>
@@ -405,7 +465,7 @@
             </a>
     </section>
 
-    <div class="trigger-area max-md:hidden relative h-[400vh] max-md:h-[0vh] w-full">
+    <div class="trigger-area  relative h-[400vh] max-md:h-[200vh] max-lg:h-[260vh] w-full">
         <div class="sticky-box sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
             <div class="relative w-full h-full max-w-6xl flex items-center justify-center px-6">
                 
@@ -441,58 +501,13 @@
         </div>
     </div>
 
-
-<div class="max-w-4xl lg:hidden mx-auto max-md:mx-4 px-4 pb-[1vh]">
-    
-    <div class="sticky top-28 mb-60 card-wrapper" data-offset="112">
-        <article class="card-inner h-[560px] w-full rounded-[40px] shadow-2xl overflow-hidden -rotate-3 translate-y-10 opacity-100 bg-white relative">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5184f0f9633090453952_Why%20Choose%20Card%20Image.png" 
-                 class="absolute inset-0 w-full h-full object-cover" alt="Small Group">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
-                <p class="text-white font-boldo text-xl uppercase leading-tight">Small Group<br>Attention</p>
-            </div>
-        </article>
-    </div>
-
-    <div class="sticky top-[120px] mb-60 card-wrapper" data-offset="120">
-        <article class="card-inner h-[560px] w-full rounded-[40px] shadow-2xl overflow-hidden rotate-6 translate-y-20 opacity-100 bg-white relative">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e51834f1d55f72657b182_Why%20Choose%20Card%20Image-1.png" 
-                 class="absolute inset-0 w-full h-full object-cover" alt="Safe Environment">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
-                <p class="text-white font-boldo text-xl uppercase leading-tight">Safe, Loving<br>Environment</p>
-            </div>
-        </article>
-    </div>
-
-    <div class="sticky top-[128px] mb-60 card-wrapper" data-offset="128">
-        <article class="card-inner h-[560px] w-full rounded-[40px] shadow-2xl overflow-hidden -rotate-6 translate-y-20 opacity-100 bg-white relative">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5183d153500411ac6752_Why%20Choose%20Card%20Image-2.png" 
-                 class="absolute inset-0 w-full h-full object-cover" alt="Qualified Educators">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
-                <p class="text-white font-boldo text-xl uppercase leading-tight">Qualified<br>Educators</p>
-            </div>
-        </article>
-    </div>
-
-    <div class="sticky top-[136px] mb-60 card-wrapper" data-offset="136">
-        <article class="card-inner h-[560px] w-full rounded-[40px] shadow-2xl overflow-hidden rotate-3 translate-y-20 opacity-100 bg-white relative">
-            <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695e5182f212d5ff26eb6845_Why%20Choose%20Card%20Image-3.png" 
-                 class="absolute inset-0 w-full h-full object-cover" alt="Learning">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
-                <p class="text-white font-boldo text-xl uppercase leading-tight">Learning<br>Through Play</p>
-            </div>
-        </article>
-    </div>
-
-</div>
-
     
 <!-- experience section  -->
-    <section id="experience-section" class="experience py-20 px-4 max-md:mt-[-30vh] opacity-0 translate-y-20">
+    <section id="experience-section" class="experience py-20 px-4 max-md:mt-[60vh] opacity-0 translate-y-20">
         <div class="max-w-6xl mx-auto bg-[#dcd4ff] rounded-[40px] p-8 md:p-16">
             
             <div class="text-center mb-12">
-                <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] tracking-tight uppercase">
+                <h2 class="text-7xl max-md:text-2xl  max-lg:text-4xl  font-extrabold text-[#1a1a1a] tracking-tight uppercase">
                     Daily Experience
                 </h2>
             </div>
@@ -544,7 +559,7 @@
 <main class="hidden lg:block max-w-7xl mx-auto px-10 py-2 ">
         <header class="text-center mb-16">
             <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-10">Our Programs</p>
-        <h2 class="text-7xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+        <h2 class="text-7xl max-md:text-2xl max-lg:text-4xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
             <span> Programs Designed</span>
               <span class="block mt-7 max-md:mt-2">For Every Child.</span>
         </h2>
@@ -552,31 +567,31 @@
 
         <div class="stack-container -mb-[10em] ">
             <div class="desktop-card card-1">
-  <article class="bg-[#f4f3ec] rounded-[50px] mt-28 shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
+               <article class="bg-[#f4f3ec] rounded-[50px] mt-28 shadow-2xl flex h-[520px] w-full border border-white/40 overflow-hidden">
 
-    <!-- LEFT IMAGE -->
-    <div class="w-[35%] p-7">
-      <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png"
-        class="w-full h-full object-cover rounded-[40px]">
-    </div>
+              <!-- LEFT IMAGE -->
+                <div class="w-[35%] p-7">
+                     <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9ac9900594a1866157_Thumbnail%20Image%2005.png"
+                       class="w-full h-full object-cover rounded-[40px]">
+                 </div>
 
-    <!-- CENTER CONTENT -->
-    <div class="w-[40%] p-12 flex flex-col justify-between">
+                <!-- CENTER CONTENT -->
+               <div class="w-[40%] p-12 flex flex-col justify-between">
 
-      <div>
-        <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9f1ef1be24912cd37f_Program%20Card%20Icon%2001.png"
-          class="w-14 h-14 mb-4">
+                <div>
+                      <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/69552b9f1ef1be24912cd37f_Program%20Card%20Icon%2001.png"
+                     class="w-14 h-14 mb-4">
 
-        <h2 class="text-4xl font-black text-slate-900 mb-1">
-          Infant Care
-          <span class="text-lg font-bold text-slate-600 ml-2">
-            0 months–18 months
-          </span>
-        </h2>
+                    <h2 class="text-4xl font-black text-slate-900 mb-1">
+                 Infant Care
+                     <span class="text-lg font-bold text-slate-600 ml-2">
+                   0 months–18 months
+                   </span>
+                  </h2>
 
-        <p class="text-slate-600 text-sm mb-8">
-          Our Infant program is all about providing cozy care and fun experiences for your little one right from the start.
-        </p>
+              <p class="text-slate-600 text-sm mb-8">
+                Our Infant program is all about providing cozy care and fun experiences for your little one right from the start.
+             </p>
 
         <div class="ticket-dashed-h mb-8"></div>
 
@@ -718,14 +733,14 @@
                     </div>
                     <div class="w-[40%] p-12 flex flex-col justify-between text-black">
                         <div>
-<img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695530eb03eab3b018215095_Program%20Card%20Icon%2003.png"  class="w-14 h-14 mb-4" alt="">                            <h2 class="text-4xl font-black mb-1">Preschoolers <span class="text-lg font-bold opacity-80 ml-2">3-5 Years</span></h2>
+                     <img src="https://cdn.prod.website-files.com/6955294002fa5c897b429071/695530eb03eab3b018215095_Program%20Card%20Icon%2003.png"  class="w-14 h-14 mb-4" alt="">                            <h2 class="text-4xl font-black mb-1">Preschoolers <span class="text-lg font-bold opacity-80 ml-2">3-5 Years</span></h2>
                             <p class="text-black text-sm font-comic mb-8">Preparing young minds for their next big step in education with spark and creativity.</p>
-                            <div class="ticket-dashed-h border-white/20 mb-8"></div>
+                            <div class="ticket-dashed-h"></div>
                             <ul class="space-y-2 font-comic">
-                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:black">✓</span> STEM Exploration</li>
-                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:black">✓</span> Creative Arts</li>
-                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:black">✓</span> Outdoor Play</li>
-                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:black">✓</span> Outdoor Play &Nature</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:white">✓</span> STEM Exploration</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:white">✓</span> Creative Arts</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:white">✓</span> Outdoor Play</li>
+                                <li class="flex items-center gap-3"><span class="check-circle" style=" color:white">✓</span> Outdoor Play &Nature</li>
                             </ul>
                         </div>
                         <!-- ✅ CORRECT BUTTON -->
@@ -780,10 +795,15 @@
                 </article>
             </div>
         </div>
+
+
+
+
+        
     </main>
          <header class="text-center lg:hidden mb-16">
             <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-400 mb-3">Why Choose Us</p>
-            <h2 class="text-4xl max-md:text-2xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
+            <h2 class="text-4xl max-md:text-2xl  max-lg:text-4xl font-extrabold text-[#1a1a1a] leading-[1.1] mb-6 tracking-tight">
                Programs Designed<br>For Every Child.
             </h2>
         </header>
@@ -899,7 +919,7 @@
             <span class=" text-gray-400 font-bold font-comic mb-10 uppercase tracking-widest">
                 Testimonials
             </span>
-            <h2 class="text-7xl max-md:text-2xl font-[900] text-[#1a1a1a] mt-6 leading-[1.1] uppercase tracking-tighter">
+            <h2 class="text-7xl max-md:text-2xl max-lg:text-4xl font-[900] text-[#1a1a1a] mt-6 leading-[1.1] uppercase tracking-tighter">
                 <span>  What Families Love</span>
               <span class="block mt-7 max-md:mt-2">Most About Our Care</span>
             </h2>
@@ -978,83 +998,96 @@
             <span class="uppercase tracking-[0.2em] mb-16 font-comic text-[10px] md:text-xs font-bold text-gray-500">
                 Parents Question
             </span>
-            <h2 class="faq-title text-7xl max-md:text-2xl lg:text-6xl text-[#1a1a1a] uppercase">
+            <h2 class="faq-title text-6xl max-md:text-2xl max-lg:text-4xl text-[#1a1a1a] uppercase">
                  <span> Answers For</span>
               <span class="block mt-7 max-md:mt-2">Parents</span>
             </h2>
         </div>
-
-        <div class="space-y-3 md:space-y-4 font-comic" x-data="{ selected: 1 }">
+ 
+        <div class="space-y-4 md:space-y-6 font-comic" x-data="{ selected: null }">
+    
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 1 ? selected = 1 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
             
-            <div class="border border-dashed border-gray-400 f rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
-                <button @click="selected !== 1 ? selected = 1 : selected = null" 
-                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
-                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What ages do you accept?</span>
-                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
-                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
-                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
-                             :class="selected === 1 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
-                    </div>
-                </button>
-                <div x-show="selected === 1" x-collapse>
-                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                        We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
-                    </div>
-                </div>
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What ages do you accept?</span>
+            
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 1 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 1 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
             </div>
+        </button>
 
-            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
-                <button @click="selected !== 2 ? selected = 2 : selected = null" 
-                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
-                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What are your operating hours?</span>
-                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
-                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
-                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
-                             :class="selected === 2 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
-                    </div>
-                </button>
-                <div x-show="selected === 2" x-collapse>
-                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                        We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
-                    </div>
-                </div>
+        <div x-show="selected === 1" 
+             x-collapse.duration.500ms
+             x-transition:enter="transition ease-out duration-500"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                We accept children from early childhood through school age, with programs tailored to support each age group’s developmental needs.
             </div>
-
-            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
-                <button @click="selected !== 3 ? selected = 3 : selected = null" 
-                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
-                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">Is your center licensed?</span>
-                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
-                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
-                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
-                             :class="selected === 3 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
-                    </div>
-                </button>
-                <div x-show="selected === 3" x-collapse>
-                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                        Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
-                    </div>
-                </div>
-            </div>
-
-            <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white">
-                <button @click="selected !== 4 ? selected = 4 : selected = null" 
-                        class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-white/40 transition-all duration-300">
-                    <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">How do you ensure safety?</span>
-                    <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
-                        <div class="absolute w-5 h-[2.5px] bg-gray-900"></div>
-                        <div class="absolute h-5 w-[2.5px] bg-gray-900 transition-transform duration-500" 
-                             :class="selected === 4 ? 'rotate-90 opacity-0' : 'rotate-0'"></div>
-                    </div>
-                </button>
-                <div x-show="selected === 4" x-collapse>
-                    <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
-                        We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
-                    </div>
-                </div>
-            </div>
-
         </div>
+    </div>
+
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 2 ? selected = 2 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">What are your operating hours?</span>
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 2 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 2 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+        <div x-show="selected === 2" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                We are open Sunday to Thursday, 8:00 AM – 6:00 PM. Early drop-off and extended care options may be available upon request.
+            </div>
+        </div>
+    </div>
+
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 3 ? selected = 3 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">Is your center licensed?</span>
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 3 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 3 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+        <div x-show="selected === 3" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                Yes, our center is fully licensed and operates in compliance with all local regulations and required industry standards.
+            </div>
+        </div>
+    </div>
+
+    <div class="border border-dashed border-gray-400 rounded-[30px] md:rounded-[40px] overflow-hidden bg-white transition-all duration-500 shadow-sm hover:shadow-md">
+        <button @click="selected !== 4 ? selected = 4 : selected = null" 
+                class="w-full flex justify-between items-center p-6 md:p-8 text-left hover:bg-gray-50/50 transition-colors duration-300 outline-none">
+            <span class="text-2xl max-md:text-lg font-black text-gray-900 pr-4 font-boldo">How do you ensure safety?</span>
+            <div class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center transition-transform duration-500"
+                 :class="selected === 4 ? 'rotate-180' : 'rotate-0'">
+                <div class="absolute w-5 h-[3px] bg-gray-900 rounded-full"></div>
+                <div class="absolute h-5 w-[3px] bg-gray-900 rounded-full transition-all duration-500 ease-in-out" 
+                     :class="selected === 4 ? 'rotate-90 opacity-0 scale-0' : 'rotate-0 opacity-100 scale-100'"></div>
+            </div>
+        </button>
+        <div x-show="selected === 4" x-collapse.duration.500ms x-transition:enter="transition ease-out duration-500">
+            <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-600 text-base md:text-lg leading-relaxed">
+                We ensure safety through clear protocols, trained teams, secure systems, regular audits, and rapid response to issues globally.
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+    
     </div>
 </section>
 <!-- blog-one section   -->
@@ -1071,13 +1104,13 @@
         
         <div class="text-center mb-16 animate__animated animate__fadeIn">
             <p class="uppercase tracking-[0.2em] text-[10px] font-bold text-gray-800 mb-10">Blog & News</p>
-            <h2 class="text-7xl max-md:text-xl font-[900] text-[#1a1a1a] leading-[1.1] uppercase tracking-tighter">
+            <h2 class="text-7xl max-md:text-xl  max-lg:text-4xl font-[900] text-[#1a1a1a] leading-[1.1] uppercase tracking-tighter">
                   <span>Insights For Confident</span>
               <span class="block mt-7 max-md:mt-2">Parenting Choices</span>
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-3 max-md:grid-cols-1 max-lg:grid-cols-1 gap-8">
             
             <article class="bg-[#f5f7f1] rounded-[40px] p-2 border-2 border-dashed border-gray-400 shadow-sm transition-transform duration-300 hover:-translate-y-2 animate__animated animate__fadeInUp">
                 <div class="overflow-hidden rounded-[35px]">
@@ -1089,7 +1122,7 @@
                         <span class="w-8 h-[1px] bg-gray-300"></span>
                         <span>Baby Care</span>
                     </div>
-                    <h3 class="text-2xl max-md:text-lg font-black text-[#1a1a1a] leading-tight uppercase">Calm Bedtime Routines For Kids</h3>
+                    <h3 class="text-2xl max-md:text-lg  max-lg:text-xl  font-black text-[#1a1a1a] leading-tight uppercase">Calm Bedtime Routines For Kids</h3>
                 </div>
             </article>
 
@@ -1103,7 +1136,7 @@
                         <span class="w-8 h-[1px] bg-gray-300"></span>
                         <span>Health & Safety</span>
                     </div>
-                    <h3 class="text-2xl max-md:text-lg font-black text-[#1a1a1a] leading-tight uppercase">Music Enhances Toddlers’ Growth</h3>
+                    <h3 class="text-2xl max-md:text-lg  max-lg:text-xl font-black text-[#1a1a1a] leading-tight uppercase">Music Enhances Toddlers’ Growth</h3>
                 </div>
             </article>
 
@@ -1117,7 +1150,7 @@
                         <span class="w-8 h-[1px] bg-gray-300"></span>
                         <span>Parenting Tips</span>
                     </div>
-                    <h3 class="text-2xl max-md:text-lg font-black text-[#1a1a1a] leading-tight uppercase">Safety Updates For Parent Peace</h3>
+                    <h3 class="text-2xl max-md:text-lg  max-lg:text-xl font-black text-[#1a1a1a] leading-tight uppercase">Safety Updates For Parent Peace</h3>
                 </div>
             </article>
 
@@ -1155,13 +1188,13 @@
             <span class="uppercase tracking-[0.3em] font-comic text-[11px] font-bold text-gray-400 block mb-10">
                 Special Moments
             </span>
-            <h2 class="gallery-title text-7xl max-md:text-xl  text-[#1a1a1a] uppercase mb-4">             
+            <h2 class="gallery-title text-7xl max-md:text-xl max-lg:text-4xl text-[#1a1a1a] uppercase mb-4">             
                  <span>  Moments That <span class="inline-block align-middle w-12 md:w-20 h-1 bg-[#1a1a1a] mx-2"></span> Shape</span>
               <span class="block mt-7 max-md:mt-2">  Early Childhood</span>
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        <div class="grid grid-cols-12 max-md:grid-cols-1 max-lg:grid-cols-1 gap-6 items-stretch">
             
             <div class="md:col-span-4 group relative overflow-hidden rounded-[40px] h-[550px] cursor-pointer">
                 <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695b99e3cacbcc52764f6f4e_Gallery%20Image%2001.png" 
@@ -1219,7 +1252,7 @@
         </div>
 
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0c62f4225c4a86cf67ac_Sun.png" 
-             class="absolute left-60 max-md:left-4 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
+             class="absolute left-60 max-md:left-4  max-lg:left-1 top-10 max-md:top-6 w-48 max-md:w-32 z-10 animate-float" alt="Sun">
         
         <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/695a0cb47257162e0f8929aa_Footer%20Element%20Right.png" 
              class="absolute right-4 md:right-24 top-20 md:top-28 w-12 md:w-32 z-10 animate-float" style="animation-delay: 1.5s;" alt="Plane">
@@ -1229,7 +1262,7 @@
                 Connect With Us
             </span>
             
-            <h2 class="text-white text-7xl max-md:text-3xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
+            <h2 class="text-white text-7xl max-md:text-3xl  max-lg:text-5xl font-[900] uppercase leading-[1.0] md:leading-[0.95] mb-8 md:mb-12 max-w-5xl mx-auto tracking-tighter">
 
                    <span> Love Care And</span>
               <span class="block mt-7 max-md:mt-2"> Learning Together</span>
@@ -1250,7 +1283,7 @@
         </div>
 
         <div class="relative z-20 mt-16 md:mt-24 font-comic px-6">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 md:gap-x-16 text-white font-[900] text-sm md:text-xl uppercase mb-8  max-lg:mb-1 md:mb-12 border-b border-white/30 pb-8 md:pb-12 max-w-6xl mx-auto">
                 <a href="#" class="hover:opacity-70 transition-all">Home</a>
                 <a href="#" class="hover:opacity-70 transition-all">About</a>
                 <a href="#" class="hover:opacity-70 transition-all">Programs</a>
@@ -1260,25 +1293,24 @@
                 <a href="#" class="hover:opacity-70 transition-all">Contact</a>
             </div>
 
-            <div class="flex flex-col font-comic md:flex-row justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
+            <div class="flex flex-col font-comic max-md:flex-cols  max-lg:flex-cols justify-between items-center text-[10px] md:text-sm text-white/90 uppercase tracking-widest max-w-7xl mx-auto pb-8 md:pb-12 font-bold text-center md:text-left">
                 <p class="mb-4 md:mb-0">Copyright © 2026 Nurivelle - All Rights Reserved.</p>
-                <div class="flex items-center justify-between px-2 max-md:pb-4">
-            <div class="flex gap-5 text-lg text-white  text-slate-900">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-linkedin-in"></i>
-            </div>
-        </div>
+                <div class="flex items-center justify-between px-2  max-lg:py-6 max-md:pb-4">
+                    <div class="flex gap-5 text-lg text-white  text-slate-900">
+                       <i class="fab fa-instagram"></i>
+                       <i class="fab fa-facebook-f"></i>
+                       <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-center gap-4 md:gap-10">
                     <a href="#" class="hover:text-white transition-colors">License</a>
                     <a href="#" class="hover:text-white transition-colors">Changelog</a>
                     <a href="#" class="hover:text-white transition-colors">Style Guide</a>
                 </div>
-                
             </div>
         </div>
 
-        <div class="relative z-10 w-full flex justify-center mt-auto pb-4 md:pb-10 pointer-events-none">
+        <div class="relative z-10 w-full flex justify-center mt-auto  max-lg:mt-0 pb-4 md:pb-10 pointer-events-none">
             <img src="https://cdn.prod.website-files.com/6946266171296e600d9c960c/6959161d33c379c742a2d585_Footer%20Text%20Image.png" 
                  class="w-[90%] md:w-[85%] max-w-[1400px] object-contain transition-transform duration-1000" 
                  alt="Nurivelle 3D Text">
